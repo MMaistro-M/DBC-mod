@@ -1,0 +1,21 @@
+{
+  "mod": "Armourers-Workshop-1.7.10-0.48.5.jar",
+  "classes_no_jar": 689,
+  "arquivos_java_recuperados": 582,
+  "fontes_java_embutidas": 0,
+  "codigo_saida_cfr": 0,
+  "segundos": 26.1,
+  "sha256_original": "d87c67ec7ac7adf910176e2b927ce572a79602b4bc25d46bcbe88744d670f0fc",
+  "jar_preservado": true,
+  "arquivos_com_metodos_nao_recuperados": [],
+  "arquivos_java_cfr": 582,
+  "recuperacao_vineflower": {
+    "versao": "1.12.0",
+    "arquivos_integrados": [
+      "riskyken/armourersWorkshop/utils/SkinIOUtils.java"
+    ],
+    "fontes_alternativas": "java_vineflower"
+  },
+  "classes_principais": 582,
+  "classes_principais_sem_fonte": []
+}

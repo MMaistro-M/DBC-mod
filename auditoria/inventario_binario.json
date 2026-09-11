@@ -1,0 +1,190 @@
+[
+  {
+    "jar": "+unimixins-all-1.7.10-0.1.23.jar",
+    "sha256": "53b1721a9fef8e3351ece7c6b1b9598ed5290f67b1d00f312244ef603845425e",
+    "class_major_versions": {
+      "52": 3333,
+      "49": 444,
+      "50": 8,
+      "51": 8
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nMixinConfigs: mixins.gtnhmixins.json,mixins.gasstation.json,mixins.gtn\r\n hmixins.json,mixingasm.mixin.json\r\nPremain-Class: org.spongepowered.tools.agent.MixinAgent\r\nImplementation-Version: 0.15.4+mixin.0.8.7\r\nFMLCorePluginContainsFMLMod: true\r\nAgent-Class: org.spongepowered.tools.agent.MixinAgent\r\nCan-Redefine-Classes: true\r\nCan-Retransform-Classes: true\r\nTweakClass: org.spongepowered.asm.launch.MixinTweaker\r\nCommit-ID: 6a62659\r\nForceLoadAsMod: true\r\nFMLCorePlugin: io.github.legacymoddingmc.unimixins.all.AllCore\r\n\r\n",
+      "mcmod.info": "[\n    {\n        \"modid\": \"unimixins\",\n        \"name\": \"UniMixins\",\n        \"description\": \"UniMixins composite jar consisting of the following modules:\\nMixin (UniMix); Compatibility; Mixingasm; SpongeMixins; MixinBooterLegacy; GasStation; GTNHMixins; MixinExtras\",\n        \"version\": \"0.1.23\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"authorList\": [\n            \"makamys\"\n        ]\n    },\n    {\n        \"modid\": \"unimixins-mixin\",\n        \"name\": \"UniMixins: Mixin (UniMix)\",\n        \"description\": \"UniMixins module that provides the UniMix fork of Mixin (version: unimix.0.15.4-mixin.0.8.7).\",\n        \"version\": \"0.1.23+unimix.0.15.4-mixin.0.8.7\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"updateUrl\": \"\",\n        \"authorList\": [\n            \"makamys\"\n        ],\n        \"credits\": \"\",\n        \"logoFile\": \"\",\n        \"screenshots\": [\n            \n        ],\n        \"dependencies\": [\n            \n        ],\n        \"parent\": \"unimixins\"\n    },\n    {\n        \"modid\": \"unimixins-compat\",\n        \"name\": \"UniMixins: Compatibility\",\n        \"description\": \"UniMixins module that improves compatibility and helps debug crashes.\",\n        \"version\": \"0.1.23\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"updateUrl\": \"\",\n        \"authorList\": [\n            \"makamys\"\n        ],\n        \"credits\": \"\",\n        \"logoFile\": \"\",\n        \"screenshots\": [\n            \n        ],\n        \"parent\": \"unimixins\"\n    },\n    {\n        \"modid\": \"mixingasm\",\n        \"name\": \"UniMixins: Mixingasm\",\n        \"description\": \"UniMixins module that implements Mixingasm (version: 0.3).\",\n        \"version\": \"0.3+uni.0.1.23\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"updateUrl\": \"\",\n        \"authorList\": [\n            \"makamys\"\n        ],\n        \"credits\": \"\",\n        \"logoFile\": \"\",\n        \"screenshots\": [\n            \n        ],\n        \"parent\": \"unimixins\"\n    },\n    {\n        \"modid\": \"spongemixins\",\n        \"name\": \"UniMixins: SpongeMixins\",\n        \"description\": \"UniMixins module that provides an emulation of SpongeMixins (version: 2.0.1 from GTNHMixins).\",\n        \"version\": \"2.0.1+gtnh.uni.0.1.23\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"updateUrl\": \"\",\n        \"authorList\": [\n            \"Time_Conqueror\",\n            \"mitchej123\"\n        ],\n        \"credits\": \"SpongePowered Team\",\n        \"logoFile\": \"\",\n        \"screenshots\": [\n            \n        ],\n        \"parent\": \"unimixins\"\n    },\n    {\n        \"modid\": \"mixinbooterlegacy\",\n        \"name\": \"UniMixins: MixinBooterLegacy\",\n        \"description\": \"UniMixins module that provides MixinBooterLegacy extras and MixinExtras with MixinBooterLegacy's package name.\",\n        \"version\": \"1.2.1+uni.0.1.23\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"updateUrl\": \"\",\n        \"authorList\": [\n            \"Rongmario\",\n            \"tox1cozZ\"\n        ],\n        \"credits\": \"Thanks Rongmario for a MixinBooter on Minecraft 1.12.2.\",\n        \"logoFile\": \"\",\n        \"screenshots\": [\n            \n        ],\n        \"dependencies\": [\n            \n        ],\n        \"parent\": \"unimixins\"\n    },\n    {\n        \"modid\": \"gasstation\",\n        \"name\": \"UniMixins: GasStation\",\n        \"description\": \"UniMixins module that provides GasStation extras.\\nDepends on: SpongeMixins, MixinBooterLegacy, MixinExtras\",\n        \"version\": \"0.5.1+uni.0.1.23\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"updateUrl\": \"\",\n        \"authorList\": [\n            \"FalsePattern\"\n        ],\n        \"credits\": \"\",\n        \"logoFile\": \"\",\n        \"screenshots\": [\n            \n        ],\n        \"dependencies\": [\n            \n        ],\n        \"parent\": \"unimixins\"\n    },\n    {\n        \"modid\": \"gtnhmixins\",\n        \"name\": \"UniMixins: GTNHMixins\",\n        \"description\": \"UniMixins module that provides GTNHMixins extras and MixinExtras with the GTNH package name.\\nDepends on: SpongeMixins\",\n        \"version\": \"2.2.0+uni.0.1.23\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"updateUrl\": \"\",\n        \"authorList\": [\n            \"mitchej123\"\n        ],\n        \"credits\": \"\",\n        \"logoFile\": \"\",\n        \"screenshots\": [\n            \n        ],\n        \"dependencies\": [\n            \n        ],\n        \"parent\": \"unimixins\"\n    },\n    {\n        \"modid\": \"mixinextras\",\n        \"name\": \"UniMixins: MixinExtras\",\n        \"description\": \"UniMixins module that provides MixinExtras (version: 0.5.0).\",\n        \"version\": \"0.5.0+uni.0.1.23\",\n        \"mcversion\": \"1.7.10\",\n        \"url\": \"https://github.com/LegacyModdingMC/UniMixins\",\n        \"updateUrl\": \"\",\n        \"authorList\": [\n            \"LlamaLad7\"\n        ],\n        \"credits\": \"\",\n        \"logoFile\": \"\",\n        \"screenshots\": [\n            \n        ],\n        \"dependencies\": [\n            \n        ],\n        \"parent\": \"unimixins\"\n    }\n]",
+      "mixingasm.mixin.json": "{\n    \"required\": true,\n    \"minVersion\": \"0.6\",\n    \"package\": \"makamys.mixingasm.mixin\",\n    \"compatibilityLevel\": \"JAVA_8\",\n    \"mixins\": [\n        \n    ],\n    \"plugin\": \"makamys.mixingasm.MixinConfigPlugin\"\n}",
+      "mixin.mixinbooterlegacy.json": "{\n  \"minVersion\": \"0.8\",\n  \"compatibilityLevel\": \"JAVA_8\",\n  \"required\": true,\n  \"target\": \"@env(PREINIT)\",\n  \"package\": \"io.github.tox1cozz.mixinbooterlegacy.loader.mixin\",\n  \"refmap\": \"mixin.mixinbooterlegacy.refmap.json\",\n  \"injectors\": {\n    \"defaultRequire\": 1\n  },\n  \"mixins\": [\n    \"LoadControllerMixin\"\n  ]\n}",
+      "mixins.gasstation.json": "{\n  \"required\": true,\n  \"minVersion\": \"0.8.3\",\n  \"package\": \"com.falsepattern.gasstation.mixins.mixin\",\n  \"refmap\": \"mixins.gasstation.refmap.json\",\n  \"target\": \"@env(PREINIT)\",\n  \"compatibilityLevel\": \"JAVA_8\",\n  \"mixins\": [\n\n  ],\n  \"plugin\": \"com.falsepattern.gasstation.mixins.DevMixinPlugin\"\n}\n\n",
+      "mixins.gtnhmixins.json": "{\n  \"required\": true,\n  \"minVersion\": \"0.8.3-GTNH\",\n  \"compatibilityLevel\": \"JAVA_8\",\n  \"target\": \"@env(PREINIT)\",\n  \"package\": \"com.gtnewhorizon.gtnhmixins.mixins\",\n  \"refmap\": \"mixins.gtnhmixins.refmap.json\",\n  \"injectors\": {\n    \"defaultRequire\": 1\n  },\n  \"mixins\": [\n    \"LateMixinOrchestrationMixin\"\n  ]\n}\n",
+      "template/mixins.template.early.json": "{\n  \"package\": \"{package}}\",\n  \"refmap\": \"{refmap}\",\n  \"target\": \"@env(DEFAULT)\",\n  \"minVersion\": \"0.8\",\n  \"compatibilityLevel\": \"JAVA_8\"\n}"
+    }
+  },
+  {
+    "jar": "Armourers-Workshop-1.7.10-0.48.5.jar",
+    "sha256": "d87c67ec7ac7adf910176e2b927ce572a79602b4bc25d46bcbe88744d670f0fc",
+    "class_major_versions": {
+      "50": 689
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\n\r\n",
+      "mcmod.info": "[\n{\n  \"modid\": \"armourersWorkshop\",\n  \"name\": \"Armourer's Workshop\",\n  \"description\": \"Minecraft armour customization mod.\",\n  \"version\": \"1.7.10-0.48.5\",\n  \"mcversion\": \"1.7.10\",\n  \"url\": \"https://github.com/RiskyKen/Armourers-Workshop\",\n  \"updateUrl\": \"\",\n  \"authorList\": [\"RiskyKen\"],\n  \"credits\": \"\",\n  \"logoFile\": \"\",\n  \"screenshots\": [],\n  \"dependencies\": []\n}\n]\n"
+    }
+  },
+  {
+    "jar": "Controlling-1.7.10-1.0.0.8.jar",
+    "sha256": "233f5dac426020b9ddd8585b2a0005e632128e4fba1be75d99a356e099d7f58f",
+    "class_major_versions": {
+      "52": 13
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nImplementation-Title: inecraft_Mods_Controlling_1.7.10\r\nImplementation-Version: 1.7.10-1.0.0.8\r\nSpecification-Vendor: BlameJared\r\nSpecification-Title: controlling\r\nFMLAT: controlling_at.cfg\r\nImplementation-Timestamp: 2024-07-06T11:26:15+0000\r\nSpecification-Version: 1\r\nImplementation-Vendor: controlling\r\n\r\n",
+      "mcmod.info": "[\n  {\n    \"modid\": \"controlling\",\n    \"name\": \"Controlling\",\n    \"description\": \"Adds the ability to search for keybinds using their name in the KeyBinding menu, this allows players to easily find a key binding in the menu.\",\n    \"version\": \"1.7.10-1.0.0.8\",\n    \"mcversion\": \"1.7.10\",\n    \"url\": \"https://www.curseforge.com/minecraft/mc-mods/controlling\",\n    \"updateUrl\": \"\",\n    \"authorList\": [\"Jaredlll08\"],\n    \"credits\": \"\",\n    \"logoFile\": \"\",\n    \"screenshots\": [],\n    \"dependencies\": []\n  }\n]\n"
+    }
+  },
+  {
+    "jar": "CustomNPC-Plus-1.11.1.jar",
+    "sha256": "f429140ff7cb758ea128e4dab44a035da94be6fc367a356b47c4bb8ce37ac056",
+    "class_major_versions": {
+      "52": 3484,
+      "50": 414,
+      "49": 92
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nMixinConfigs: mixins.customnpcs.json\r\nFMLCorePluginContainsFMLMod: true\r\nFMLAT: customnpcs_at.cfg\r\nTweakClass: org.spongepowered.asm.launch.MixinTweaker\r\nForceLoadAsMod: true\r\n\r\n",
+      "mcmod.info": "{\n  \"modListVersion\": 2,\n  \"modList\": [\n    {\n      \"modid\": \"customnpcs\",\n      \"name\": \"CustomNPC+\",\n      \"description\": \"CustomNPC+ is a continuation of the Custom NPCs Mod which allows you to create NPCs with various different functionalities\",\n      \"version\": \"1.11.1\",\n      \"mcversion\": \"1.7.10\",\n      \"url\": \"https://tinyurl.com/customnpc-plus\",\n      \"updateUrl\": \"\",\n      \"authorList\": [\n        \"KAMKEEL (CNPC+)\",\n        \"Louis XII (CNPC+ Scripting)\"\n      ],\n      \"credits\": \"Noppes (CNPC), DarkSignal (AI), Foxz (Retro-Commands), PopsicleNate (Textures), Goodbird (CustomModel), Hussar [Scroll Window/Packets]\",\n      \"logoFile\": \"assets/customnpcs/textures/gui/logo.png\",\n      \"screenshots\": [],\n      \"parent\": \"\",\n      \"requiredMods\": [],\n      \"dependencies\": [],\n      \"dependants\": [],\n      \"useDependencyInformation\": false\n    }\n  ]\n}\n",
+      "mixins.customnpcs.json": "{\n  \"required\": true,\n  \"minVersion\": \"0.7.11\",\n  \"package\": \"noppes.npcs.mixin\",\n  \"plugin\": \"noppes.npcs.mixin.CustomNPCsMixinPlugin\",\n  \"refmap\": \"mixins.customnpcs.refmap.json\",\n  \"target\": \"@env(DEFAULT)\",\n  \"compatibilityLevel\": \"JAVA_8\",\n  \"mixins\": [],\n  \"client\": [],\n  \"server\": []\n}\n"
+    }
+  },
+  {
+    "jar": "DBCAdditions-1.74.jar",
+    "sha256": "7efb01a38295569a5dd0cfbb7d568a66356ec3e0e7c2948e8e199c9f94741ca7",
+    "class_major_versions": {
+      "52": 130
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nMixinConfigs: mixins.dbcadditions.json\r\nFMLCorePluginContainsFMLMod: true\r\nTweakClass: org.spongepowered.asm.launch.MixinTweaker\r\nForceLoadAsMod: true\r\n\r\n",
+      "mcmod.info": "[\n{\n  \"modid\": \"dbcadditions\",\n  \"name\": \"Dragon Block C Additions\",\n  \"description\": \"Just stuff for Dragon Block C\",\n  \"version\": \"1.74\",\n  \"mcversion\": \"1.7.10\",\n  \"url\": \"\",\n  \"updateUrl\": \"\",\n  \"authorList\": [\"enzp912\"],\n  \"credits\": \"Ninjinentities-unofficial for the models and textures of various entities and Jinryuu (Ben and Tamás) for creating Dragon Block C\",\n  \"logoFile\": \"\",\n  \"screenshots\": [],\n  \"dependencies\": []\n}\n]\n",
+      "mixins.dbcadditions.json": "{\r\n    \"required\": true,\r\n    \"minVersion\": \"0.7.11\",\r\n    \"package\": \"com.tobiasmjc.dbcadditions.mixin\",\r\n    \"refmap\": \"mixins.dbcadditions.refmap.json\",\r\n    \"compatibilityLevel\": \"JAVA_8\"\r\n}",
+      "mixins.dbcadditions.late.json": "{\r\n    \"required\": true,\r\n    \"minVersion\": \"0.7.11\",\r\n    \"package\": \"com.tobiasmjc.dbcadditions.mixin\",\r\n    \"refmap\": \"mixins.dbcadditions.refmap.json\",\r\n    \"compatibilityLevel\": \"JAVA_8\"\r\n}"
+    }
+  },
+  {
+    "jar": "DragonBlockC-v1.4.85.jar",
+    "sha256": "be8c849ab107b1126018bc5b0d0d254d751129f70f3349261f1469f0c220dc9d",
+    "class_major_versions": {
+      "50": 838
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nCreated-By: 1.8.0_221 (Oracle Corporation)\r\n\r\n"
+    }
+  },
+  {
+    "jar": "entityculling-1.6.4-mc1.7.10.jar",
+    "sha256": "dd1b15c1abfe3756051987c17924810a4e433a26c29b5defdeccedced15567e7",
+    "class_major_versions": {
+      "52": 18
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nFMLCorePluginContainsFMLMod: true\r\nTweakClass: org.spongepowered.asm.launch.MixinTweaker\r\nMixinConfigs: mixins.entityculling.json\r\nForceLoadAsMod: true\r\n\r\n",
+      "mixins.entityculling.json": "{\n  \"required\": true,\n  \"minVersion\": \"0.8.5-GTNH\",\n  \"package\": \"dev.tr7zw.entityculling.mixin\",\n  \"refmap\": \"mixins.entityculling.refmap.json\",\n  \"target\": \"@env(DEFAULT)\",\n  \"compatibilityLevel\": \"JAVA_8\",\n  \"mixins\": [],\n  \"client\": [\n    \"BlockEntityRenderDispatcherMixin\",\n    \"CullableMixin\",\n    \"RenderLivingEntityAccessor\",\n    \"WorldRendererMixin\"\n  ],\n  \"server\": [],\n  \"injectors\": {\n    \"defaultRequire\": 1\n  }\n}\n",
+      "mcmod.info": "[\n  {\n    \"modid\": \"entityculling\",\n    \"name\": \"EntityCulling\",\n    \"description\": \"Using async raytracing to hide Tile-/Entities that are hidden behind solid blocks.\",\n    \"version\": \"1.6.4\",\n    \"mcversion\": \"1.7.10\",\n    \"url\": \"\",\n    \"updateUrl\": \"\",\n    \"authorList\": [\"tr7zw\"],\n    \"credits\": \"\",\n    \"logoFile\": \"\",\n    \"screenshots\": [],\n    \"dependencies\": []\n  }\n]\n"
+    }
+  },
+  {
+    "jar": "geckolib-unofficial-1.7.10-1.0.3.jar",
+    "sha256": "52c49121e40d648a2446f974c7c502efb0a473ca7fefd14a3e9d8964137e9cc7",
+    "class_major_versions": {
+      "52": 446,
+      "51": 593,
+      "50": 161
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nFMLAT: geckolib_at.cfg\r\n\r\n",
+      "mcmod.info": "[\n  {\n    \"modid\": \"geckolib3\",\n    \"name\": \"GeckoLib\",\n    \"description\": \"Geckolib is an entity animation loader for Java Edition, which lets you export bedrock animations and play them automatically.\",\n    \"version\": \"v3.0.0-master.7+604c673d58\",\n    \"mcversion\": \"extension 'minecraft' property 'mcVersion'\",\n    \"url\": \"http://berniesoftware.com/\",\n    \"updateUrl\": \"\",\n    \"authorList\": [\"Gecko, Goodbird, Eliot, AzureDoom, McHorse, DerToaster\"],\n    \"credits\": \"\",\n    \"logoFile\": \"geckolib.png\",\n    \"screenshots\": [],\n    \"dependencies\": []\n  }\n]\n"
+    }
+  },
+  {
+    "jar": "InventoryTweaks-1.59-dev-152.jar",
+    "sha256": "03aa8f9a012c2a34748648b8556c4391ca985bce744c4a589001c222f978ba04",
+    "class_major_versions": {
+      "50": 75
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nFMLCorePlugin: invtweaks.forge.asm.FMLPlugin\r\nFMLCorePluginContainsFMLMod: true\r\n\r\n",
+      "mcmod.info": "[\n{\n    \"modid\": \"inventorytweaks\",\n    \"name\": \"Inventory Tweaks\",\n    \"description\": \"Tweaks to inventory handling for ease of use, including sorting and automatic replacement of broken tools or exhausted stacks of items.\",\n    \"mcversion\": \"1.7.10\",\n    \"version\": \"1.59-dev-152-cf6e263\",\n    \"url\": \"https://github.com/Kobata/inventory-tweaks\",\n    \"updateUrl\": \"\",\n    \"authors\": [\n        \"Jimeo Wan\",\n        \"Kobata\"\n    ],\n    \"credits\": \"By Jimeo Wan, updated for Forge by Kobata\",\n    \"logoFile\": \"/invtweaks.png\",\n    \"screenshots\": [\n    ],\n    \"parent\":\"\",\n    \"dependencies\": [\n    ]\n}\n]\n"
+    }
+  },
+  {
+    "jar": "JBRA-Client-v1.6.52.jar",
+    "sha256": "541bc7a8063879e897a27acc3a5850b02a15f8e23ee086cb8d03a36a76e23634",
+    "class_major_versions": {
+      "50": 19
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nCreated-By: 1.8.0_221 (Oracle Corporation)\r\n\r\n"
+    }
+  },
+  {
+    "jar": "JFamilyC-v1.2.18.jar",
+    "sha256": "98e396b3a144c729d42d92c42eeadbcc5e1e97779f0a5ad4367a1f417cefea95",
+    "class_major_versions": {
+      "50": 22
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nCreated-By: 1.8.0_221 (Oracle Corporation)\r\n\r\n"
+    }
+  },
+  {
+    "jar": "JRMCore-v1.3.51.jar",
+    "sha256": "0614265d665b6e60456d460255c1488377cad1200ad6bd9444128d835fc28946",
+    "class_major_versions": {
+      "50": 345
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nCreated-By: 1.8.0_221 (Oracle Corporation)\r\n\r\n"
+    }
+  },
+  {
+    "jar": "JYearsC-v1.2.5.jar",
+    "sha256": "793ed8db158d945d387768d2cff8583e2651f70fe03f2931b6d3d63865185bf4",
+    "class_major_versions": {
+      "50": 18
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nCreated-By: 1.8.0_71 (Oracle Corporation)\r\n\r\n"
+    }
+  },
+  {
+    "jar": "NBArmors-3.1.jar",
+    "sha256": "6180cd7da7279fe4518120ae15c48407cceb7e799c85c2b647ff79eb3464f2f9",
+    "class_major_versions": {
+      "50": 60
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\n\r\n",
+      "mcmod.info": "[\n{\n  \"modid\": \"nbarmorsmod\",\n  \"name\": \"NBArmors Mod\",\n  \"description\": \"The mod just add more armor so powerful and with good durability, with DBC theme.\",\n  \"version\": \"3.1\",\n  \"mcversion\": \"1.7.10\",\n  \"url\": \"\",\n  \"updateUrl\": \"\",\n  \"authorList\": [\"Created by Naruke\"],\n  \"credits\": \"The Forge and FML guys, for making this example\",\n  \"logoFile\": \"pack.png\",\n  \"screenshots\": [],\n  \"dependencies\": [\"DragonBlockC\";\"JBRA-Client\";\"JRMCore\";\"JFamilyC\";\"JYearsC\"]\n}\n]\n"
+    }
+  },
+  {
+    "jar": "ninjinentities-Unofficial-1.4.4.jar",
+    "sha256": "89589689e24da894a280537d9f3305efa6b3680fbc0bbae749944eca98f85c31",
+    "class_major_versions": {
+      "52": 501
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\n\r\n",
+      "mcmod.info": "{\n\t\"modListVersion\": 2,\n\t\"modList\": [{\n\t\t\"modid\": \"ninjinentities-Unofficial\",\n\t\t\"name\": \"ninjinentities-Unofficial\",\n\t\t\"description\": \"An example mod for Minecraft 1.7.10 with Forge focused on a stable setup.\",\n\t\t\"version\": \"1.4.4\",\n\t\t\"mcversion\": \"1.7.10\",\n\t\t\"url\": \"https://github.com/SinTh0r4s/MyMod\",\n\t\t\"updateUrl\": \"\",\n\t\t\"authorList\": [\"SinTho0r4s\"],\n\t\t\"credits\": \"\",\n\t\t\"logoFile\": \"\",\n\t\t\"screenshots\": [],\n\t\t\"parent\": \"\",\n\t\t\"requiredMods\": [],\n\t\t\"dependencies\": [],\n\t\t\"dependants\": [],\n\t\t\"useDependencyInformation\": true\n\t}]\n}\n"
+    }
+  },
+  {
+    "jar": "npcgecko-1.0.jar",
+    "sha256": "7b68425b267e9410d8c3730abb062ff6f5b0eafc03fcdf36baa3d89ed1948341",
+    "class_major_versions": {
+      "52": 23
+    },
+    "resources": {
+      "META-INF/MANIFEST.MF": "Manifest-Version: 1.0\r\nMixinConfigs: mixins.npcgecko.json\r\nFMLCorePluginContainsFMLMod: true\r\nFMLAT: npcgecko_at.cfg\r\nTweakClass: org.spongepowered.asm.launch.MixinTweaker\r\nForceLoadAsMod: true\r\n\r\n",
+      "mcmod.info": "{\n\t\"modListVersion\": 2,\n\t\"modList\": [{\n\t\t\"modid\": \"npcgecko\",\n\t\t\"name\": \"CustomNPC-Plus-Gecko-Addon\",\n\t\t\"description\": \"A mod that is made for integrating GeckoLib3 and CustomNPC\",\n\t\t\"version\": \"1.0\",\n\t\t\"mcversion\": \"1.7.10\",\n\t\t\"url\": \"https://github.com/KAMKEEL/CustomNPC-Gecko-Addon\",\n\t\t\"updateUrl\": \"\",\n\t\t\"authorList\": [\"Goodbird\",\"KAMKEEL\"],\n\t\t\"credits\": \"\",\n\t\t\"logoFile\": \"\",\n\t\t\"screenshots\": [],\n\t\t\"parent\": \"\",\n\t\t\"requiredMods\": [],\n\t\t\"dependencies\": [],\n\t\t\"dependants\": [],\n\t\t\"useDependencyInformation\": false\n\t}]\n}\n",
+      "mixins.npcgecko.json": "{\n  \"required\": true,\n  \"minVersion\": \"0.7.11\",\n  \"package\": \"com.goodbird.npcgecko.mixin.impl\",\n  \"refmap\": \"mixins.cnpcplusgecko.refmap.json\",\n  \"target\": \"@env(DEFAULT)\",\n  \"compatibilityLevel\": \"JAVA_8\",\n  \"mixins\": [\n    \"MixinDataDisplay\",\n    \"MixinGeckoAddon\"\n  ],\n  \"client\": [\n    \"MixinGeckoAddonClient\"\n  ],\n  \"server\": []\n}\n"
+    }
+  }
+]

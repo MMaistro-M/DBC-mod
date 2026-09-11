@@ -1,0 +1,15 @@
+Summary for C:\Users\Matheus Maistro\Downloads\mods_mine\Armourers-Workshop-1.7.10-0.48.5.jar
+Decompiled with CFR 0.152
+
+
+riskyken.armourersWorkshop.utils.SkinIOUtils
+----------------------------
+
+saveSkinToFile(java.io.File riskyken.armourersWorkshop.common.skin.data.Skin )
+  Loose catch block
+loadSkinFromFile(java.io.File )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 4 blocks at once
+loadSkinFromStream(java.io.InputStream )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+getSkinTypeNameFromFile(java.io.File )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once

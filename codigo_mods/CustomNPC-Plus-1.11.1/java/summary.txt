@@ -1,0 +1,38 @@
+Summary for C:\Users\Matheus Maistro\Downloads\mods_mine\CustomNPC-Plus-1.11.1.jar
+Decompiled with CFR 0.152
+
+
+noppes.npcs.client.gui.util.script.interpreter.ScriptDocument
+----------------------------
+
+parseGlobalFields()
+  Could not resolve type clashes
+
+
+noppes.npcs.ScriptForgeEventHandler
+----------------------------
+
+registerForgeEvents()
+  Unable to fully structure code
+
+
+org.codehaus.janino.UnitCompiler
+----------------------------
+
+compile2(org.codehaus.janino.Java$SwitchStatement )
+  Could not resolve type clashes
+  Unable to fully structure code
+
+
+org.spongepowered.asm.mixin.refmap.ReferenceMapper
+----------------------------
+
+read(java.lang.String )
+  Loose catch block
+
+
+org.spongepowered.asm.lib.Type
+----------------------------
+
+getReturnType(java.lang.String )
+  Unable to fully structure code

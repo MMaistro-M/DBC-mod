@@ -1,0 +1,81 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  cpw.mods.fml.relauncher.Side
+ *  cpw.mods.fml.relauncher.SideOnly
+ *  io.netty.buffer.ByteBuf
+ *  net.minecraft.entity.player.EntityPlayer
+ *  net.minecraft.entity.player.EntityPlayerMP
+ */
+package kamkeel.npcs.network.packets.request;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import io.netty.buffer.ByteBuf;
+import java.io.IOException;
+import kamkeel.npcs.network.AbstractPacket;
+import kamkeel.npcs.network.PacketChannel;
+import kamkeel.npcs.network.PacketHandler;
+import kamkeel.npcs.network.PacketUtil;
+import kamkeel.npcs.network.enums.EnumItemPacketType;
+import kamkeel.npcs.network.enums.EnumRequestPacket;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import noppes.npcs.NoppesUtilServer;
+import noppes.npcs.constants.EnumGuiType;
+
+public final class GuiRequestPacket
+extends AbstractPacket {
+    public static String packetName = "Request|Gui";
+    private int guiIndex;
+    private int posX;
+    private int posY;
+    private int posZ;
+
+    public GuiRequestPacket(int guiIndex, int posX, int posY, int posZ) {
+        this.guiIndex = guiIndex;
+        this.posX = posX;
+        this.posY = posY;
+        this.posZ = posZ;
+    }
+
+    public GuiRequestPacket() {
+    }
+
+    @Override
+    public Enum getType() {
+        return EnumRequestPacket.Gui;
+    }
+
+    @Override
+    public PacketChannel getChannel() {
+        return PacketHandler.REQUEST_PACKET;
+    }
+
+    @Override
+    @SideOnly(value=Side.CLIENT)
+    public void sendData(ByteBuf out) throws IOException {
+        out.writeInt(this.guiIndex);
+        out.writeInt(this.posX);
+        out.writeInt(this.posY);
+        out.writeInt(this.posZ);
+    }
+
+    @Override
+    public void receiveData(ByteBuf in, EntityPlayer player) throws IOException {
+        if (!(player instanceof EntityPlayerMP)) {
+            return;
+        }
+        if (!PacketUtil.verifyItemPacket(packetName, player, EnumItemPacketType.WAND, EnumItemPacketType.CLONER, EnumItemPacketType.BRUSH, EnumItemPacketType.MAGIC_BOOK)) {
+            return;
+        }
+        int index = in.readInt();
+        int x = in.readInt();
+        int y = in.readInt();
+        int z = in.readInt();
+        EnumGuiType gui = EnumGuiType.values()[index];
+        NoppesUtilServer.sendOpenGui(player, gui, this.npc, x, y, z);
+    }
+}
+

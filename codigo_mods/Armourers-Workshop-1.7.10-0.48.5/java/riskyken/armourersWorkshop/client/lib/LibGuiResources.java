@@ -1,0 +1,29 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  cpw.mods.fml.relauncher.Side
+ *  cpw.mods.fml.relauncher.SideOnly
+ */
+package riskyken.armourersWorkshop.client.lib;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+@SideOnly(value=Side.CLIENT)
+public class LibGuiResources {
+    private static final String PREFIX_RESOURCE = "armourersWorkshop".toLowerCase() + ":textures/gui/";
+    public static final String MANNEQUIN = PREFIX_RESOURCE + "mannequin.png";
+    public static final String MANNEQUIN_TABS = PREFIX_RESOURCE + "mannequinTabs.png";
+    public static final String ARMOURER = PREFIX_RESOURCE + "armourer.png";
+    public static final String ARMOURER_TABS = PREFIX_RESOURCE + "armourerTabs.png";
+    public static final String WARDROBE_1 = PREFIX_RESOURCE + "wardrobe-1.png";
+    public static final String WARDROBE_2 = PREFIX_RESOURCE + "wardrobe-2.png";
+    public static final String WARDROBE_TABS = PREFIX_RESOURCE + "wardrobe-tabs.png";
+    public static final String HOLOGRAM_PROJECTOR = PREFIX_RESOURCE + "hologramProjector.png";
+    public static final String HOLOGRAM_PROJECTOR_TABS = PREFIX_RESOURCE + "hologramProjectorTabs.png";
+    public static final String SKINNABLE = PREFIX_RESOURCE + "skinnable.png";
+    public static final String SKIN_PREVIEW = PREFIX_RESOURCE + "skinPreview.png";
+    public static final String OUTFIT_MAKER = PREFIX_RESOURCE + "outfit-maker.png";
+}
+

@@ -1,0 +1,13 @@
+{
+  "mod": "npcgecko-1.0.jar",
+  "classes_no_jar": 23,
+  "arquivos_java_recuperados": 22,
+  "fontes_java_embutidas": 0,
+  "codigo_saida_cfr": 0,
+  "segundos": 2.2,
+  "sha256_original": "7b68425b267e9410d8c3730abb062ff6f5b0eafc03fcdf36baa3d89ed1948341",
+  "jar_preservado": true,
+  "arquivos_com_metodos_nao_recuperados": [],
+  "classes_principais": 22,
+  "classes_principais_sem_fonte": []
+}

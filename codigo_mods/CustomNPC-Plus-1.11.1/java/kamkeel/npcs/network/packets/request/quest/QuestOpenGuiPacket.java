@@ -1,0 +1,80 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  cpw.mods.fml.relauncher.Side
+ *  cpw.mods.fml.relauncher.SideOnly
+ *  io.netty.buffer.ByteBuf
+ *  net.minecraft.entity.player.EntityPlayer
+ *  net.minecraft.entity.player.EntityPlayerMP
+ *  net.minecraft.nbt.NBTTagCompound
+ */
+package kamkeel.npcs.network.packets.request.quest;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import io.netty.buffer.ByteBuf;
+import java.io.IOException;
+import kamkeel.npcs.network.AbstractPacket;
+import kamkeel.npcs.network.PacketChannel;
+import kamkeel.npcs.network.PacketHandler;
+import kamkeel.npcs.network.PacketUtil;
+import kamkeel.npcs.network.enums.EnumItemPacketType;
+import kamkeel.npcs.network.enums.EnumRequestPacket;
+import kamkeel.npcs.util.ByteBufUtils;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.nbt.NBTTagCompound;
+import noppes.npcs.CustomNpcs;
+import noppes.npcs.NoppesUtilServer;
+import noppes.npcs.constants.EnumGuiType;
+import noppes.npcs.controllers.data.Quest;
+
+public final class QuestOpenGuiPacket
+extends AbstractPacket {
+    public static String packetName = "Request|QuestOpenGui";
+    private EnumGuiType guiType;
+    private NBTTagCompound questNBT;
+
+    public QuestOpenGuiPacket(EnumGuiType guiType, NBTTagCompound questNBT) {
+        this.guiType = guiType;
+        this.questNBT = questNBT;
+    }
+
+    public QuestOpenGuiPacket() {
+    }
+
+    @Override
+    public Enum getType() {
+        return EnumRequestPacket.QuestOpenGui;
+    }
+
+    @Override
+    public PacketChannel getChannel() {
+        return PacketHandler.REQUEST_PACKET;
+    }
+
+    @Override
+    @SideOnly(value=Side.CLIENT)
+    public void sendData(ByteBuf out) throws IOException {
+        out.writeInt(this.guiType.ordinal());
+        ByteBufUtils.writeNBT(out, this.questNBT);
+    }
+
+    @Override
+    public void receiveData(ByteBuf in, EntityPlayer player) throws IOException {
+        if (!(player instanceof EntityPlayerMP)) {
+            return;
+        }
+        if (!PacketUtil.verifyItemPacket(packetName, EnumItemPacketType.WAND, player)) {
+            return;
+        }
+        int gui = in.readInt();
+        NBTTagCompound compound = ByteBufUtils.readNBT(in);
+        Quest quest = new Quest();
+        quest.readNBT(compound);
+        NoppesUtilServer.setEditingQuest(player, quest);
+        player.openGui((Object)CustomNpcs.instance, gui, player.field_70170_p, 0, 0, 0);
+    }
+}
+

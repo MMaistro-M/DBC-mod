@@ -1,0 +1,54 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.relocated.fasterxml.jackson.databind.ser.impl;
+
+import com.relocated.fasterxml.jackson.annotation.ObjectIdGenerator;
+import com.relocated.fasterxml.jackson.core.JsonGenerator;
+import com.relocated.fasterxml.jackson.core.SerializableString;
+import com.relocated.fasterxml.jackson.databind.SerializerProvider;
+import com.relocated.fasterxml.jackson.databind.ser.impl.ObjectIdWriter;
+import java.io.IOException;
+
+public final class WritableObjectId {
+    public final ObjectIdGenerator<?> generator;
+    public Object id;
+    protected boolean idWritten = false;
+
+    public WritableObjectId(ObjectIdGenerator<?> generator) {
+        this.generator = generator;
+    }
+
+    public boolean writeAsId(JsonGenerator gen, SerializerProvider provider, ObjectIdWriter w) throws IOException {
+        if (this.id != null && (this.idWritten || w.alwaysAsId)) {
+            if (gen.canWriteObjectId()) {
+                gen.writeObjectRef(String.valueOf(this.id));
+            } else {
+                w.serializer.serialize(this.id, gen, provider);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public Object generateId(Object forPojo) {
+        if (this.id == null) {
+            this.id = this.generator.generateId(forPojo);
+        }
+        return this.id;
+    }
+
+    public void writeAsField(JsonGenerator gen, SerializerProvider provider, ObjectIdWriter w) throws IOException {
+        this.idWritten = true;
+        if (gen.canWriteObjectId()) {
+            gen.writeObjectId(String.valueOf(this.id));
+            return;
+        }
+        SerializableString name = w.propertyName;
+        if (name != null) {
+            gen.writeFieldName(name);
+            w.serializer.serialize(this.id, gen, provider);
+        }
+    }
+}
+

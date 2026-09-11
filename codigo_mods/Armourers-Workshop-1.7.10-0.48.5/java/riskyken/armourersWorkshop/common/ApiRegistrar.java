@@ -1,0 +1,75 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.mojang.authlib.GameProfile
+ *  net.minecraft.entity.Entity
+ *  net.minecraft.tileentity.TileEntity
+ *  org.apache.logging.log4j.Level
+ */
+package riskyken.armourersWorkshop.common;
+
+import com.mojang.authlib.GameProfile;
+import java.util.LinkedHashMap;
+import net.minecraft.entity.Entity;
+import net.minecraft.tileentity.TileEntity;
+import org.apache.logging.log4j.Level;
+import riskyken.armourersWorkshop.ArmourersWorkshop;
+import riskyken.armourersWorkshop.api.client.IArmourersClientManager;
+import riskyken.armourersWorkshop.api.common.IArmourersCommonManager;
+import riskyken.armourersWorkshop.api.common.skin.type.ISkinPartType;
+import riskyken.armourersWorkshop.api.common.skin.type.ISkinType;
+import riskyken.armourersWorkshop.client.handler.EquipmentRenderHandler;
+import riskyken.armourersWorkshop.common.config.ConfigHandler;
+import riskyken.armourersWorkshop.common.handler.SkinDataHandler;
+import riskyken.armourersWorkshop.common.skin.type.SkinTypeRegistry;
+import riskyken.armourersWorkshop.common.wardrobe.entity.EntitySkinHandler;
+import riskyken.armourersWorkshop.utils.ModLogger;
+
+public final class ApiRegistrar {
+    public static final ApiRegistrar INSTANCE = new ApiRegistrar();
+    public LinkedHashMap<String, IArmourersCommonManager> equipmentDataManagers = new LinkedHashMap();
+    public LinkedHashMap<String, IArmourersClientManager> equipmentRenderManagers = new LinkedHashMap();
+
+    public void addApiRequest(String modName, String className) {
+        if (!ConfigHandler.allowModsToRegisterWithAPI) {
+            return;
+        }
+        try {
+            Class<?> c = Class.forName(className);
+            Object classObject = c.newInstance();
+            if (classObject instanceof IArmourersCommonManager) {
+                ModLogger.log(String.format("Loading %s API addon for %s", "data manager", modName));
+                this.equipmentDataManagers.put(modName, (IArmourersCommonManager)classObject);
+                ((IArmourersCommonManager)classObject).onLoad(SkinDataHandler.INSTANCE, SkinTypeRegistry.INSTANCE, EntitySkinHandler.INSTANCE);
+            }
+            if (classObject instanceof IArmourersClientManager) {
+                if (ArmourersWorkshop.isDedicated()) {
+                    ModLogger.log(Level.ERROR, String.format("Mod %s is registering a render manager on the server side. This is very bad!", modName));
+                }
+                ModLogger.log(String.format("Loading %s API addon for %s", "render manager", modName));
+                this.equipmentRenderManagers.put(modName, (IArmourersClientManager)classObject);
+                ((IArmourersClientManager)classObject).onLoad(EquipmentRenderHandler.INSTANCE);
+            }
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (InstantiationException e) {
+            e.printStackTrace();
+        }
+        catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void onRenderEquipment(Entity entity, ISkinType skinType) {
+    }
+
+    public void onRenderEquipmentPart(Entity entity, ISkinPartType skinPart) {
+    }
+
+    public void onRenderMannequin(TileEntity TileEntity2, GameProfile gameProfile) {
+    }
+}
+

@@ -1,0 +1,272 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.minecraft.client.model.ModelBase
+ *  net.minecraft.client.model.ModelBox
+ *  net.minecraft.client.model.ModelRenderer
+ *  net.minecraft.entity.Entity
+ *  net.minecraft.util.MathHelper
+ *  org.lwjgl.opengl.GL11
+ */
+package hedaox.ninjinentities.models;
+
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelBox;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
+import org.lwjgl.opengl.GL11;
+
+public class Modelglnl
+extends ModelBase {
+    private final ModelRenderer Head;
+    private final ModelRenderer Body;
+    private final ModelRenderer LArm;
+    private final ModelRenderer RArm;
+    private final ModelRenderer LLeg;
+    private final ModelRenderer RLeg;
+
+    public Modelglnl(float _scale) {
+        this.field_78090_t = 128;
+        this.field_78089_u = 64;
+        this.Head = new ModelRenderer((ModelBase)this);
+        this.Head.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Head.field_78804_l.add(new ModelBox(this.Head, 0, 0, -4.0f, -8.0f, -4.0f, 8, 8, 8, 0.0f));
+        ModelRenderer SSJ3 = new ModelRenderer((ModelBase)this);
+        SSJ3.func_78793_a(0.0f, -8.0f, 1.0f);
+        this.Head.func_78792_a(SSJ3);
+        this.setRotationAngle(SSJ3, 0.0436f, 0.0f, 0.0f);
+        ModelRenderer hair24 = new ModelRenderer((ModelBase)this);
+        hair24.func_78793_a(2.0f, -7.0f, 0.0f);
+        SSJ3.func_78792_a(hair24);
+        this.setRotationAngle(hair24, 0.0f, 0.0873f, 0.2618f);
+        hair24.field_78804_l.add(new ModelBox(hair24, 47, 2, 3.1514f, 4.3781f, -3.167f, 2, 6, 3, 0.0f));
+        ModelRenderer hair25 = new ModelRenderer((ModelBase)this);
+        hair25.func_78793_a(-5.0f, -6.0f, -2.0f);
+        SSJ3.func_78792_a(hair25);
+        this.setRotationAngle(hair25, 2.7925f, 0.0873f, -0.6109f);
+        hair25.field_78804_l.add(new ModelBox(hair25, 47, 2, -4.5394f, -10.3785f, -4.7561f, 3, 6, 3, 0.0f));
+        ModelRenderer hair26 = new ModelRenderer((ModelBase)this);
+        hair26.func_78793_a(-5.0f, -7.0f, 4.0f);
+        SSJ3.func_78792_a(hair26);
+        this.setRotationAngle(hair26, -1.2218f, 0.0f, -0.4363f);
+        hair26.field_78804_l.add(new ModelBox(hair26, 47, 2, -1.5676f, 0.679f, 4.469f, 3, 6, 3, 0.0f));
+        ModelRenderer hair27 = new ModelRenderer((ModelBase)this);
+        hair27.func_78793_a(-1.0f, -10.0f, 4.0f);
+        SSJ3.func_78792_a(hair27);
+        this.setRotationAngle(hair27, -0.8727f, 0.0f, 0.5236f);
+        hair27.field_78804_l.add(new ModelBox(hair27, 47, 2, 5.8061f, 3.2744f, -0.0199f, 3, 5, 5, 0.0f));
+        ModelRenderer hair28 = new ModelRenderer((ModelBase)this);
+        hair28.func_78793_a(-5.0f, -7.0f, 2.0f);
+        SSJ3.func_78792_a(hair28);
+        this.setRotationAngle(hair28, 2.7925f, 0.0873f, -0.4363f);
+        hair28.field_78804_l.add(new ModelBox(hair28, 47, 2, -3.337f, -10.9973f, -5.0933f, 3, 6, 3, 0.0f));
+        ModelRenderer hair29 = new ModelRenderer((ModelBase)this);
+        hair29.func_78793_a(3.0f, -8.0f, 2.0f);
+        SSJ3.func_78792_a(hair29);
+        this.setRotationAngle(hair29, 2.7925f, 0.0873f, 0.5236f);
+        hair29.field_78804_l.add(new ModelBox(hair29, 47, 2, 4.0086f, -10.4748f, -5.5873f, 3, 6, 3, 0.0f));
+        ModelRenderer hair30 = new ModelRenderer((ModelBase)this);
+        hair30.func_78793_a(0.0f, -2.0f, 6.0f);
+        SSJ3.func_78792_a(hair30);
+        this.setRotationAngle(hair30, -2.7053f, 0.3491f, 0.0f);
+        hair30.field_78804_l.add(new ModelBox(hair30, 45, 2, 1.1165f, -8.7341f, 3.5159f, 3, 5, 3, 0.0f));
+        ModelRenderer hair31 = new ModelRenderer((ModelBase)this);
+        hair31.func_78793_a(-4.0f, -2.0f, 4.0f);
+        SSJ3.func_78792_a(hair31);
+        this.setRotationAngle(hair31, -2.7053f, -0.2618f, 0.0f);
+        hair31.field_78804_l.add(new ModelBox(hair31, 44, 2, 0.907f, -7.7303f, 2.5242f, 3, 5, 3, 0.0f));
+        ModelRenderer hair32 = new ModelRenderer((ModelBase)this);
+        hair32.func_78793_a(-4.0f, -2.0f, 4.0f);
+        SSJ3.func_78792_a(hair32);
+        this.setRotationAngle(hair32, -2.7053f, 0.0f, 0.0f);
+        hair32.field_78804_l.add(new ModelBox(hair32, 44, 2, 1.9972f, -6.7253f, -0.465f, 4, 4, 3, 0.0f));
+        ModelRenderer hair34 = new ModelRenderer((ModelBase)this);
+        hair34.func_78793_a(-4.0f, -2.0f, 4.0f);
+        SSJ3.func_78792_a(hair34);
+        this.setRotationAngle(hair34, -2.7053f, 0.1745f, -0.2618f);
+        hair34.field_78804_l.add(new ModelBox(hair34, 44, 2, 3.0206f, -10.3289f, 1.7406f, 4, 5, 3, 0.0f));
+        ModelRenderer hair35 = new ModelRenderer((ModelBase)this);
+        hair35.func_78793_a(4.0f, -2.0f, 4.0f);
+        SSJ3.func_78792_a(hair35);
+        this.setRotationAngle(hair35, -2.7053f, -0.1745f, 0.5236f);
+        hair35.field_78804_l.add(new ModelBox(hair35, 44, 2, -4.1222f, -9.4638f, 1.7065f, 3, 5, 3, 0.0f));
+        ModelRenderer hair36 = new ModelRenderer((ModelBase)this);
+        hair36.func_78793_a(4.0f, -2.0f, 4.0f);
+        SSJ3.func_78792_a(hair36);
+        this.setRotationAngle(hair36, -2.7053f, -0.1745f, 0.9599f);
+        hair36.field_78804_l.add(new ModelBox(hair36, 44, 2, -2.6103f, -9.1585f, 4.1202f, 3, 4, 3, 0.0f));
+        ModelRenderer hair37 = new ModelRenderer((ModelBase)this);
+        hair37.func_78793_a(-4.0f, -2.0f, 4.0f);
+        SSJ3.func_78792_a(hair37);
+        this.setRotationAngle(hair37, -2.7053f, 0.1745f, -0.9599f);
+        hair37.field_78804_l.add(new ModelBox(hair37, 44, 2, -0.3897f, -9.1585f, 4.1202f, 3, 4, 3, 0.0f));
+        ModelRenderer hair1 = new ModelRenderer((ModelBase)this);
+        hair1.func_78793_a(-2.1f, -0.7f, 0.5f);
+        SSJ3.func_78792_a(hair1);
+        this.setRotationAngle(hair1, -0.3054f, 0.0f, -0.3491f);
+        hair1.field_78804_l.add(new ModelBox(hair1, 42, 4, -2.4f, -0.6987f, -3.9075f, 4, 3, 4, 0.0f));
+        ModelRenderer hair20 = new ModelRenderer((ModelBase)this);
+        hair20.func_78793_a(1.3892f, -2.2882f, 3.4164f);
+        SSJ3.func_78792_a(hair20);
+        this.setRotationAngle(hair20, -1.2217f, 0.0f, -0.0873f);
+        hair20.field_78804_l.add(new ModelBox(hair20, 40, 4, -1.0f, -0.6206f, -1.684f, 2, 5, 2, 0.0f));
+        ModelRenderer hair2 = new ModelRenderer((ModelBase)this);
+        hair2.func_78793_a(0.5f, -0.5f, -1.0f);
+        SSJ3.func_78792_a(hair2);
+        this.setRotationAngle(hair2, -0.4363f, 0.0f, 0.0436f);
+        hair2.field_78804_l.add(new ModelBox(hair2, 42, 4, -1.5f, -0.6132f, -3.1126f, 4, 3, 2, 0.0f));
+        ModelRenderer hair8 = new ModelRenderer((ModelBase)this);
+        hair8.func_78793_a(5.0f, 1.0f, -1.0f);
+        SSJ3.func_78792_a(hair8);
+        this.setRotationAngle(hair8, -0.48f, 0.0f, 0.3927f);
+        hair8.field_78804_l.add(new ModelBox(hair8, 47, 3, -4.3f, -0.2764f, -2.2006f, 4, 4, 3, 0.0f));
+        ModelRenderer bone4 = new ModelRenderer((ModelBase)this);
+        bone4.func_78793_a(-6.0f, -1.6f, 2.5f);
+        hair8.func_78792_a(bone4);
+        this.setRotationAngle(bone4, -0.3491f, 0.0873f, -0.7854f);
+        bone4.field_78804_l.add(new ModelBox(bone4, 43, 5, -3.7459f, -0.9408f, -2.8677f, 4, 5, 3, 0.0f));
+        ModelRenderer bone19 = new ModelRenderer((ModelBase)this);
+        bone19.func_78793_a(-6.3827f, -3.343f, 3.8474f);
+        hair8.func_78792_a(bone19);
+        this.setRotationAngle(bone19, -0.3491f, 0.3491f, -0.6545f);
+        bone19.field_78804_l.add(new ModelBox(bone19, 43, 5, -2.6388f, -0.8539f, -2.8734f, 3, 5, 3, 0.0f));
+        ModelRenderer hair4 = new ModelRenderer((ModelBase)this);
+        hair4.func_78793_a(1.0f, -2.0f, 0.0f);
+        SSJ3.func_78792_a(hair4);
+        this.setRotationAngle(hair4, -0.5236f, 0.0f, 0.0f);
+        hair4.field_78804_l.add(new ModelBox(hair4, 48, 4, -1.5f, -1.0f, -2.032f, 3, 3, 3, 0.0f));
+        ModelRenderer hair5 = new ModelRenderer((ModelBase)this);
+        hair5.func_78793_a(1.0f, -2.0f, 0.0f);
+        SSJ3.func_78792_a(hair5);
+        this.setRotationAngle(hair5, -0.6545f, 0.0f, 0.0f);
+        hair5.field_78804_l.add(new ModelBox(hair5, 40, 4, -1.0f, -3.1485f, -1.2207f, 2, 3, 2, 0.0f));
+        ModelRenderer hair6 = new ModelRenderer((ModelBase)this);
+        hair6.func_78793_a(5.0f, 0.0f, -2.0f);
+        SSJ3.func_78792_a(hair6);
+        this.setRotationAngle(hair6, -0.4799f, 0.0f, 0.1745f);
+        hair6.field_78804_l.add(new ModelBox(hair6, 48, 2, -4.4f, -2.0766f, -0.2741f, 4, 3, 3, 0.0f));
+        ModelRenderer hair7 = new ModelRenderer((ModelBase)this);
+        hair7.func_78793_a(1.0f, -1.5f, 3.5f);
+        SSJ3.func_78792_a(hair7);
+        this.setRotationAngle(hair7, -0.0436f, 0.0f, 0.0f);
+        hair7.field_78804_l.add(new ModelBox(hair7, 42, 3, -2.2f, -1.6128f, -3.5981f, 4, 4, 3, 0.0f));
+        ModelRenderer hair9 = new ModelRenderer((ModelBase)this);
+        hair9.func_78793_a(2.2f, 0.0f, 2.6f);
+        SSJ3.func_78792_a(hair9);
+        this.setRotationAngle(hair9, -0.672f, 0.0f, 0.2182f);
+        hair9.field_78804_l.add(new ModelBox(hair9, 50, 2, -1.7f, -1.1549f, -3.6652f, 3, 6, 3, 0.0f));
+        ModelRenderer hair13 = new ModelRenderer((ModelBase)this);
+        hair13.func_78793_a(0.0f, 1.5f, 5.0f);
+        SSJ3.func_78792_a(hair13);
+        this.setRotationAngle(hair13, -0.3927f, 0.0f, 0.0f);
+        hair13.field_78804_l.add(new ModelBox(hair13, 41, 7, -2.0f, -0.7346f, -3.1578f, 4, 4, 2, 0.0f));
+        ModelRenderer hair14 = new ModelRenderer((ModelBase)this);
+        hair14.func_78793_a(3.5f, -0.5f, 4.5f);
+        SSJ3.func_78792_a(hair14);
+        this.setRotationAngle(hair14, -0.2182f, 0.1187f, 0.0f);
+        hair14.field_78804_l.add(new ModelBox(hair14, 49, 5, -3.0632f, 0.4299f, -3.9888f, 4, 5, 3, 0.0f));
+        ModelRenderer hair15 = new ModelRenderer((ModelBase)this);
+        hair15.func_78793_a(-3.0f, 0.0f, 3.5f);
+        SSJ3.func_78792_a(hair15);
+        this.setRotationAngle(hair15, -0.2182f, -0.1833f, 0.0f);
+        hair15.field_78804_l.add(new ModelBox(hair15, 49, 5, -1.3646f, -1.5743f, -3.3199f, 4, 6, 3, 0.0f));
+        ModelRenderer hair16 = new ModelRenderer((ModelBase)this);
+        hair16.func_78793_a(-3.0f, 0.0f, 3.5f);
+        SSJ3.func_78792_a(hair16);
+        this.setRotationAngle(hair16, -0.2182f, -0.1833f, 0.0f);
+        hair16.field_78804_l.add(new ModelBox(hair16, 49, 5, -0.2646f, -3.5269f, -3.7528f, 3, 4, 3, 0.0f));
+        ModelRenderer hair17 = new ModelRenderer((ModelBase)this);
+        hair17.func_78793_a(1.0f, -2.0f, 0.0f);
+        SSJ3.func_78792_a(hair17);
+        this.setRotationAngle(hair17, -0.5236f, 0.0f, -0.0873f);
+        ModelRenderer hair17_r1 = new ModelRenderer((ModelBase)this);
+        hair17_r1.func_78793_a(-1.5f, -3.2902f, 3.2f);
+        hair17.func_78792_a(hair17_r1);
+        this.setRotationAngle(hair17_r1, -0.4363f, 0.0f, 0.0f);
+        hair17_r1.field_78804_l.add(new ModelBox(hair17_r1, 40, 4, -1.0f, -0.8617f, -2.1472f, 2, 5, 2, 0.0f));
+        ModelRenderer hair18 = new ModelRenderer((ModelBase)this);
+        hair18.func_78793_a(1.0f, -2.0f, 0.0f);
+        SSJ3.func_78792_a(hair18);
+        this.setRotationAngle(hair18, -2.0071f, 0.0f, 0.0f);
+        hair18.field_78804_l.add(new ModelBox(hair18, 48, 4, -1.5f, 0.8126f, -0.4548f, 3, 2, 3, 0.0f));
+        ModelRenderer hair19 = new ModelRenderer((ModelBase)this);
+        hair19.func_78793_a(-1.2151f, -2.3399f, 0.2173f);
+        SSJ3.func_78792_a(hair19);
+        this.setRotationAngle(hair19, -0.2753f, 0.5737f, 0.1595f);
+        hair19.field_78804_l.add(new ModelBox(hair19, 40, 4, 0.0855f, -1.0434f, -2.6165f, 2, 3, 2, 0.0f));
+        ModelRenderer bone1 = new ModelRenderer((ModelBase)this);
+        bone1.func_78793_a(-0.3171f, -1.3105f, -3.52f);
+        SSJ3.func_78792_a(bone1);
+        this.setRotationAngle(bone1, -0.7941f, 0.476f, 0.6803f);
+        ModelRenderer bone2_r1 = new ModelRenderer((ModelBase)this);
+        bone2_r1.func_78793_a(0.3171f, 33.3105f, 2.52f);
+        bone1.func_78792_a(bone2_r1);
+        this.setRotationAngle(bone2_r1, 0.0f, -0.0436f, 0.0f);
+        ModelRenderer bone3 = new ModelRenderer((ModelBase)this);
+        bone3.func_78793_a(1.7141f, -1.4245f, -5.1921f);
+        SSJ3.func_78792_a(bone3);
+        this.setRotationAngle(bone3, -0.7778f, -0.4431f, 1.5161f);
+        ModelRenderer bone3_r1 = new ModelRenderer((ModelBase)this);
+        bone3_r1.func_78793_a(-0.6141f, 0.0f, 1.3921f);
+        bone3.func_78792_a(bone3_r1);
+        this.setRotationAngle(bone3_r1, 0.0f, 0.6109f, 0.0f);
+        ModelRenderer bone5 = new ModelRenderer((ModelBase)this);
+        bone5.func_78793_a(0.5284f, -2.1338f, -4.9196f);
+        SSJ3.func_78792_a(bone5);
+        this.setRotationAngle(bone5, -0.8459f, 0.5578f, 0.5784f);
+        ModelRenderer bone7_r1 = new ModelRenderer((ModelBase)this);
+        bone7_r1.func_78793_a(2.2785f, -0.4162f, -2.1804f);
+        bone5.func_78792_a(bone7_r1);
+        this.setRotationAngle(bone7_r1, 0.0f, 0.2182f, 0.0f);
+        this.Body = new ModelRenderer((ModelBase)this);
+        this.Body.func_78793_a(0.2f, 5.4f, -0.2f);
+        this.Body.field_78804_l.add(new ModelBox(this.Body, 16, 16, -4.2f, -5.4f, -1.8f, 8, 12, 4, 0.0f));
+        this.LArm = new ModelRenderer((ModelBase)this);
+        this.LArm.func_78793_a(4.8f, -3.4f, 0.2f);
+        this.Body.func_78792_a(this.LArm);
+        this.LArm.field_78809_i = true;
+        this.LArm.field_78804_l.add(new ModelBox(this.LArm, 40, 16, -1.0f, -2.0f, -2.0f, 4, 12, 4, 0.0f));
+        this.RArm = new ModelRenderer((ModelBase)this);
+        this.RArm.func_78793_a(-5.2f, -3.4f, 0.2f);
+        this.Body.func_78792_a(this.RArm);
+        this.RArm.field_78804_l.add(new ModelBox(this.RArm, 40, 16, -3.0f, -2.0f, -2.0f, 4, 12, 4, 0.0f));
+        this.LLeg = new ModelRenderer((ModelBase)this);
+        this.LLeg.func_78793_a(0.8f, 6.6f, 0.2f);
+        this.Body.func_78792_a(this.LLeg);
+        this.LLeg.field_78809_i = true;
+        this.LLeg.field_78804_l.add(new ModelBox(this.LLeg, 0, 16, -1.0f, 0.0f, -2.0f, 4, 12, 4, 0.0f));
+        this.RLeg = new ModelRenderer((ModelBase)this);
+        this.RLeg.func_78793_a(-2.2f, 6.6f, 0.2f);
+        this.Body.func_78792_a(this.RLeg);
+        this.RLeg.field_78804_l.add(new ModelBox(this.RLeg, 0, 16, -2.0f, 0.0f, -2.0f, 4, 12, 4, 0.0f));
+    }
+
+    public void func_78088_a(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+        GL11.glPushMatrix();
+        float scale = 1.0f;
+        GL11.glScalef((float)scale, (float)scale, (float)scale);
+        GL11.glTranslatef((float)0.0f, (float)((float)((double)-1.04f + 5.5 / (1.0 + Math.pow(scale / 0.45f, 1.88f)))), (float)0.0f);
+        this.Head.func_78785_a(f5);
+        this.Body.func_78785_a(f5);
+        GL11.glPopMatrix();
+        this.Head.field_78796_g = f3 / 57.295776f;
+        this.Head.field_78795_f = f4 / 57.295776f;
+        this.RArm.field_78795_f = MathHelper.func_76134_b((float)(f * 0.6662f + (float)Math.PI)) * 2.0f * f1 * 0.5f;
+        this.LArm.field_78795_f = MathHelper.func_76134_b((float)(f * 0.6662f)) * 2.0f * f1 * 0.5f;
+        this.RArm.field_78808_h = 0.0f;
+        this.LArm.field_78808_h = 0.0f;
+        this.RLeg.field_78795_f = MathHelper.func_76134_b((float)(f * 0.6662f)) * 1.4f * f1;
+        this.LLeg.field_78795_f = MathHelper.func_76134_b((float)(f * 0.6662f + (float)Math.PI)) * 1.4f * f1;
+        this.RLeg.field_78796_g = 0.0f;
+        this.LLeg.field_78796_g = 0.0f;
+    }
+
+    public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+        modelRenderer.field_78795_f = x;
+        modelRenderer.field_78796_g = y;
+        modelRenderer.field_78808_h = z;
+    }
+}
+

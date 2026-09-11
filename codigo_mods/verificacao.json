@@ -1,0 +1,12 @@
+{
+  "mods": 16,
+  "arquivos_java": 7723,
+  "fontes_embutidas": 37,
+  "todos_jars_preservados": true,
+  "todas_classes_principais_com_arquivo_java": true,
+  "arquivos_com_metodos_nao_recuperados": [
+    "JRMCore-v1.3.51/java/JinRyuu/JRMCore/JRMCoreGuiScreen.java"
+  ],
+  "links_locais_do_guia_validos": true,
+  "compilacao_testada": false
+}

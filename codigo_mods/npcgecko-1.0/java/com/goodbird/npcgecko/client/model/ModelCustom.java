@@ -1,0 +1,30 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.minecraft.util.ResourceLocation
+ */
+package com.goodbird.npcgecko.client.model;
+
+import com.goodbird.npcgecko.entity.EntityCustomModel;
+import net.minecraft.util.ResourceLocation;
+import software.bernie.geckolib3.model.AnimatedGeoModel;
+
+public class ModelCustom
+extends AnimatedGeoModel<EntityCustomModel> {
+    @Override
+    public ResourceLocation getAnimationFileLocation(EntityCustomModel entity) {
+        return entity.animResLoc;
+    }
+
+    @Override
+    public ResourceLocation getModelLocation(EntityCustomModel entity) {
+        return entity.modelResLoc;
+    }
+
+    @Override
+    public ResourceLocation getTextureLocation(EntityCustomModel entity) {
+        return entity.textureResLoc;
+    }
+}
+

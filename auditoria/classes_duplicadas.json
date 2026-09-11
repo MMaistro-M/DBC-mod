@@ -1,0 +1,3866 @@
+[
+  {
+    "classe": "org/spongepowered/asm/bridge/RemapperAdapter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/bridge/RemapperAdapterFML",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/GlobalProperties$Keys",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/GlobalProperties",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/MixinBootstrap",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/MixinInitialisationError",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/MixinTweaker",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/platform/IMixinPlatformAgent",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/platform/MainAttributes",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/platform/MixinContainer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/platform/MixinPlatformAgentAbstract",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/platform/MixinPlatformAgentDefault",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/launch/platform/MixinPlatformManager",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/AnnotationVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/AnnotationWriter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Attribute",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/ByteVector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/ClassReader",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/ClassVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/ClassWriter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Context",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/CurrentFrame",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Edge",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/FieldVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/FieldWriter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Frame",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Handle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Handler",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Label",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/MethodVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/MethodWriter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Opcodes",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/Type",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/TypePath",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/TypeReference",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/commons/AnnotationRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/commons/ClassRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/commons/FieldRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/commons/MethodRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/commons/Remapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/commons/SignatureRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/commons/SimpleRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/signature/SignatureReader",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/signature/SignatureVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/signature/SignatureWriter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/AbstractInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/AnnotationNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/ClassNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/FieldInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/FieldNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/FrameNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/IincInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/InnerClassNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/InsnList$InsnListIterator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/InsnList",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/InsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/IntInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/InvokeDynamicInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/JumpInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/LabelNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/LdcInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/LineNumberNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/LocalVariableAnnotationNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/LocalVariableNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/LookupSwitchInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/MethodInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/MethodNode$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/MethodNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/MultiANewArrayInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/ParameterNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/TableSwitchInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/TryCatchBlockNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/TypeAnnotationNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/TypeInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/VarInsnNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/Analyzer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/AnalyzerException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/BasicInterpreter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/BasicValue",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/BasicVerifier",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/Frame",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/Interpreter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/SimpleVerifier",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/SmallSet",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/SourceInterpreter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/SourceValue",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/Subroutine",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/tree/analysis/Value",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 1
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/ASMifier",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/CheckAnnotationAdapter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/CheckClassAdapter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/CheckFieldAdapter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/CheckMethodAdapter$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/CheckMethodAdapter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/CheckSignatureAdapter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/Printer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/Textifier",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/TraceAnnotationVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/TraceClassVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/TraceFieldVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/TraceMethodVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/lib/util/TraceSignatureVisitor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Debug",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Dynamic",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/EnvironmentStateTweaker",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Final",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Implements",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Interface$Remap",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Interface",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Intrinsic",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Mixin",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$CompatibilityLevel$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$CompatibilityLevel$2",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$CompatibilityLevel$3",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$CompatibilityLevel",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$Option$Inherit",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$Option",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$Phase",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$Side$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$Side$2",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$Side$3",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$Side",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment$TokenProviderWrapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/MixinEnvironment",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Mixins",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Mutable",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Overwrite",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Pseudo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Shadow",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/SoftOverride",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/Unique",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/extensibility/IEnvironmentTokenProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/extensibility/IMixinConfig",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/extensibility/IMixinConfigPlugin",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/extensibility/IMixinErrorHandler$ErrorAction",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/extensibility/IMixinErrorHandler",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/extensibility/IMixinInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/extensibility/IRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/Accessor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorGenerator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorGeneratorField",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorGeneratorFieldGetter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorGeneratorFieldSetter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorGeneratorMethodProxy",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorInfo$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorInfo$AccessorType$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorInfo$AccessorType$2",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorInfo$AccessorType$3",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorInfo$AccessorType",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/AccessorInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/Invoker",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/InvokerInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/gen/throwables/InvalidAccessorException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/At$Shift",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/At",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/Coerce",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/Constant$Condition",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/Constant",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/Group",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/IInjectionPointContext",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/Inject",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/InjectionPoint$AtCode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/InjectionPoint$CompositeInjectionPoint",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/InjectionPoint$Intersection",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/InjectionPoint$Shift",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/InjectionPoint$ShiftByViolationBehaviour",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/InjectionPoint$Union",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/InjectionPoint",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/ModifyArg",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/ModifyArgs",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/ModifyConstant",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/ModifyVariable",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/Redirect",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/Slice",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/Surrogate",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/callback/CallbackInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/callback/CallbackInjector$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/callback/CallbackInjector$Callback",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/callback/CallbackInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/callback/Cancellable",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/callback/CancellationException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/callback/LocalCapture",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/code/ISliceContext",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/code/Injector$TargetNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/code/Injector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/code/InjectorTarget",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/code/MethodSlice$InsnListSlice$SliceIterator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/code/MethodSlice$InsnListSlice",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/code/MethodSlice",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/code/MethodSlices",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/InvokeInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/ModifyArgInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/ModifyArgsInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/ModifyConstantInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/RedirectInjector$ConstructorRedirectData",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/RedirectInjector$Meta",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/RedirectInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/arg/Args",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/arg/ArgsClassGenerator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/arg/ArgumentCountException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/arg/ArgumentIndexOutOfBoundsException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/util/InsnFinder$AnalysisResultException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/util/InsnFinder$AnalyzerState",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/util/InsnFinder$PopAnalyzer$PopFrame",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/util/InsnFinder$PopAnalyzer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/invoke/util/InsnFinder",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/AfterStoreLocal",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/BeforeLoadLocal$SearchState",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/BeforeLoadLocal",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/InvalidImplicitDiscriminatorException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/LocalVariableDiscriminator$Context$Local",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/LocalVariableDiscriminator$Context",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/LocalVariableDiscriminator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/ModifyVariableInjector$Context",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/modify/ModifyVariableInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/AfterInvoke",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/BeforeConstant",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/BeforeFieldAccess",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/BeforeFinalReturn",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/BeforeInvoke$SearchType",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/BeforeInvoke",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/BeforeNew",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/BeforeReturn",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/BeforeStringInvoke",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/JumpInsnPoint",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/points/MethodHead",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/CallbackInjectionInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/InjectionInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/InjectionNodes$InjectionNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/InjectionNodes",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/InjectionPointData",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/InjectorGroupInfo$Map",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/InjectorGroupInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/InvalidMemberDescriptorException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/MemberInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/ModifyArgInjectionInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/ModifyArgsInjectionInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/ModifyConstantInjectionInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/ModifyVariableInjectionInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/RedirectInjectionInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/struct/Target",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/throwables/InjectionError",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/throwables/InjectionValidationException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/throwables/InvalidInjectionException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/throwables/InvalidInjectionPointException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/injection/throwables/InvalidSliceException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/refmap/IMixinContext",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/refmap/IReferenceMapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/refmap/ReferenceMapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/refmap/RemappingReferenceMapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/struct/MemberRef$Field",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/struct/MemberRef$Handle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/struct/MemberRef$Method",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/struct/MemberRef",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/struct/SourceMap$File",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/struct/SourceMap$Stratum",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/struct/SourceMap",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/struct/SpecialMethodInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/throwables/ClassAlreadyLoadedException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/throwables/MixinApplyError",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/throwables/MixinException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/throwables/MixinPrepareError",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassContext",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo$Field",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo$FrameData",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo$InterfaceMethod",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo$Member$Type",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo$Member",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo$Method",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo$SearchType",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo$Traversal",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ClassInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/Config",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/InnerClassGenerator$InnerClassAdapter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/InnerClassGenerator$InnerClassInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/InnerClassGenerator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/InterfaceInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MethodMapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinApplicatorInterface",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinApplicatorStandard$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinApplicatorStandard$ApplicatorPass",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinApplicatorStandard",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinConfig$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinConfig$IListener",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinConfig$InjectorOptions",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinConfig$OverwriteOptions",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinConfig",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$MixinClassNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$MixinMethodNode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$Reloaded",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$State",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$SubType$Accessor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$SubType$Interface",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$SubType$Standard",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo$SubType",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinInfo",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinPreProcessorAccessor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinPreProcessorInterface",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinPreProcessorStandard$SpecialMethod",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinPreProcessorStandard",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinTargetContext",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/MixinTransformer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/Proxy",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/TargetClassContext",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/debug/RuntimeDecompiler$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/debug/RuntimeDecompiler",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/debug/RuntimeDecompilerAsync",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/Extensions",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/IClassGenerator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/IDecompiler",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/IExtension",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/IHotSwap",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/ITargetClassContext",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/extensions/ExtensionCheckClass$ValidationFailedException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/extensions/ExtensionCheckClass",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/extensions/ExtensionCheckInterfaces",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/ext/extensions/ExtensionClassExporter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/meta/MixinInner",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/meta/MixinMerged",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/meta/MixinRenamed",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/throwables/InvalidInterfaceMixinException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/throwables/InvalidMixinException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/throwables/MixinReloadException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/throwables/MixinTargetAlreadyLoadedException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/mixin/transformer/throwables/MixinTransformerError",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/obfuscation/RemapperChain",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/obfuscation/mapping/IMapping$Type",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/obfuscation/mapping/IMapping",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/obfuscation/mapping/common/MappingField",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/obfuscation/mapping/common/MappingMethod",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/obfuscation/mapping/mcp/MappingFieldSrg",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/IClassBytecodeProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/IClassProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/IGlobalPropertyService",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/ILegacyClassTransformer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/IMixinService",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/IMixinServiceBootstrap",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/ITransformer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/MixinService",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/ServiceNotAvailableError",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/mojang/Blackboard",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/mojang/LaunchClassLoaderUtil",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/mojang/LegacyTransformerHandle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/mojang/MixinServiceLaunchWrapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/service/mojang/MixinServiceLaunchWrapperBootstrap",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/transformers/MixinClassWriter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/transformers/TreeTransformer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/Annotations$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/Annotations",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/Bytecode$Visibility",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/Bytecode",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$IToken",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$Lazy",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureParser$BoundElement",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureParser$FormalParamElement",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureParser$InterfaceElement",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureParser$SignatureElement",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureParser$SuperClassElement",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureParser$TokenElement",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureParser$TypeArgElement",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureParser",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$SignatureRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$Token",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$TokenHandle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature$TypeVar",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ClassSignature",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/Constants$ManifestAttributes",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/Constants",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ConstraintParser$Constraint",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ConstraintParser",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/Counter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ITokenProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/JavaVersion",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/Locals",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ObfuscationUtil$IClassRemapper",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ObfuscationUtil",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$Alignment",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$CentredText",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$Column",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$HorizontalRule",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$IPrettyPrintable",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$ISpecialEntry",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$IVariableWidthEntry",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$KeyValue",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$Row",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter$Table",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/PrettyPrinter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/ReEntranceLock",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/SignaturePrinter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/VersionNumber",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/asm/MethodVisitorEx",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/asm/MixinVerifier",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/perf/Profiler$LiveSection",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/perf/Profiler$Section",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/perf/Profiler$SubSection",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/perf/Profiler",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/throwables/ConstraintViolationException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/throwables/InvalidConstraintException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/throwables/SyntheticBridgeException$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/throwables/SyntheticBridgeException$Problem",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/asm/util/throwables/SyntheticBridgeException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/agent/MixinAgent$Transformer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/agent/MixinAgent",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/agent/MixinAgentClassLoader",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixin",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandler$AliasedElementName",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandler$AnnotatedElement",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandler$ShadowElementName",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandler",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerAccessor$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerAccessor$AnnotatedElementAccessor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerAccessor$AnnotatedElementInvoker",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerAccessor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerInjector$AnnotatedElementInjectionPoint",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerInjector$AnnotatedElementInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerInjector",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerOverwrite$AnnotatedElementOverwrite",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerOverwrite",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerShadow$AnnotatedElementShadow",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerShadow$AnnotatedElementShadowField",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerShadow$AnnotatedElementShadowMethod",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerShadow",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixinElementHandlerSoftImplements",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/AnnotatedMixins",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/Mappings$MappingConflictException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/Mappings$UniqueMappings",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/Mappings",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/MixinObfuscationProcessor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/MixinObfuscationProcessorInjection",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/MixinObfuscationProcessorTargets",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/MixinValidator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/ObfuscationData",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/ObfuscationDataProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/ObfuscationEnvironment$RemapperProxy",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/ObfuscationEnvironment",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/ObfuscationManager",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/ObfuscationType",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/ReferenceManager$ReferenceConflictException",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/ReferenceManager",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/SupportedOptions",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/TargetMap",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IJavadocProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IMixinAnnotationProcessor$CompilerEnvironment",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IMixinAnnotationProcessor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IMixinValidator$ValidationPass",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IMixinValidator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IObfuscationDataProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IObfuscationEnvironment",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IObfuscationManager",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IOptionProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/IReferenceManager",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/interfaces/ITypeHandleProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/IMappingConsumer$MappingSet$Pair",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/IMappingConsumer$MappingSet",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/IMappingConsumer",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/IMappingProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/IMappingWriter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/common/MappingProvider",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/common/MappingWriter",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/mcp/MappingProviderSrg$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/mcp/MappingProviderSrg",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mapping/mcp/MappingWriterSrg",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mcp/ObfuscationEnvironmentMCP",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mcp/ObfuscationServiceMCP",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/AnnotationHandle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/FieldHandle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/MemberHandle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/MethodHandle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/TypeHandle",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/TypeHandleSimulated",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/TypeReference",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/TypeUtils$1",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/mirror/TypeUtils",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/service/IObfuscationService",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/service/ObfuscationServices",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/service/ObfuscationTypeDescriptor",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/struct/InjectorRemap",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/struct/Message",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/validation/ParentValidator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  },
+  {
+    "classe": "org/spongepowered/tools/obfuscation/validation/TargetValidator",
+    "jars": [
+      "+unimixins-all-1.7.10-0.1.23.jar",
+      "CustomNPC-Plus-1.11.1.jar"
+    ],
+    "versoes_binarias_distintas": 2
+  }
+]

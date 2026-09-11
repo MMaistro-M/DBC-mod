@@ -1,0 +1,13 @@
+{
+  "mod": "geckolib-unofficial-1.7.10-1.0.3.jar",
+  "classes_no_jar": 1200,
+  "arquivos_java_recuperados": 837,
+  "fontes_java_embutidas": 37,
+  "codigo_saida_cfr": 0,
+  "segundos": 41.6,
+  "sha256_original": "52c49121e40d648a2446f974c7c502efb0a473ca7fefd14a3e9d8964137e9cc7",
+  "jar_preservado": true,
+  "arquivos_com_metodos_nao_recuperados": [],
+  "classes_principais": 837,
+  "classes_principais_sem_fonte": []
+}

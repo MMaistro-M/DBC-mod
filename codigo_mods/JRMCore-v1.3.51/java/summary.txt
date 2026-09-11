@@ -1,0 +1,9 @@
+Summary for C:\Users\Matheus Maistro\Downloads\mods_mine\JRMCore-v1.3.51.jar
+Decompiled with CFR 0.152
+
+
+JinRyuu.JRMCore.JRMCoreCliTicH
+----------------------------
+
+onTickInGame()
+  Unable to fully structure code

@@ -1,0 +1,117 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  cpw.mods.fml.relauncher.Side
+ *  cpw.mods.fml.relauncher.SideOnly
+ *  io.netty.buffer.ByteBuf
+ *  net.minecraft.entity.player.EntityPlayer
+ *  net.minecraft.entity.player.EntityPlayerMP
+ *  net.minecraft.nbt.NBTBase
+ *  net.minecraft.nbt.NBTTagCompound
+ */
+package kamkeel.npcs.network.packets.request.script.item;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import io.netty.buffer.ByteBuf;
+import java.io.IOException;
+import java.util.Map;
+import java.util.TreeMap;
+import kamkeel.npcs.network.AbstractPacket;
+import kamkeel.npcs.network.PacketChannel;
+import kamkeel.npcs.network.PacketClient;
+import kamkeel.npcs.network.PacketHandler;
+import kamkeel.npcs.network.enums.EnumRequestPacket;
+import kamkeel.npcs.network.packets.data.large.GuiDataPacket;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.nbt.NBTBase;
+import net.minecraft.nbt.NBTTagCompound;
+import noppes.npcs.CustomNpcsPermissions;
+import noppes.npcs.NBTTags;
+import noppes.npcs.api.item.IItemStack;
+import noppes.npcs.config.ConfigScript;
+import noppes.npcs.controllers.data.IScriptUnit;
+import noppes.npcs.scripted.NpcAPI;
+import noppes.npcs.scripted.item.ScriptCustomItem;
+
+public final class ItemScriptErrorPacket
+extends AbstractPacket {
+    public static String packetName = "Request|ItemScriptError";
+    private Action action;
+
+    public ItemScriptErrorPacket() {
+    }
+
+    public ItemScriptErrorPacket(Action action) {
+        this.action = action;
+    }
+
+    @Override
+    public Enum getType() {
+        return EnumRequestPacket.ItemScriptError;
+    }
+
+    @Override
+    public PacketChannel getChannel() {
+        return PacketHandler.REQUEST_PACKET;
+    }
+
+    @Override
+    public CustomNpcsPermissions.Permission getPermission() {
+        return CustomNpcsPermissions.SCRIPT_ITEM;
+    }
+
+    @Override
+    @SideOnly(value=Side.CLIENT)
+    public void sendData(ByteBuf out) throws IOException {
+        out.writeInt(this.action.ordinal());
+    }
+
+    @Override
+    public void receiveData(ByteBuf in, EntityPlayer player) throws IOException {
+        if (!(player instanceof EntityPlayerMP)) {
+            return;
+        }
+        if (!ConfigScript.canScript(player, CustomNpcsPermissions.SCRIPT)) {
+            return;
+        }
+        Action requestedAction = Action.values()[in.readInt()];
+        IItemStack iw = NpcAPI.Instance().getIItemStack(player.func_70694_bm());
+        if (iw instanceof ScriptCustomItem) {
+            if (requestedAction == Action.GET) {
+                TreeMap<Long, String> map = new TreeMap<Long, String>();
+                int tab = 0;
+                for (IScriptUnit script : ((ScriptCustomItem)iw).scripts) {
+                    ++tab;
+                    for (Map.Entry<Long, String> longStringEntry : script.getConsole().entrySet()) {
+                        map.put(longStringEntry.getKey(), " tab " + tab + ":\n" + longStringEntry.getValue());
+                    }
+                }
+                NBTTagCompound compound = new NBTTagCompound();
+                compound.func_74782_a("ItemScriptConsole", (NBTBase)NBTTags.NBTLongStringMap(map));
+                GuiDataPacket.sendGuiData((EntityPlayerMP)player, compound);
+            } else {
+                for (IScriptUnit script : ((ScriptCustomItem)iw).scripts) {
+                    script.clearConsole();
+                }
+            }
+        }
+    }
+
+    public static void Clear() {
+        PacketClient.sendClient(new ItemScriptErrorPacket(Action.CLEAR));
+    }
+
+    public static void Get() {
+        PacketClient.sendClient(new ItemScriptErrorPacket(Action.GET));
+    }
+
+    private static enum Action {
+        GET,
+        CLEAR;
+
+    }
+}
+

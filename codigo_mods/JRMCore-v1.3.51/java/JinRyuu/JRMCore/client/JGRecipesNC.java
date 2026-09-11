@@ -1,0 +1,117 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  JinRyuu.NarutoC.common.Items.ItemsNC
+ */
+package JinRyuu.JRMCore.client;
+
+import JinRyuu.DragonBC.common.Items.ItemsDBC;
+import JinRyuu.JRMCore.JRMCoreH;
+import JinRyuu.JRMCore.client.JGRecipeHandler;
+import JinRyuu.NarutoC.common.Items.ItemsNC;
+
+public class JGRecipesNC {
+    public static void registerRecipes(String mod, String category) {
+        mod = "Naruto C";
+        category = "Armors";
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[0]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[0]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[0]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[0]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[1]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[2]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[2]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[2]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[3]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[3]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[3]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[3]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[4]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[4]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[4]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[4]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[5]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[5]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[5]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[5]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[6]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[6]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[6]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[6]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[7]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[7]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[7]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[7]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[8]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[8]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[8]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[8]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[9]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[9]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[9]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[9]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[10]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[10]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[10]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[10]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[11]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[11]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[11]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[11]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[12]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[12]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[12]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[12]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[13]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[13]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[13]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[13]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[14]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[14]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[14]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[14]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[15]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[15]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[15]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[15]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[16]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[16]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[16]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[16]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[17]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[17]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[17]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[17]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[18]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[18]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[18]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[18]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[19]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[19]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[19]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[19]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit0[20]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit1[20]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit2[20]);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemsOutfit3[20]);
+        category = "Weapons";
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemKatana);
+        if (!JRMCoreH.DBC()) {
+            JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemKatanaBlade);
+        } else {
+            JGRecipeHandler.addRecipe(mod, category, ItemsDBC.ItemKatanaSwordBlade);
+        }
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemKatanaHandle);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemKunai);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemShuriken);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemGiantShuriken);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemExplosiveTag);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.ItemKunaiExplosiveTag);
+        category = "Vanities";
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.Vanity_headband);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.Vanity_Knhmrsc);
+        JGRecipeHandler.addRecipe(mod, category, ItemsNC.Vanity_Nrtgggl);
+    }
+}
+

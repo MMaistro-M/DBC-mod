@@ -1,0 +1,198 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  cpw.mods.fml.relauncher.Side
+ *  cpw.mods.fml.relauncher.SideOnly
+ *  net.minecraft.client.model.ModelBase
+ *  net.minecraft.client.model.ModelBiped
+ *  net.minecraft.entity.player.EntityPlayer
+ *  net.minecraft.item.ItemStack
+ */
+package riskyken.armourersWorkshop.client.handler;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import riskyken.armourersWorkshop.api.client.render.ISkinRenderHandler;
+import riskyken.armourersWorkshop.api.common.skin.data.ISkin;
+import riskyken.armourersWorkshop.api.common.skin.data.ISkinPointer;
+import riskyken.armourersWorkshop.api.common.skin.type.ISkinPartType;
+import riskyken.armourersWorkshop.api.common.skin.type.ISkinType;
+import riskyken.armourersWorkshop.client.handler.EquipmentWardrobeHandler;
+import riskyken.armourersWorkshop.client.model.armourer.ModelHand;
+import riskyken.armourersWorkshop.client.render.SkinModelRenderer;
+import riskyken.armourersWorkshop.client.render.SkinPartRenderData;
+import riskyken.armourersWorkshop.client.render.SkinPartRenderer;
+import riskyken.armourersWorkshop.client.skin.cache.ClientSkinCache;
+import riskyken.armourersWorkshop.common.data.PlayerPointer;
+import riskyken.armourersWorkshop.common.skin.data.Skin;
+import riskyken.armourersWorkshop.common.skin.data.SkinPart;
+import riskyken.armourersWorkshop.common.skin.data.SkinPointer;
+import riskyken.armourersWorkshop.common.wardrobe.EquipmentWardrobeData;
+import riskyken.armourersWorkshop.proxies.ClientProxy;
+import riskyken.armourersWorkshop.utils.SkinNBTHelper;
+
+public class EquipmentRenderHandler
+implements ISkinRenderHandler {
+    public static final EquipmentRenderHandler INSTANCE = new EquipmentRenderHandler();
+
+    @Override
+    public boolean renderSkinWithHelper(ItemStack stack) {
+        if (stack == null) {
+            return false;
+        }
+        return SkinModelRenderer.INSTANCE.renderEquipmentPartFromStack(stack, null, null, 0.0, true);
+    }
+
+    @Override
+    public boolean renderSkinWithHelper(ItemStack stack, ModelBiped modelBiped) {
+        if (stack == null) {
+            return false;
+        }
+        return SkinModelRenderer.INSTANCE.renderEquipmentPartFromStack(stack, modelBiped, null, 0.0, true);
+    }
+
+    @Override
+    public boolean renderSkinWithHelper(ItemStack stack, float limb1, float limb2, float limb3, float headY, float headX) {
+        if (stack == null) {
+            return false;
+        }
+        SkinPointer skinPointer = SkinNBTHelper.getSkinPointerFromStack(stack);
+        if (skinPointer == null) {
+            return false;
+        }
+        return this.renderSkinWithHelper(skinPointer, limb1, limb2, limb3, headY, headX);
+    }
+
+    @Override
+    public boolean renderSkinWithHelper(ISkinPointer skinPointer) {
+        return false;
+    }
+
+    @Override
+    public boolean renderSkinWithHelper(ISkinPointer skinPointer, ModelBiped modelBiped) {
+        return false;
+    }
+
+    @Override
+    public boolean renderSkinWithHelper(ISkinPointer skinPointer, float limb1, float limb2, float limb3, float headY, float headX) {
+        if (skinPointer == null) {
+            return false;
+        }
+        return SkinModelRenderer.INSTANCE.renderEquipmentPartFromSkinPointer(skinPointer, limb1, limb2, limb3, headY, headX);
+    }
+
+    @Override
+    public boolean renderSkin(ItemStack stack) {
+        if (stack == null) {
+            return false;
+        }
+        SkinPointer skinPointer = SkinNBTHelper.getSkinPointerFromStack(stack);
+        if (skinPointer != null) {
+            return this.renderSkin(skinPointer);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean renderSkin(ISkinPointer skinPointer) {
+        ISkinType skinType = skinPointer.getIdentifier().getSkinType();
+        for (int i = 0; i < skinType.getSkinParts().size(); ++i) {
+            ISkinPartType skinPartType = skinType.getSkinParts().get(i);
+            this.renderSkinPart(skinPointer, skinPartType);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean renderSkinPart(ISkinPointer skinPointer, ISkinPartType skinPartType) {
+        if (skinPointer == null | skinPartType == null) {
+            return false;
+        }
+        Skin skin = ClientSkinCache.INSTANCE.getSkin(skinPointer);
+        if (skin == null) {
+            return false;
+        }
+        for (int i = 0; i < skin.getParts().size(); ++i) {
+            SkinPart skinPart = skin.getParts().get(i);
+            if (skinPart.getPartType() != skinPartType) continue;
+            SkinPartRenderData renderData = new SkinPartRenderData(skinPart, 0.0625f, skinPointer.getSkinDye(), null, 0.0, true, false, false, null);
+            SkinPartRenderer.INSTANCE.renderPart(renderData);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean isSkinInModelCache(ItemStack stack) {
+        if (!SkinNBTHelper.stackHasSkinData(stack)) {
+            return false;
+        }
+        SkinPointer skinPointer = SkinNBTHelper.getSkinPointerFromStack(stack);
+        return this.isSkinInModelCache(skinPointer);
+    }
+
+    @Override
+    public boolean isSkinInModelCache(ISkinPointer skinPointer) {
+        if (skinPointer == null) {
+            return false;
+        }
+        return ClientSkinCache.INSTANCE.isSkinInCache(skinPointer);
+    }
+
+    @Override
+    public void requestSkinModelFromSever(ItemStack stack) {
+        if (!SkinNBTHelper.stackHasSkinData(stack)) {
+            return;
+        }
+        SkinPointer skinPointer = SkinNBTHelper.getSkinPointerFromStack(stack);
+        this.requestSkinModelFromSever(skinPointer);
+    }
+
+    @Override
+    public void requestSkinModelFromSever(ISkinPointer skinPointer) {
+        if (skinPointer == null) {
+            return;
+        }
+        ClientSkinCache.INSTANCE.requestSkinFromServer(skinPointer);
+    }
+
+    @Override
+    public ModelBase getArmourerHandModel() {
+        return this.getHandModel();
+    }
+
+    @SideOnly(value=Side.CLIENT)
+    private ModelBase getHandModel() {
+        return ModelHand.MODEL;
+    }
+
+    @Override
+    public ISkin getSkinFromModelCache(ISkinPointer skinPointer) {
+        if (skinPointer == null) {
+            return null;
+        }
+        return ClientSkinCache.INSTANCE.getSkin(skinPointer);
+    }
+
+    @Override
+    public boolean isArmourRenderOverridden(EntityPlayer player, int slotId) {
+        if (slotId < 4 & slotId >= 0) {
+            return false;
+        }
+        if (player == null) {
+            return false;
+        }
+        EquipmentWardrobeHandler ewh = ClientProxy.equipmentWardrobeHandler;
+        EquipmentWardrobeData ewd = ewh.getEquipmentWardrobeData(new PlayerPointer(player));
+        if (ewd != null) {
+            return ewd.armourOverride.get(slotId);
+        }
+        return false;
+    }
+}
+

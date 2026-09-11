@@ -1,0 +1,5 @@
+﻿*.jar
+/auditoria/evidencias/
+/auditoria/referencias_para_revisao.json
+/auditoria/variaveis_locais_bytecode.json
+*.class

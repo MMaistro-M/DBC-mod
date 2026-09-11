@@ -1,0 +1,63 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  org.spongepowered.libraries.com.google.errorprone.annotations.CanIgnoreReturnValue
+ */
+package org.spongepowered.libraries.com.google.common.hash;
+
+import java.nio.charset.Charset;
+import org.spongepowered.libraries.com.google.common.annotations.Beta;
+import org.spongepowered.libraries.com.google.common.hash.Funnel;
+import org.spongepowered.libraries.com.google.common.hash.HashCode;
+import org.spongepowered.libraries.com.google.common.hash.PrimitiveSink;
+import org.spongepowered.libraries.com.google.errorprone.annotations.CanIgnoreReturnValue;
+
+@Beta
+@CanIgnoreReturnValue
+public interface Hasher
+extends PrimitiveSink {
+    @Override
+    public Hasher putByte(byte var1);
+
+    @Override
+    public Hasher putBytes(byte[] var1);
+
+    @Override
+    public Hasher putBytes(byte[] var1, int var2, int var3);
+
+    @Override
+    public Hasher putShort(short var1);
+
+    @Override
+    public Hasher putInt(int var1);
+
+    @Override
+    public Hasher putLong(long var1);
+
+    @Override
+    public Hasher putFloat(float var1);
+
+    @Override
+    public Hasher putDouble(double var1);
+
+    @Override
+    public Hasher putBoolean(boolean var1);
+
+    @Override
+    public Hasher putChar(char var1);
+
+    @Override
+    public Hasher putUnencodedChars(CharSequence var1);
+
+    @Override
+    public Hasher putString(CharSequence var1, Charset var2);
+
+    public <T> Hasher putObject(T var1, Funnel<? super T> var2);
+
+    public HashCode hash();
+
+    @Deprecated
+    public int hashCode();
+}
+

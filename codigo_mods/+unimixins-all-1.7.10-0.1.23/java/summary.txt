@@ -1,0 +1,23 @@
+Summary for C:\Users\Matheus Maistro\Downloads\mods_mine\+unimixins-all-1.7.10-0.1.23.jar
+Decompiled with CFR 0.152
+
+
+org.spongepowered.asm.lib.signature.SignatureReader
+----------------------------
+
+parseType(java.lang.String int org.spongepowered.asm.lib.signature.SignatureVisitor )
+  Unable to fully structure code
+
+
+org.spongepowered.asm.mixin.refmap.ReferenceMapper
+----------------------------
+
+read(java.lang.String )
+  Loose catch block
+
+
+org.spongepowered.libraries.com.google.common.util.concurrent.AbstractFuture
+----------------------------
+
+removeWaiter(org.spongepowered.libraries.com.google.common.util.concurrent.AbstractFuture$Waiter )
+  Unable to fully structure code

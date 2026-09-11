@@ -1,0 +1,291 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.minecraft.client.model.ModelBase
+ *  net.minecraft.client.model.ModelRenderer
+ *  net.minecraft.entity.Entity
+ *  net.minecraft.util.MathHelper
+ *  org.lwjgl.opengl.GL11
+ */
+package JinRyuu.DragonBC.common.Npcs;
+
+import JinRyuu.DragonBC.common.Npcs.EntityRRMecha;
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
+import org.lwjgl.opengl.GL11;
+
+public class ModelRRMecha
+extends ModelBase {
+    public ModelRenderer Base1;
+    public ModelRenderer ArmL;
+    public ModelRenderer ArmR;
+    public ModelRenderer LegL;
+    public ModelRenderer LegR;
+    public ModelRenderer Spine1;
+    public ModelRenderer Belly1;
+    public ModelRenderer Head1;
+    public ModelRenderer BottomBase;
+    public ModelRenderer Extra10;
+    public ModelRenderer Extra20;
+    public ModelRenderer Extra30;
+    public ModelRenderer Extra40;
+    public ModelRenderer ShoulderL;
+    public ModelRenderer ShoulderR;
+    public ModelRenderer Back1;
+    public ModelRenderer Back2;
+    public ModelRenderer BackTop1;
+    public ModelRenderer BackTop2;
+    public ModelRenderer Belly2;
+    public ModelRenderer Belly3;
+    public ModelRenderer HeadTop;
+    public ModelRenderer HeadFront;
+    public ModelRenderer HeadBack;
+    public ModelRenderer BottomBack;
+    public ModelRenderer BottomFront;
+    public ModelRenderer BottomBack2;
+    public ModelRenderer Extra11;
+    public ModelRenderer Extra12;
+    public ModelRenderer Extra21;
+    public ModelRenderer Extra22;
+    public ModelRenderer ArmL2;
+    public ModelRenderer ArmL3;
+    public ModelRenderer ArmL4;
+    public ModelRenderer ArmR2;
+    public ModelRenderer ArmR3;
+    public ModelRenderer ArmR4;
+    public ModelRenderer LegL2;
+    public ModelRenderer LegL3;
+    public ModelRenderer LegR2;
+    public ModelRenderer LegR3;
+
+    public ModelRRMecha() {
+        this.field_78090_t = 128;
+        this.field_78089_u = 128;
+        this.BottomFront = new ModelRenderer((ModelBase)this, 47, 79);
+        this.BottomFront.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.BottomFront.func_78790_a(-3.5f, 7.2f, 5.0f, 7, 4, 6, 0.0f);
+        this.setRotateAngle(this.BottomFront, -0.7285004f, 0.0f, 0.0f);
+        this.Extra12 = new ModelRenderer((ModelBase)this, 112, 0);
+        this.Extra12.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Extra12.func_78790_a(-1.5f, 2.7f, -2.4f, 3, 1, 1, 0.0f);
+        this.Extra30 = new ModelRenderer((ModelBase)this, 104, 0);
+        this.Extra30.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Extra30.func_78790_a(-4.9f, 1.3f, -1.9f, 2, 2, 1, 0.0f);
+        this.setRotateAngle(this.Extra30, 0.0f, 0.3630285f, 0.21642083f);
+        this.ArmL = new ModelRenderer((ModelBase)this, 3, 86);
+        this.ArmL.func_78793_a(8.5f, 0.1f, 4.9f);
+        this.ArmL.func_78790_a(-0.6f, -0.4f, -1.2f, 2, 7, 2, 0.0f);
+        this.setRotateAngle(this.ArmL, 0.11082841f, 0.0f, -0.27576202f);
+        this.Spine1 = new ModelRenderer((ModelBase)this, 0, 21);
+        this.Spine1.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Spine1.func_78790_a(-7.5f, -1.2f, 1.7f, 15, 10, 6, 0.0f);
+        this.setRotateAngle(this.Spine1, 0.7749262f, 0.0f, 0.0f);
+        this.Belly3 = new ModelRenderer((ModelBase)this, 0, 67);
+        this.Belly3.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Belly3.func_78790_a(-5.0f, 5.0f, -4.8f, 10, 6, 1, 0.0f);
+        this.ArmL2 = new ModelRenderer((ModelBase)this, 1, 96);
+        this.ArmL2.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.ArmL2.func_78790_a(-0.6f, 5.8f, 1.5f, 3, 7, 3, 0.0f);
+        this.setRotateAngle(this.ArmL2, -0.4553564f, 0.0f, 0.0f);
+        this.ArmR = new ModelRenderer((ModelBase)this, 18, 86);
+        this.ArmR.func_78793_a(-8.5f, 0.1f, 4.9f);
+        this.ArmR.func_78790_a(-1.3f, -0.4f, -1.1f, 2, 7, 2, 0.0f);
+        this.setRotateAngle(this.ArmR, 0.11082841f, 0.0f, 0.27576202f);
+        this.ArmL4 = new ModelRenderer((ModelBase)this, 1, 114);
+        this.ArmL4.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.ArmL4.func_78790_a(-0.6f, 12.6f, 1.0f, 3, 4, 4, 0.0f);
+        this.setRotateAngle(this.ArmL4, -0.4553564f, 0.16475908f, 0.0f);
+        this.ArmR4 = new ModelRenderer((ModelBase)this, 17, 114);
+        this.ArmR4.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.ArmR4.func_78790_a(-2.4f, 12.6f, 1.0f, 3, 4, 4, 0.0f);
+        this.setRotateAngle(this.ArmR4, -0.4553564f, -0.1829105f, 0.0f);
+        this.ShoulderR = new ModelRenderer((ModelBase)this, 16, 76);
+        this.ShoulderR.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.ShoulderR.func_78790_a(-8.3f, -4.2f, 3.1f, 3, 5, 4, 0.0f);
+        this.setRotateAngle(this.ShoulderR, 0.7749262f, 0.1308997f, -0.20943952f);
+        this.LegR = new ModelRenderer((ModelBase)this, 96, 85);
+        this.LegR.func_78793_a(-4.5f, 11.2f, 4.8f);
+        this.LegR.func_78790_a(-2.3f, -1.2f, -0.9f, 2, 7, 2, 0.0f);
+        this.setRotateAngle(this.LegR, -0.11047934f, 0.0f, 0.10471976f);
+        this.Belly1 = new ModelRenderer((ModelBase)this, 0, 39);
+        this.Belly1.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Belly1.func_78790_a(-7.0f, 2.5f, -2.3f, 14, 10, 5, 0.0f);
+        this.setRotateAngle(this.Belly1, 0.7749262f, 0.0f, 0.0f);
+        this.LegL2 = new ModelRenderer((ModelBase)this, 73, 97);
+        this.LegL2.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.LegL2.func_78790_a(0.1f, 5.6f, -2.7f, 4, 6, 4, 0.0f);
+        this.setRotateAngle(this.LegL2, 0.11047934f, 0.0f, 0.10471976f);
+        this.Extra20 = new ModelRenderer((ModelBase)this, 113, 3);
+        this.Extra20.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Extra20.func_78790_a(-2.5f, 2.7f, -14.1f, 1, 1, 2, 0.0f);
+        this.setRotateAngle(this.Extra20, 1.8430676f, 0.0f, 0.0f);
+        this.HeadBack = new ModelRenderer((ModelBase)this, 80, 48);
+        this.HeadBack.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.HeadBack.func_78790_a(-2.0f, -7.7f, -2.9f, 4, 1, 5, 0.0f);
+        this.ArmR3 = new ModelRenderer((ModelBase)this, 19, 107);
+        this.ArmR3.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.ArmR3.func_78790_a(-3.3f, 7.3f, 1.8f, 2, 4, 2, 0.0f);
+        this.setRotateAngle(this.ArmR3, -0.4553564f, 0.0f, 0.0f);
+        this.Head1 = new ModelRenderer((ModelBase)this, 80, 31);
+        this.Head1.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Head1.func_78790_a(-3.0f, -6.7f, -4.0f, 6, 6, 4, 0.0f);
+        this.BottomBase = new ModelRenderer((ModelBase)this, 46, 51);
+        this.BottomBase.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.BottomBase.func_78790_a(-3.0f, 8.3f, 0.8f, 6, 7, 7, 0.0f);
+        this.setRotateAngle(this.BottomBase, 0.7749262f, 0.0f, 0.0f);
+        this.BottomBack2 = new ModelRenderer((ModelBase)this, 48, 43);
+        this.BottomBack2.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.BottomBack2.func_78790_a(-2.5f, 16.8f, -3.8f, 5, 2, 5, 0.0f);
+        this.LegR2 = new ModelRenderer((ModelBase)this, 94, 97);
+        this.LegR2.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.LegR2.func_78790_a(-4.1f, 5.6f, -2.7f, 4, 6, 4, 0.0f);
+        this.setRotateAngle(this.LegR2, 0.11047934f, 0.0f, -0.10471976f);
+        this.Belly2 = new ModelRenderer((ModelBase)this, 0, 56);
+        this.Belly2.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Belly2.func_78790_a(-6.51f, 3.7f, -3.8f, 13, 8, 2, 0.0f);
+        this.Extra22 = new ModelRenderer((ModelBase)this, 112, 0);
+        this.Extra22.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Extra22.func_78790_a(-1.5f, 2.7f, -14.6f, 3, 1, 1, 0.0f);
+        this.ArmL3 = new ModelRenderer((ModelBase)this, 3, 107);
+        this.ArmL3.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.ArmL3.func_78790_a(1.0f, 7.3f, 1.8f, 2, 4, 2, 0.0f);
+        this.setRotateAngle(this.ArmL3, -0.4553564f, 0.0f, 0.0f);
+        this.Extra10 = new ModelRenderer((ModelBase)this, 113, 3);
+        this.Extra10.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Extra10.func_78790_a(-2.5f, 2.7f, -2.0f, 1, 1, 2, 0.0f);
+        this.ShoulderL = new ModelRenderer((ModelBase)this, 1, 76);
+        this.ShoulderL.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.ShoulderL.func_78790_a(5.3f, -4.2f, 3.2f, 3, 5, 4, 0.0f);
+        this.setRotateAngle(this.ShoulderL, 0.7749262f, -0.1308997f, 0.20943952f);
+        this.Extra21 = new ModelRenderer((ModelBase)this, 113, 3);
+        this.Extra21.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Extra21.func_78790_a(1.5f, 2.7f, -14.1f, 1, 1, 2, 0.0f);
+        this.Back1 = new ModelRenderer((ModelBase)this, 45, 0);
+        this.Back1.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Back1.func_78790_a(-7.0f, 0.0f, 6.8f, 14, 12, 3, 0.0f);
+        this.BackTop1 = new ModelRenderer((ModelBase)this, 81, 0);
+        this.BackTop1.func_78793_a(0.0f, 0.0f, 0.1f);
+        this.BackTop1.func_78790_a(-3.5f, -5.4f, 7.5f, 7, 3, 5, 0.0f);
+        this.setRotateAngle(this.BackTop1, -0.19896753f, 0.0f, 0.0f);
+        this.HeadTop = new ModelRenderer((ModelBase)this, 83, 23);
+        this.HeadTop.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.HeadTop.func_78790_a(-2.0f, -6.2f, -5.0f, 4, 5, 1, 0.0f);
+        this.Base1 = new ModelRenderer((ModelBase)this, 0, 0);
+        this.Base1.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Base1.func_78790_a(-6.5f, -6.8f, 0.0f, 13, 12, 7, 0.0f);
+        this.setRotateAngle(this.Base1, -0.7749262f, 0.0017453292f, 0.0f);
+        this.Extra11 = new ModelRenderer((ModelBase)this, 113, 3);
+        this.Extra11.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Extra11.func_78790_a(1.5f, 2.7f, -2.0f, 1, 1, 2, 0.0f);
+        this.LegL3 = new ModelRenderer((ModelBase)this, 66, 108);
+        this.LegL3.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.LegL3.func_78790_a(-0.4f, 10.9f, -4.9f, 5, 2, 7, 0.0f);
+        this.setRotateAngle(this.LegL3, 0.11047934f, 0.0f, 0.10471976f);
+        this.Extra40 = new ModelRenderer((ModelBase)this, 104, 0);
+        this.Extra40.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.Extra40.func_78790_a(2.9f, 1.3f, -1.9f, 2, 2, 1, 0.0f);
+        this.setRotateAngle(this.Extra40, 0.0f, -0.3630285f, -0.23387411f);
+        this.BottomBack = new ModelRenderer((ModelBase)this, 46, 66);
+        this.BottomBack.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.BottomBack.func_78790_a(-3.5f, 12.9f, -5.4f, 7, 4, 8, 0.0f);
+        this.setRotateAngle(this.BottomBack, 0.7749262f, 0.0f, 0.0f);
+        this.BackTop2 = new ModelRenderer((ModelBase)this, 81, 10);
+        this.BackTop2.func_78793_a(0.0f, 0.0f, 0.1f);
+        this.BackTop2.func_78790_a(-3.0f, -6.2f, 7.9f, 6, 1, 4, 0.0f);
+        this.ArmR2 = new ModelRenderer((ModelBase)this, 17, 96);
+        this.ArmR2.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.ArmR2.func_78790_a(-2.3f, 5.8f, 1.5f, 3, 7, 3, 0.0f);
+        this.setRotateAngle(this.ArmR2, -0.4553564f, 0.0f, 0.0f);
+        this.LegL = new ModelRenderer((ModelBase)this, 76, 85);
+        this.LegL.func_78793_a(4.6f, 11.2f, 4.8f);
+        this.LegL.func_78790_a(0.1f, -1.2f, -0.9f, 2, 7, 2, 0.0f);
+        this.setRotateAngle(this.LegL, -0.11052218f, 0.0f, -0.10471976f);
+        this.Back2 = new ModelRenderer((ModelBase)this, 47, 17);
+        this.Back2.func_78793_a(0.0f, 0.0f, 0.1f);
+        this.Back2.func_78790_a(-4.0f, -2.8f, 6.6f, 8, 13, 7, 0.0f);
+        this.LegR3 = new ModelRenderer((ModelBase)this, 93, 108);
+        this.LegR3.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.LegR3.func_78790_a(-4.6f, 10.9f, -4.9f, 5, 2, 7, 0.0f);
+        this.setRotateAngle(this.LegR3, 0.11047934f, 0.0f, -0.10471976f);
+        this.HeadFront = new ModelRenderer((ModelBase)this, 80, 42);
+        this.HeadFront.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.HeadFront.func_78790_a(-2.0f, -0.9f, -3.1f, 4, 1, 4, 0.0f);
+        this.BottomBase.func_78792_a(this.BottomFront);
+        this.Extra10.func_78792_a(this.Extra12);
+        this.Base1.func_78792_a(this.Extra30);
+        this.Base1.func_78792_a(this.Spine1);
+        this.Belly2.func_78792_a(this.Belly3);
+        this.ArmL.func_78792_a(this.ArmL2);
+        this.ArmL.func_78792_a(this.ArmL4);
+        this.ArmR.func_78792_a(this.ArmR4);
+        this.Base1.func_78792_a(this.ShoulderR);
+        this.Base1.func_78792_a(this.Belly1);
+        this.LegL.func_78792_a(this.LegL2);
+        this.Base1.func_78792_a(this.Extra20);
+        this.Head1.func_78792_a(this.HeadBack);
+        this.ArmR.func_78792_a(this.ArmR3);
+        this.Base1.func_78792_a(this.Head1);
+        this.Base1.func_78792_a(this.BottomBase);
+        this.BottomBack.func_78792_a(this.BottomBack2);
+        this.LegR.func_78792_a(this.LegR2);
+        this.Belly1.func_78792_a(this.Belly2);
+        this.Extra20.func_78792_a(this.Extra22);
+        this.ArmL.func_78792_a(this.ArmL3);
+        this.Base1.func_78792_a(this.Extra10);
+        this.Base1.func_78792_a(this.ShoulderL);
+        this.Extra20.func_78792_a(this.Extra21);
+        this.Spine1.func_78792_a(this.Back1);
+        this.Back2.func_78792_a(this.BackTop1);
+        this.Head1.func_78792_a(this.HeadTop);
+        this.Extra10.func_78792_a(this.Extra11);
+        this.LegL.func_78792_a(this.LegL3);
+        this.Base1.func_78792_a(this.Extra40);
+        this.BottomBase.func_78792_a(this.BottomBack);
+        this.BackTop1.func_78792_a(this.BackTop2);
+        this.ArmR.func_78792_a(this.ArmR2);
+        this.Back1.func_78792_a(this.Back2);
+        this.LegR.func_78792_a(this.LegR3);
+        this.Head1.func_78792_a(this.HeadFront);
+    }
+
+    public void func_78088_a(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+        this.func_78087_a(f, f1, f2, f3, f4, f5, entity);
+        GL11.glPushMatrix();
+        float[] sizes = new float[]{0.0f, 0.5f, 1.0f};
+        float size = 2.0f + sizes[((EntityRRMecha)entity).getType()];
+        GL11.glScalef((float)size, (float)size, (float)size);
+        GL11.glTranslatef((float)0.0f, (float)-0.9f, (float)0.0f);
+        this.ArmL.func_78785_a(f5);
+        this.ArmR.func_78785_a(f5);
+        this.LegR.func_78785_a(f5);
+        this.Base1.func_78785_a(f5);
+        this.LegL.func_78785_a(f5);
+        GL11.glPopMatrix();
+    }
+
+    public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+        modelRenderer.field_78795_f = x;
+        modelRenderer.field_78796_g = y;
+        modelRenderer.field_78808_h = z;
+    }
+
+    public void func_78087_a(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity) {
+        float r = 360.0f;
+        float r2 = 180.0f;
+        float n4 = par4;
+        float n5 = par5;
+        this.LegR.field_78795_f = -0.1f - MathHelper.func_76134_b((float)(par1 * 0.6662f)) * 1.2f * par2;
+        this.LegL.field_78795_f = -0.1f - MathHelper.func_76134_b((float)(par1 * 0.6662f + (float)Math.PI)) * 1.2f * par2;
+        this.ArmR.field_78795_f = -0.1f + MathHelper.func_76134_b((float)(par1 * 0.6662f)) * 1.2f * par2;
+        this.ArmL.field_78795_f = -0.1f + MathHelper.func_76134_b((float)(par1 * 0.6662f + (float)Math.PI)) * 1.2f * par2;
+        this.LegR.field_78796_g = 0.0f;
+        this.LegL.field_78796_g = 0.0f;
+        this.ArmR.field_78796_g = 0.0f;
+        this.ArmL.field_78796_g = 0.0f;
+        super.func_78087_a(par1, par2, par3, par4, par5, par6, par7Entity);
+    }
+}
+

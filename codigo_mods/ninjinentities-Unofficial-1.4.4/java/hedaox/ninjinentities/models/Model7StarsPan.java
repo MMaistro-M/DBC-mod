@@ -1,0 +1,167 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.minecraft.client.model.ModelBase
+ *  net.minecraft.client.model.ModelBox
+ *  net.minecraft.client.model.ModelRenderer
+ *  net.minecraft.entity.Entity
+ *  net.minecraft.util.MathHelper
+ *  org.lwjgl.opengl.GL11
+ */
+package hedaox.ninjinentities.models;
+
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelBox;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
+import org.lwjgl.opengl.GL11;
+
+public class Model7StarsPan
+extends ModelBase {
+    private final ModelRenderer bipedHead;
+    private final ModelRenderer Line_r1;
+    private final ModelRenderer Line_r2;
+    private final ModelRenderer bipedBody;
+    private final ModelRenderer RTail2;
+    private final ModelRenderer Tail5;
+    private final ModelRenderer Tail6;
+    private final ModelRenderer Tail7;
+    private final ModelRenderer RTail;
+    private final ModelRenderer Tail2;
+    private final ModelRenderer Tail3;
+    private final ModelRenderer Tail4;
+    private final ModelRenderer bipedRightArm;
+    private final ModelRenderer bipedLeftArm;
+    private final ModelRenderer bipedRightLeg;
+    private final ModelRenderer bipedLeftLeg;
+    private float scale = 1.0f;
+
+    public Model7StarsPan(float _scale) {
+        this.field_78090_t = 128;
+        this.field_78089_u = 128;
+        this.scale = _scale;
+        this.bipedHead = new ModelRenderer((ModelBase)this);
+        this.bipedHead.func_78793_a(0.0f, 7.0f, -1.0f);
+        this.bipedHead.field_78804_l.add(new ModelBox(this.bipedHead, 24, 44, -2.5f, -8.0f, 0.5f, 1, 3, 1, 0.01f));
+        this.bipedHead.field_78804_l.add(new ModelBox(this.bipedHead, 50, 11, 1.5f, -8.0f, 0.5f, 1, 3, 1, 0.01f));
+        this.bipedHead.field_78804_l.add(new ModelBox(this.bipedHead, 24, 50, -3.0f, -5.0f, -2.5f, 6, 5, 5, 0.0f));
+        this.bipedHead.field_78804_l.add(new ModelBox(this.bipedHead, 34, 17, -0.5f, -4.5f, -2.6f, 1, 1, 0, 0.0f));
+        this.bipedHead.field_78804_l.add(new ModelBox(this.bipedHead, 34, 11, -2.0f, -2.0f, -6.5f, 4, 2, 4, 0.0f));
+        this.Line_r1 = new ModelRenderer((ModelBase)this);
+        this.Line_r1.func_78793_a(2.5f, -3.0f, 1.5f);
+        this.bipedHead.func_78792_a(this.Line_r1);
+        this.setRotationAngle(this.Line_r1, -0.5698f, 0.9137f, -0.429f);
+        this.Line_r1.field_78804_l.add(new ModelBox(this.Line_r1, 0, 52, 0.0f, -6.0f, -2.0f, 0, 8, 7, 0.0f));
+        this.Line_r2 = new ModelRenderer((ModelBase)this);
+        this.Line_r2.func_78793_a(-2.5f, -3.0f, 1.5f);
+        this.bipedHead.func_78792_a(this.Line_r2);
+        this.setRotationAngle(this.Line_r2, -0.5698f, -0.9137f, 0.429f);
+        this.Line_r2.field_78804_l.add(new ModelBox(this.Line_r2, 46, 50, 0.0f, -6.0f, -2.0f, 0, 8, 7, 0.0f));
+        this.bipedBody = new ModelRenderer((ModelBase)this);
+        this.bipedBody.func_78793_a(0.0f, 0.0f, 0.0f);
+        this.bipedBody.field_78804_l.add(new ModelBox(this.bipedBody, 0, 18, -4.0f, 7.0f, -3.0f, 8, 7, 6, 0.0f));
+        this.bipedBody.field_78804_l.add(new ModelBox(this.bipedBody, 0, 0, -4.0f, 14.0f, -4.0f, 8, 9, 9, 0.0f));
+        this.RTail2 = new ModelRenderer((ModelBase)this);
+        this.RTail2.func_78793_a(1.0f, 21.0f, 5.0f);
+        this.bipedBody.func_78792_a(this.RTail2);
+        this.setRotationAngle(this.RTail2, -0.3348f, 0.4149f, -0.1393f);
+        this.RTail2.field_78804_l.add(new ModelBox(this.RTail2, 0, 31, -3.5f, -4.0f, -2.0f, 7, 6, 7, 0.0f));
+        this.Tail5 = new ModelRenderer((ModelBase)this);
+        this.Tail5.func_78793_a(1.0f, -0.75f, 7.0f);
+        this.RTail2.func_78792_a(this.Tail5);
+        this.setRotationAngle(this.Tail5, 0.3927f, 0.0f, 0.0f);
+        this.Tail5.field_78804_l.add(new ModelBox(this.Tail5, 34, 0, -4.0f, -4.0f, -3.0f, 6, 5, 6, 0.0f));
+        this.Tail6 = new ModelRenderer((ModelBase)this);
+        this.Tail6.func_78793_a(-1.0f, -1.75f, 3.0f);
+        this.Tail5.func_78792_a(this.Tail6);
+        this.setRotationAngle(this.Tail6, 0.3927f, 0.0f, 0.0f);
+        this.Tail6.field_78804_l.add(new ModelBox(this.Tail6, 56, 11, -2.0f, -3.0f, -1.0f, 4, 5, 5, 0.0f));
+        this.Tail7 = new ModelRenderer((ModelBase)this);
+        this.Tail7.func_78793_a(1.0f, -0.75f, 6.0f);
+        this.Tail6.func_78792_a(this.Tail7);
+        this.setRotationAngle(this.Tail7, 0.3927f, 0.0f, 0.0f);
+        this.Tail7.field_78804_l.add(new ModelBox(this.Tail7, 14, 60, -2.5f, -3.0f, -3.0f, 3, 3, 5, 0.0f));
+        this.RTail = new ModelRenderer((ModelBase)this);
+        this.RTail.func_78793_a(-1.0f, 21.25f, 5.0f);
+        this.bipedBody.func_78792_a(this.RTail);
+        this.setRotationAngle(this.RTail, -0.3348f, -0.4149f, 0.1393f);
+        this.RTail.field_78804_l.add(new ModelBox(this.RTail, 28, 18, -3.5f, -4.0f, -2.0f, 7, 6, 7, 0.0f));
+        this.Tail2 = new ModelRenderer((ModelBase)this);
+        this.Tail2.func_78793_a(-1.0f, -0.75f, 7.0f);
+        this.RTail.func_78792_a(this.Tail2);
+        this.setRotationAngle(this.Tail2, 0.3927f, 0.0f, 0.0f);
+        this.Tail2.field_78804_l.add(new ModelBox(this.Tail2, 28, 31, -2.0f, -4.0f, -3.0f, 6, 5, 6, 0.0f));
+        this.Tail3 = new ModelRenderer((ModelBase)this);
+        this.Tail3.func_78793_a(1.0f, -1.75f, 3.0f);
+        this.Tail2.func_78792_a(this.Tail3);
+        this.setRotationAngle(this.Tail3, 0.3927f, 0.0f, 0.0f);
+        this.Tail3.field_78804_l.add(new ModelBox(this.Tail3, 52, 31, -2.0f, -3.0f, -1.0f, 4, 5, 5, 0.0f));
+        this.Tail4 = new ModelRenderer((ModelBase)this);
+        this.Tail4.func_78793_a(-1.0f, -0.75f, 6.0f);
+        this.Tail3.func_78792_a(this.Tail4);
+        this.setRotationAngle(this.Tail4, 0.3927f, 0.0f, 0.0f);
+        this.Tail4.field_78804_l.add(new ModelBox(this.Tail4, 58, 0, -0.5f, -3.0f, -3.0f, 3, 3, 5, 0.0f));
+        this.bipedRightArm = new ModelRenderer((ModelBase)this);
+        this.bipedRightArm.func_78793_a(-5.0f, 10.0f, -1.0f);
+        this.bipedBody.func_78792_a(this.bipedRightArm);
+        this.bipedRightArm.field_78804_l.add(new ModelBox(this.bipedRightArm, 30, 60, -1.0f, -2.0f, -1.5f, 2, 10, 3, 0.0f));
+        this.bipedLeftArm = new ModelRenderer((ModelBase)this);
+        this.bipedLeftArm.func_78793_a(5.0f, 10.0f, -1.0f);
+        this.bipedBody.func_78792_a(this.bipedLeftArm);
+        this.bipedLeftArm.field_78804_l.add(new ModelBox(this.bipedLeftArm, 60, 50, -1.0f, -2.0f, -1.5f, 2, 10, 3, 0.0f));
+        this.bipedRightLeg = new ModelRenderer((ModelBase)this);
+        this.bipedRightLeg.func_78793_a(-1.9f, 21.0f, 0.0f);
+        this.bipedBody.func_78792_a(this.bipedRightLeg);
+        this.bipedRightLeg.field_78804_l.add(new ModelBox(this.bipedRightLeg, 28, 42, -4.5f, 2.0f, -6.0f, 5, 1, 7, 0.0f));
+        this.bipedRightLeg.field_78804_l.add(new ModelBox(this.bipedRightLeg, 52, 41, -3.5f, -2.0f, -4.0f, 3, 4, 5, 0.25f));
+        this.bipedLeftLeg = new ModelRenderer((ModelBase)this);
+        this.bipedLeftLeg.func_78793_a(1.9f, 21.0f, 0.0f);
+        this.bipedBody.func_78792_a(this.bipedLeftLeg);
+        this.bipedLeftLeg.field_78804_l.add(new ModelBox(this.bipedLeftLeg, 0, 44, -0.5f, 2.0f, -6.0f, 5, 1, 7, 0.0f));
+        this.bipedLeftLeg.field_78804_l.add(new ModelBox(this.bipedLeftLeg, 56, 21, 0.5f, -2.0f, -4.0f, 3, 4, 5, 0.25f));
+    }
+
+    public void func_78088_a(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
+        this.func_78087_a(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor, entity);
+        GL11.glPushMatrix();
+        GL11.glScalef((float)this.scale, (float)this.scale, (float)this.scale);
+        GL11.glTranslatef((float)0.0f, (float)((float)((double)-1.04f + 5.5 / (1.0 + Math.pow(this.scale / 0.45f, 1.88f)))), (float)0.0f);
+        this.bipedHead.func_78785_a(scaleFactor);
+        this.bipedBody.func_78785_a(scaleFactor);
+        GL11.glPopMatrix();
+    }
+
+    public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+        modelRenderer.field_78795_f = x;
+        modelRenderer.field_78796_g = y;
+        modelRenderer.field_78808_h = z;
+    }
+
+    public void func_78087_a(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entity) {
+        this.bipedHead.field_78796_g = netHeadYaw / 57.295776f;
+        this.bipedHead.field_78795_f = headPitch / 57.295776f;
+        this.bipedRightArm.field_78795_f = MathHelper.func_76134_b((float)(limbSwing * 0.6662f + (float)Math.PI)) * 2.0f * limbSwingAmount * 0.5f;
+        this.bipedLeftArm.field_78795_f = MathHelper.func_76134_b((float)(limbSwing * 0.6662f)) * 2.0f * limbSwingAmount * 0.5f;
+        this.bipedRightLeg.field_78795_f = MathHelper.func_76134_b((float)(limbSwing * 0.6662f)) * 1.4f * limbSwingAmount;
+        this.bipedLeftLeg.field_78795_f = MathHelper.func_76134_b((float)(limbSwing * 0.6662f + (float)Math.PI)) * 1.4f * limbSwingAmount;
+        this.bipedRightArm.field_78808_h = 0.0f;
+        this.bipedLeftArm.field_78808_h = 0.0f;
+        this.bipedRightLeg.field_78796_g = 0.0f;
+        this.bipedLeftLeg.field_78796_g = 0.0f;
+        this.bipedRightArm.field_78796_g = 0.0f;
+        float animProgress = this.field_78095_p;
+        this.bipedBody.field_78796_g = MathHelper.func_76126_a((float)(MathHelper.func_76129_c((float)animProgress) * (float)Math.PI * 2.0f)) * 0.2f;
+        float animCurve = 1.0f - animProgress;
+        animCurve *= animCurve;
+        animCurve *= animCurve;
+        animCurve = 1.0f - animCurve;
+        float sinCurve = MathHelper.func_76126_a((float)(animCurve * (float)Math.PI));
+        float headOffset = MathHelper.func_76126_a((float)(animProgress * (float)Math.PI)) * -(this.bipedHead.field_78795_f - 0.7f) * 0.75f;
+        this.bipedRightArm.field_78795_f -= sinCurve * 1.2f + headOffset;
+        this.bipedRightArm.field_78796_g += this.bipedBody.field_78796_g * 2.0f;
+        this.bipedRightArm.field_78808_h = MathHelper.func_76126_a((float)(animProgress * 2.1415927f)) * -0.4f;
+    }
+}
+

@@ -1,0 +1,19 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package kamkeel.npcs.network.enums;
+
+public enum EnumItemPacketType {
+    WAND,
+    MOUNTER,
+    CLONER,
+    TELEPORTER,
+    SCRIPTER,
+    PATHER,
+    BLOCK,
+    BRUSH,
+    HAMMER,
+    MAGIC_BOOK;
+
+}
+

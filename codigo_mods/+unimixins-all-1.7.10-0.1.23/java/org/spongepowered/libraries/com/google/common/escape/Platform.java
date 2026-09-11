@@ -1,0 +1,25 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package org.spongepowered.libraries.com.google.common.escape;
+
+import org.spongepowered.libraries.com.google.common.annotations.GwtCompatible;
+
+@GwtCompatible(emulated=true)
+final class Platform {
+    private static final ThreadLocal<char[]> DEST_TL = new ThreadLocal<char[]>(){
+
+        @Override
+        protected char[] initialValue() {
+            return new char[1024];
+        }
+    };
+
+    private Platform() {
+    }
+
+    static char[] charBufferFromThreadLocal() {
+        return DEST_TL.get();
+    }
+}
+

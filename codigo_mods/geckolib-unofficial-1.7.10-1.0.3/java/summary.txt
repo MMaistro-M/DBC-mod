@@ -1,0 +1,33 @@
+Summary for C:\Users\Matheus Maistro\Downloads\mods_mine\geckolib-unofficial-1.7.10-1.0.3.jar
+Decompiled with CFR 0.152
+
+
+com.relocated.fasterxml.jackson.databind.deser.std.BaseNodeDeserializer
+----------------------------
+
+updateObject(com.relocated.fasterxml.jackson.core.JsonParser com.relocated.fasterxml.jackson.databind.DeserializationContext com.relocated.fasterxml.jackson.databind.node.ObjectNode )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+com.relocated.fasterxml.jackson.databind.type.TypeFactory
+----------------------------
+
+constructSpecializedType(com.relocated.fasterxml.jackson.databind.JavaType java.lang.Class<?> )
+  Unable to fully structure code
+
+
+org.apache.commons.lang3.CharSequenceUtils
+----------------------------
+
+lastIndexOf(java.lang.CharSequence java.lang.CharSequence int )
+  Unable to fully structure code
+
+
+com.relocated.fasterxml.jackson.core.io.UTF8Writer
+----------------------------
+
+write(char[] int int )
+  Unable to fully structure code
+write(java.lang.String int int )
+  Unable to fully structure code

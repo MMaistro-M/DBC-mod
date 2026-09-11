@@ -1,0 +1,10 @@
+Summary for C:\Users\Matheus Maistro\Downloads\mods_mine\JFamilyC-v1.2.18.jar
+Decompiled with CFR 0.152
+
+
+JinRyuu.FamilyC.FamilyCCharGui
+----------------------------
+
+func_73863_a(int int float )
+  Could not resolve type clashes
+  Unable to fully structure code
