@@ -1,0 +1,21 @@
+﻿JARs corrigidos — Minecraft Forge 1.7.10 / Forge 10.13.4.1614
+
+Instalação
+1. Pare o servidor e feche o Minecraft cliente.
+2. Faça cópia da pasta mods e do mundo.
+3. Substitua os arquivos originais pelos JARs com o mesmo nome abaixo:
+   DBCAdditions-1.74.jar  <- DBCAdditions-1.74-corrigido.jar
+   JRMCore-v1.3.51.jar    <- JRMCore-v1.3.51-corrigido.jar
+   npcgecko-1.0.jar       <- npcgecko-1.0-corrigido.jar
+4. DBC Additions e JRMCore: instale no servidor e em todos os clientes.
+   NPC Gecko: instale onde CustomNPC Plus e GeckoLib estiverem instalados.
+5. Não deixe o original e o corrigido juntos na mesma pasta mods.
+6. Inicie o servidor e teste uma dimensão nova primeiro; depois teste a troca de forma e NPCs Gecko.
+
+Conteúdo
+- DBC Additions: correções de dimensões, teleporte seguro, geração da Universal Arena,
+  validações de NBT/pacotes e custos mínimos/proporcionais de formas.
+- JRMCore: custos raciais zero ou negativos recebem valores mínimos válidos.
+- NPC Gecko: targets Mixin corrigidos para kamkeel.npcs.addon.
+
+Os JARs originais da raiz do projeto não foram alterados.
