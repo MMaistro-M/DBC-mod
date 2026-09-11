@@ -137,7 +137,7 @@ public class FormItem {
         jgPlayer.connectBaseNBT();
         boolean tailMode = JRMCoreH.tailHas(JRMCoreH.getByte(player, "jrmcTlmd"));
         byte customRace = DataUtils.getDBCARace(player);
-        int racialSkillLevel = JRMCoreH.SklLvlX(1, jgPlayer.getNBT().func_74779_i("jrmcSSltX"));
+        int racialSkillLevel = JRMCoreH.SklLvlX(1, jgPlayer.getNBT().getString("jrmcSSltX"));
         int kaioSkillLvl = JRMCoreH.SklLvl(8, player);
         int godSkillLvl = JRMCoreH.SklLvl(9, player);
         int mysticLvl = JRMCoreH.SklLvl(10, player);
@@ -193,47 +193,47 @@ public class FormItem {
 
     public NBTTagCompound write() {
         NBTTagCompound compound = new NBTTagCompound();
-        compound.func_74778_a("DisplayName", this.displayName);
-        compound.func_74768_a("ID", this.id);
-        compound.func_74783_a("Races", DataUtils.toIntArray(this.races));
-        compound.func_74768_a("RacialSkillLevel", this.racialSkillLevel);
-        compound.func_74768_a("GodSkillLevel", this.godSkillLevel);
-        compound.func_74768_a("KaioSkillLevel", this.kaioSkillLevel);
-        compound.func_74768_a("MysticSkillLevel", this.mysticSkillLevel);
-        compound.func_74768_a("UISkillLevel", this.ultraInstinctSkillLevel);
-        compound.func_74768_a("UESkillLevel", this.ultraEgoSkillLevel);
-        compound.func_74757_a("TailRequired", this.tailRequired);
-        compound.func_74768_a("CustomForm", this.customForm);
+        compound.setString("DisplayName", this.displayName);
+        compound.setInteger("ID", this.id);
+        compound.setIntArray("Races", DataUtils.toIntArray(this.races));
+        compound.setInteger("RacialSkillLevel", this.racialSkillLevel);
+        compound.setInteger("GodSkillLevel", this.godSkillLevel);
+        compound.setInteger("KaioSkillLevel", this.kaioSkillLevel);
+        compound.setInteger("MysticSkillLevel", this.mysticSkillLevel);
+        compound.setInteger("UISkillLevel", this.ultraInstinctSkillLevel);
+        compound.setInteger("UESkillLevel", this.ultraEgoSkillLevel);
+        compound.setBoolean("TailRequired", this.tailRequired);
+        compound.setInteger("CustomForm", this.customForm);
         NBTTagList skillsList = new NBTTagList();
         for (Map.Entry<Integer, Integer> entry : this.requiredSkills.entrySet()) {
             NBTTagCompound skillTag = new NBTTagCompound();
-            skillTag.func_74768_a("SkillID", entry.getKey().intValue());
-            skillTag.func_74768_a("SkillLevel", entry.getValue().intValue());
-            skillsList.func_74742_a((NBTBase)skillTag);
+            skillTag.setInteger("SkillID", entry.getKey().intValue());
+            skillTag.setInteger("SkillLevel", entry.getValue().intValue());
+            skillsList.appendTag((NBTBase)skillTag);
         }
-        compound.func_74782_a("RequiredSkills", (NBTBase)skillsList);
+        compound.setTag("RequiredSkills", (NBTBase)skillsList);
         return compound;
     }
 
     public static FormItem read(NBTTagCompound compound) {
-        String displayName = compound.func_74779_i("DisplayName");
-        byte[] races = DataUtils.toByteArray(compound.func_74759_k("Races"));
-        int id = compound.func_74762_e("ID");
-        int racialSkillLevel = compound.func_74762_e("RacialSkillLevel");
-        int godSkillLevel = compound.func_74762_e("GodSkillLevel");
-        int kaioSkillLevel = compound.func_74762_e("KaioSkillLevel");
-        int mysticSkillLevel = compound.func_74762_e("MysticSkillLevel");
-        int ueSkillLevel = compound.func_74762_e("UESkillLevel");
-        int uiSkillLevel = compound.func_74762_e("UISkillLevel");
-        boolean tailRequired = compound.func_74767_n("TailRequired");
+        String displayName = compound.getString("DisplayName");
+        byte[] races = DataUtils.toByteArray(compound.getIntArray("Races"));
+        int id = compound.getInteger("ID");
+        int racialSkillLevel = compound.getInteger("RacialSkillLevel");
+        int godSkillLevel = compound.getInteger("GodSkillLevel");
+        int kaioSkillLevel = compound.getInteger("KaioSkillLevel");
+        int mysticSkillLevel = compound.getInteger("MysticSkillLevel");
+        int ueSkillLevel = compound.getInteger("UESkillLevel");
+        int uiSkillLevel = compound.getInteger("UISkillLevel");
+        boolean tailRequired = compound.getBoolean("TailRequired");
         FormItem form = new FormItem(id, displayName, races, racialSkillLevel, godSkillLevel);
         form.setTailRequired(tailRequired);
-        form.setCustomForm(compound.func_74762_e("CustomForm"));
+        form.setCustomForm(compound.getInteger("CustomForm"));
         form.setSkillLevels(kaioSkillLevel, mysticSkillLevel, uiSkillLevel, ueSkillLevel);
-        NBTTagList skillsList = compound.func_150295_c("RequiredSkills", 10);
-        for (int i = 0; i < skillsList.func_74745_c(); ++i) {
-            NBTTagCompound skillTag = skillsList.func_150305_b(i);
-            form.addRequiredCustomSkill(DBCASkills.getSkill(skillTag.func_74762_e("SkillID")), skillTag.func_74762_e("SkillLevel"));
+        NBTTagList skillsList = compound.getTagList("RequiredSkills", 10);
+        for (int i = 0; i < skillsList.tagCount(); ++i) {
+            NBTTagCompound skillTag = skillsList.getCompoundTagAt(i);
+            form.addRequiredCustomSkill(DBCASkills.getSkill(skillTag.getInteger("SkillID")), skillTag.getInteger("SkillLevel"));
         }
         return form;
     }

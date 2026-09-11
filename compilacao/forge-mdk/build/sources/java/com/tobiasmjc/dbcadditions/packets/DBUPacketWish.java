@@ -65,44 +65,44 @@ implements IMessage {
                 }
                 case 1: {
                     if (TeleporterDBUtils.transferPlayer(server, p, 99)) {
-                        p.field_71135_a.func_147364_a(-10.0, 70.0, 0.0, 0.0f, 0.0f);
+                        p.playerNetServerHandler.setPlayerLocation(-10.0, 70.0, 0.0, 0.0f, 0.0f);
                     }
                     break;
                 }
                 case 2: {
                     if (TeleporterDBUtils.transferPlayer(server, p, 0)) {
-                        p.field_71135_a.func_147364_a(80.0, 220.0, 60.0, 0.0f, 0.0f);
+                        p.playerNetServerHandler.setPlayerLocation(80.0, 220.0, 60.0, 0.0f, 0.0f);
                     }
                     break;
                 }
                 case 3: {
                     if (TeleporterDBUtils.transferPlayer(server, p, 100)) {
-                        p.field_71135_a.func_147364_a(0.0, 74.0, -39.0, 0.0f, 0.0f);
+                        p.playerNetServerHandler.setPlayerLocation(0.0, 74.0, -39.0, 0.0f, 0.0f);
                     }
                     break;
                 }
                 case 4: {
-                    p.field_71071_by.func_70441_a(new ItemStack((Item)ItemsDBCUtils.potara_yellow, DBCAConfig.PotaraAmount));
+                    p.inventory.addItemStackToInventory(new ItemStack((Item)ItemsDBCUtils.potara_yellow, DBCAConfig.PotaraAmount));
                     break;
                 }
                 case 5: {
-                    p.field_71071_by.func_70441_a(new ItemStack((Item)ItemsDBCUtils.potara_green, DBCAConfig.PotaraAmount));
+                    p.inventory.addItemStackToInventory(new ItemStack((Item)ItemsDBCUtils.potara_green, DBCAConfig.PotaraAmount));
                     break;
                 }
                 case 6: {
-                    p.field_71071_by.func_70441_a(new ItemStack((Item)ItemsDBCUtils.potara_blue, DBCAConfig.PotaraAmount));
+                    p.inventory.addItemStackToInventory(new ItemStack((Item)ItemsDBCUtils.potara_blue, DBCAConfig.PotaraAmount));
                     break;
                 }
                 case 7: {
-                    p.field_71071_by.func_70441_a(new ItemStack((Item)ItemsDBCUtils.potara_red, DBCAConfig.PotaraAmount));
+                    p.inventory.addItemStackToInventory(new ItemStack((Item)ItemsDBCUtils.potara_red, DBCAConfig.PotaraAmount));
                     break;
                 }
                 case 8: {
-                    p.field_71071_by.func_70441_a(new ItemStack((Item)ItemsDBCUtils.potara_pink, DBCAConfig.PotaraAmount));
+                    p.inventory.addItemStackToInventory(new ItemStack((Item)ItemsDBCUtils.potara_pink, DBCAConfig.PotaraAmount));
                     break;
                 }
                 case 9: {
-                    p.field_71071_by.func_70441_a(new ItemStack((Item)ItemsDBCUtils.potara_white, DBCAConfig.PotaraAmount));
+                    p.inventory.addItemStackToInventory(new ItemStack((Item)ItemsDBCUtils.potara_white, DBCAConfig.PotaraAmount));
                 }
             }
         }

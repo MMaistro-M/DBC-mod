@@ -24,7 +24,7 @@ public class UniversalArena {
         int ovalHeight = 40;
         for (i = -platformSize / 2; i <= platformSize / 2; ++i) {
             for (j = -platformSize / 2; j <= platformSize / 2; ++j) {
-                world.func_147449_b(x + i, y, z + j, BlocksJRMC.BlockColoredStone);
+                world.setBlock(x + i, y, z + j, BlocksJRMC.BlockColoredStone);
             }
         }
         this.generateSeats(world, x - platformSize / 2 - seatsDistance, y, z, platformSize, "left");
@@ -37,8 +37,8 @@ public class UniversalArena {
         for (i = -platformSize / 2 - 3; i <= platformSize / 2 + 3; ++i) {
             for (j = -platformSize / 2 - 3; j <= platformSize / 2 + 3; ++j) {
                 for (int yi = -1; yi > -3; --yi) {
-                    if (!world.func_147437_c(x + i, y + yi, z + j)) continue;
-                    world.func_147449_b(x + i, y + yi, z + j, BlocksDBC.BlockKachiKachin[3]);
+                    if (!world.isAirBlock(x + i, y + yi, z + j)) continue;
+                    world.setBlock(x + i, y + yi, z + j, BlocksDBC.BlockKachiKachin[3]);
                 }
             }
         }
@@ -58,9 +58,9 @@ public class UniversalArena {
                 int innerDistanceSquared = innerRadiusSquared - dx * dx - dy * dy;
                 int innerZ = innerDistanceSquared < 0 ? -1 : (int)Math.floor(Math.sqrt(innerDistanceSquared));
                 for (int dz = Math.max(0, innerZ + 1); dz <= outerZ; ++dz) {
-                    world.func_147449_b(x + dx, y + dy, z + dz, (Block)BlocksDBCAdditions.MagicGlass);
+                    world.setBlock(x + dx, y + dy, z + dz, (Block)BlocksDBCAdditions.MagicGlass);
                     if (dz > 0) {
-                        world.func_147449_b(x + dx, y + dy, z - dz, (Block)BlocksDBCAdditions.MagicGlass);
+                        world.setBlock(x + dx, y + dy, z - dz, (Block)BlocksDBCAdditions.MagicGlass);
                     }
                 }
             }
@@ -77,15 +77,15 @@ public class UniversalArena {
             for (int dx = -ancho / 2; dx <= ancho / 2; ++dx) {
                 for (int dz = inicio; dz < profundidad; ++dz) {
                     if (posicion.equals("left")) {
-                        world.func_147449_b(x - dz, alturaActual, z + dx, BlocksDBC.BlockKachiKachin[0]);
+                        world.setBlock(x - dz, alturaActual, z + dx, BlocksDBC.BlockKachiKachin[0]);
                         continue;
                     }
                     if (posicion.equals("right")) {
-                        world.func_147449_b(x + dz, alturaActual, z + dx, BlocksDBC.BlockKachiKachin[0]);
+                        world.setBlock(x + dz, alturaActual, z + dx, BlocksDBC.BlockKachiKachin[0]);
                         continue;
                     }
                     if (!posicion.equals("front")) continue;
-                    world.func_147449_b(x + dx, alturaActual, z - dz, BlocksDBC.BlockKachiKachin[0]);
+                    world.setBlock(x + dx, alturaActual, z - dz, BlocksDBC.BlockKachiKachin[0]);
                 }
             }
         }
@@ -95,7 +95,7 @@ public class UniversalArena {
         for (int i = -radioX; i <= radioX; ++i) {
             for (int j = -radioY; j <= radioY; ++j) {
                 if (!((double)(i * i) / (double)(radioX * radioX) + (double)(j * j) / (double)(radioY * radioY) <= 1.0)) continue;
-                mundo.func_147449_b(x, y + j, z + i, material);
+                mundo.setBlock(x, y + j, z + i, material);
             }
         }
     }
@@ -109,13 +109,13 @@ public class UniversalArena {
     }
 
     private void buildPixelArt(World world, int x, int y, int z, int[][] pixelArt, boolean rotated) {
-        Block[] colors = new Block[]{Blocks.field_150350_a, BlocksDBC.BlockKachiKachin[10], BlocksDBC.BlockKachiKachin[4], BlocksDBC.BlockKachiKachin[15], BlocksDBC.BlockKachiKachin[7]};
+        Block[] colors = new Block[]{Blocks.air, BlocksDBC.BlockKachiKachin[10], BlocksDBC.BlockKachiKachin[4], BlocksDBC.BlockKachiKachin[15], BlocksDBC.BlockKachiKachin[7]};
         int multiplier = rotated ? -1 : 1;
         for (int i = 0; i < pixelArt.length; ++i) {
             for (int j = 0; j < pixelArt[i].length; ++j) {
                 int color = pixelArt[i][j];
-                if (color <= 0 || color >= colors.length || colors[color] == Blocks.field_150350_a) continue;
-                world.func_147449_b(x, y - i + pixelArt.length / 2, z + (j - pixelArt[i].length / 2) * multiplier, colors[color]);
+                if (color <= 0 || color >= colors.length || colors[color] == Blocks.air) continue;
+                world.setBlock(x, y - i + pixelArt.length / 2, z + (j - pixelArt[i].length / 2) * multiplier, colors[color]);
             }
         }
     }

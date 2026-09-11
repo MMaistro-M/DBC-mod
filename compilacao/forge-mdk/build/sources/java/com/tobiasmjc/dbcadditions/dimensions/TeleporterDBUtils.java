@@ -36,30 +36,30 @@ extends Teleporter {
         if (server == null || player == null) {
             return false;
         }
-        WorldServer destination = server.func_71218_a(dimensionID);
+        WorldServer destination = server.worldServerForDimension(dimensionID);
         if (destination == null) {
             return false;
         }
-        server.func_71203_ab().transferPlayerToDimension(player, dimensionID, (Teleporter)new TeleporterDBUtils(destination));
+        server.getConfigurationManager().transferPlayerToDimension(player, dimensionID, (Teleporter)new TeleporterDBUtils(destination));
         return true;
     }
 
-    public void func_77185_a(Entity entity, double par2, double par4, double par6, float par8) {
-        int i = MathHelper.func_76128_c((double)(entity.field_70165_t + 1.0));
-        int j = MathHelper.func_76128_c((double)entity.field_70163_u);
-        int k = MathHelper.func_76128_c((double)entity.field_70161_v);
+    public void placeInPortal(Entity entity, double par2, double par4, double par6, float par8) {
+        int i = MathHelper.floor_double((double)(entity.posX + 1.0));
+        int j = MathHelper.floor_double((double)entity.posY);
+        int k = MathHelper.floor_double((double)entity.posZ);
         int k1 = i;
         int l1 = j;
         int i2 = k;
         for (l1 = 250; l1 > 5; --l1) {
-            if (this.worldServerInstance.func_147439_a(k1, l1, i2) == Blocks.field_150350_a) continue;
+            if (this.worldServerInstance.getBlock(k1, l1, i2) == Blocks.air) continue;
             this.placeInExistingPortal((World)this.worldServerInstance, entity, k1, l1, i2);
             return;
         }
-        entity.func_70012_b((double)k1 + 0.5, 80.0, (double)i2 + 0.5, entity.field_70177_z, 0.0f);
-        entity.field_70179_y = 0.0;
-        entity.field_70181_x = 0.0;
-        entity.field_70159_w = 0.0;
+        entity.setLocationAndAngles((double)k1 + 0.5, 80.0, (double)i2 + 0.5, entity.rotationYaw, 0.0f);
+        entity.motionZ = 0.0;
+        entity.motionY = 0.0;
+        entity.motionX = 0.0;
     }
 
     public boolean placeInExistingPortal(World world, Entity entity, int i, int j, int k) {
@@ -69,10 +69,10 @@ extends Teleporter {
         double d2 = (double)k1 + 0.5;
         double d4 = (double)l1 + 0.5 + 4.0;
         double d6 = (double)i2 + 0.5;
-        entity.func_70012_b(d2 + 0.0, d4 + 2.0, d6 + 0.0, entity.field_70177_z, 0.0f);
-        entity.field_70179_y = 0.0;
-        entity.field_70181_x = 0.0;
-        entity.field_70159_w = 0.0;
+        entity.setLocationAndAngles(d2 + 0.0, d4 + 2.0, d6 + 0.0, entity.rotationYaw, 0.0f);
+        entity.motionZ = 0.0;
+        entity.motionY = 0.0;
+        entity.motionX = 0.0;
         d2 -= 3.0;
         d6 -= 3.0;
         return true;

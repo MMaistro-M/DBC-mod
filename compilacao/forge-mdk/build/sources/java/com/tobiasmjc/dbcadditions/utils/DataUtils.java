@@ -29,7 +29,7 @@ import net.minecraft.nbt.NBTTagCompound;
 public class DataUtils {
     public static void writeNBT(ByteBuf buffer, NBTTagCompound tag) {
         try {
-            byte[] bytes = CompressedStreamTools.func_74798_a((NBTTagCompound)tag);
+            byte[] bytes = CompressedStreamTools.compress((NBTTagCompound)tag);
             buffer.writeShort(bytes.length);
             buffer.writeBytes(bytes);
         }
@@ -70,11 +70,11 @@ public class DataUtils {
     public static NBTTagCompound nbt(EntityPlayer p, String s) {
         NBTTagCompound nbt;
         if (s.contains("pres")) {
-            if (!p.getEntityData().func_74764_b("PlayerPersisted")) {
+            if (!p.getEntityData().hasKey("PlayerPersisted")) {
                 nbt = new NBTTagCompound();
-                p.getEntityData().func_74782_a("PlayerPersisted", (NBTBase)nbt);
+                p.getEntityData().setTag("PlayerPersisted", (NBTBase)nbt);
             } else {
-                nbt = p.getEntityData().func_74775_l("PlayerPersisted");
+                nbt = p.getEntityData().getCompoundTag("PlayerPersisted");
             }
         } else {
             nbt = p.getEntityData();
@@ -94,7 +94,7 @@ public class DataUtils {
             return -1;
         }
         for (int i = 0; i < JRMCoreH.plyrs.length; ++i) {
-            if (!JRMCoreH.plyrs[i].equals(p.func_70005_c_())) continue;
+            if (!JRMCoreH.plyrs[i].equals(p.getCommandSenderName())) continue;
             return JRMCoreH.dat10 == null ? (byte)0 : Byte.parseByte(JRMCoreH.dat10[i].split(";")[2]);
         }
         return -1;
@@ -112,7 +112,7 @@ public class DataUtils {
             return "";
         }
         for (int i = 0; i < JRMCoreH.plyrs.length; ++i) {
-            if (!JRMCoreH.plyrs[i].equals(p.func_70005_c_())) continue;
+            if (!JRMCoreH.plyrs[i].equals(p.getCommandSenderName())) continue;
             if (JRMCoreH.dat10 == null || JRMCoreH.dat10[i].split(";").length < 4) {
                 return "";
             }
@@ -134,7 +134,7 @@ public class DataUtils {
         }
         try {
             for (int i = 0; i < JRMCoreH.plyrs.length; ++i) {
-                if (!JRMCoreH.plyrs[i].equals(p.func_70005_c_())) continue;
+                if (!JRMCoreH.plyrs[i].equals(p.getCommandSenderName())) continue;
                 return JRMCoreH.dat19 == null ? "" : JRMCoreH.dat19[i].split(";")[2];
             }
         }
@@ -156,7 +156,7 @@ public class DataUtils {
             return false;
         }
         for (int i = 0; i < JRMCoreH.plyrs.length; ++i) {
-            if (!JRMCoreH.plyrs[i].equals(p.func_70005_c_())) continue;
+            if (!JRMCoreH.plyrs[i].equals(p.getCommandSenderName())) continue;
             return JRMCoreH.dat10 == null ? false : Byte.parseByte(JRMCoreH.dat10[i].split(";")[5]) != 0;
         }
         return false;
@@ -174,7 +174,7 @@ public class DataUtils {
             return 0;
         }
         for (int i = 0; i < JRMCoreH.plyrs.length; ++i) {
-            if (!JRMCoreH.plyrs[i].equals(p.func_70005_c_())) continue;
+            if (!JRMCoreH.plyrs[i].equals(p.getCommandSenderName())) continue;
             return JRMCoreH.dat10 == null ? 0 : Integer.parseInt(JRMCoreH.dat10[i].split(";")[6]);
         }
         return 0;
@@ -192,7 +192,7 @@ public class DataUtils {
             return -1;
         }
         for (int i = 0; i < JRMCoreH.plyrs.length; ++i) {
-            if (!JRMCoreH.plyrs[i].equals(p.func_70005_c_())) continue;
+            if (!JRMCoreH.plyrs[i].equals(p.getCommandSenderName())) continue;
             return JRMCoreH.dat10 == null ? (byte)0 : Byte.parseByte(JRMCoreH.dat10[i].split(";")[4]);
         }
         return -1;
@@ -205,7 +205,7 @@ public class DataUtils {
         }
         int pl = -1;
         for (int i = 0; i < JRMCoreH.plyrs.length; ++i) {
-            if (!JRMCoreH.plyrs[i].equals(player.func_70005_c_())) continue;
+            if (!JRMCoreH.plyrs[i].equals(player.getCommandSenderName())) continue;
             pl = i;
             break;
         }
@@ -214,9 +214,9 @@ public class DataUtils {
         }
         String[] fullFusionData = JRMCoreH.dat18[pl].split(";");
         if (fullFusionData.length >= 3 && (fusionData = fullFusionData[2].split(",")).length == 3) {
-            EntityPlayer playerPartner = player.field_70170_p.func_72924_a(fusionData[0]);
-            if (playerPartner != null && playerPartner.func_70005_c_().equals(player.func_70005_c_())) {
-                playerPartner = player.field_70170_p.func_72924_a(fusionData[1]);
+            EntityPlayer playerPartner = player.worldObj.getPlayerEntityByName(fusionData[0]);
+            if (playerPartner != null && playerPartner.getCommandSenderName().equals(player.getCommandSenderName())) {
+                playerPartner = player.worldObj.getPlayerEntityByName(fusionData[1]);
             }
             return playerPartner;
         }

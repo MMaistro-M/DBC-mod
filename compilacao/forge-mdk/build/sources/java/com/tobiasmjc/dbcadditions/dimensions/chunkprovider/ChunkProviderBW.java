@@ -124,7 +124,7 @@ implements IChunkProvider {
                             for (int k2 = 0; k2 < 8; ++k2) {
                                 Block block = null;
                                 if (d15 > 0.0) {
-                                    block = Blocks.field_150348_b;
+                                    block = Blocks.stone;
                                 }
                                 p_147420_3_[j2] = block;
                                 j2 += short1;
@@ -152,7 +152,7 @@ implements IChunkProvider {
             int y = random.nextInt(128);
             int z = chunkZ * 16 + random.nextInt(16);
             if (random.nextInt(4) != 0) continue;
-            new WorldGenLakes(Blocks.field_150355_j).func_76484_a(world, random, x, y, z);
+            new WorldGenLakes(Blocks.water).generate(world, random, x, y, z);
         }
     }
 
@@ -175,8 +175,8 @@ implements IChunkProvider {
                 for (int j1 = 127; j1 >= 0; --j1) {
                     int k1 = (l * 16 + k) * 128 + j1;
                     Block block2 = p_147421_3_[k1];
-                    if (block2 != null && block2.func_149688_o() != Material.field_151579_a) {
-                        if (block2 != Blocks.field_150348_b) continue;
+                    if (block2 != null && block2.getMaterial() != Material.air) {
+                        if (block2 != Blocks.stone) continue;
                         if (i1 == -1) {
                             if (b0 <= 0) {
                                 block = null;
@@ -201,23 +201,23 @@ implements IChunkProvider {
         }
     }
 
-    public Chunk func_73158_c(int p_73158_1_, int p_73158_2_) {
-        return this.func_73154_d(p_73158_1_, p_73158_2_);
+    public Chunk loadChunk(int p_73158_1_, int p_73158_2_) {
+        return this.provideChunk(p_73158_1_, p_73158_2_);
     }
 
-    public Chunk func_73154_d(int p_73154_1_, int p_73154_2_) {
+    public Chunk provideChunk(int p_73154_1_, int p_73154_2_) {
         this.endRNG.setSeed((long)p_73154_1_ * 341873128712L + (long)p_73154_2_ * 132897987541L);
         Block[] ablock = new Block[32768];
         byte[] meta = new byte[ablock.length];
-        this.biomesForGeneration = this.endWorld.func_72959_q().func_76933_b(this.biomesForGeneration, p_73154_1_ * 16, p_73154_2_ * 16, 16, 16);
+        this.biomesForGeneration = this.endWorld.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, p_73154_1_ * 16, p_73154_2_ * 16, 16, 16);
         this.func_147420_a(p_73154_1_, p_73154_2_, ablock, this.biomesForGeneration);
         this.replaceBiomeBlocks(p_73154_1_, p_73154_2_, ablock, this.biomesForGeneration, meta);
         Chunk chunk = new Chunk(this.endWorld, ablock, meta, p_73154_1_, p_73154_2_);
-        byte[] abyte = chunk.func_76605_m();
+        byte[] abyte = chunk.getBiomeArray();
         for (int k = 0; k < abyte.length; ++k) {
-            abyte[k] = (byte)this.biomesForGeneration[k].field_76756_M;
+            abyte[k] = (byte)this.biomesForGeneration[k].biomeID;
         }
-        chunk.func_76603_b();
+        chunk.generateSkylightMap();
         return chunk;
     }
 
@@ -232,11 +232,11 @@ implements IChunkProvider {
         }
         double d0 = 684.412;
         double d1 = 684.412;
-        this.noiseData4 = this.noiseGen4.func_76305_a(this.noiseData4, p_73187_2_, p_73187_4_, p_73187_5_, p_73187_7_, 1.121, 1.121, 0.5);
-        this.noiseData5 = this.noiseGen5.func_76305_a(this.noiseData5, p_73187_2_, p_73187_4_, p_73187_5_, p_73187_7_, 200.0, 200.0, 0.5);
-        this.noiseData1 = this.noiseGen3.func_76304_a(this.noiseData1, p_73187_2_, p_73187_3_, p_73187_4_, p_73187_5_, p_73187_6_, p_73187_7_, (d0 *= 2.0) / 80.0, d1 / 160.0, d0 / 80.0);
-        this.noiseData2 = this.noiseGen1.func_76304_a(this.noiseData2, p_73187_2_, p_73187_3_, p_73187_4_, p_73187_5_, p_73187_6_, p_73187_7_, d0, d1, d0);
-        this.noiseData3 = this.noiseGen2.func_76304_a(this.noiseData3, p_73187_2_, p_73187_3_, p_73187_4_, p_73187_5_, p_73187_6_, p_73187_7_, d0, d1, d0);
+        this.noiseData4 = this.noiseGen4.generateNoiseOctaves(this.noiseData4, p_73187_2_, p_73187_4_, p_73187_5_, p_73187_7_, 1.121, 1.121, 0.5);
+        this.noiseData5 = this.noiseGen5.generateNoiseOctaves(this.noiseData5, p_73187_2_, p_73187_4_, p_73187_5_, p_73187_7_, 200.0, 200.0, 0.5);
+        this.noiseData1 = this.noiseGen3.generateNoiseOctaves(this.noiseData1, p_73187_2_, p_73187_3_, p_73187_4_, p_73187_5_, p_73187_6_, p_73187_7_, (d0 *= 2.0) / 80.0, d1 / 160.0, d0 / 80.0);
+        this.noiseData2 = this.noiseGen1.generateNoiseOctaves(this.noiseData2, p_73187_2_, p_73187_3_, p_73187_4_, p_73187_5_, p_73187_6_, p_73187_7_, d0, d1, d0);
+        this.noiseData3 = this.noiseGen2.generateNoiseOctaves(this.noiseData3, p_73187_2_, p_73187_3_, p_73187_4_, p_73187_5_, p_73187_6_, p_73187_7_, d0, d1, d0);
         int k1 = 0;
         int l1 = 0;
         for (int i2 = 0; i2 < p_73187_5_; ++i2) {
@@ -252,7 +252,7 @@ implements IChunkProvider {
                 d3 = d3 * 3.0 - 2.0;
                 float f = (float)(i2 + p_73187_2_ - 0) / 1.0f;
                 float f1 = (float)(j2 + p_73187_4_ - 0) / 1.0f;
-                float f2 = 100.0f - MathHelper.func_76129_c((float)(f * f + f1 * f1)) * 8.0f;
+                float f2 = 100.0f - MathHelper.sqrt_float((float)(f * f + f1 * f1)) * 8.0f;
                 if (f2 > 80.0f) {
                     f2 = 80.0f;
                 }
@@ -307,66 +307,66 @@ implements IChunkProvider {
         return p_73187_1_;
     }
 
-    public boolean func_73149_a(int p_73149_1_, int p_73149_2_) {
+    public boolean chunkExists(int p_73149_1_, int p_73149_2_) {
         return true;
     }
 
-    public void func_73153_a(IChunkProvider p_73153_1_, int x, int z) {
-        BlockFalling.field_149832_M = true;
+    public void populate(IChunkProvider p_73153_1_, int x, int z) {
+        BlockFalling.fallInstantly = true;
         try {
-            MinecraftForge.EVENT_BUS.post((Event)new PopulateChunkEvent.Pre(p_73153_1_, this.endWorld, this.endWorld.field_73012_v, x, z, false));
+            MinecraftForge.EVENT_BUS.post((Event)new PopulateChunkEvent.Pre(p_73153_1_, this.endWorld, this.endWorld.rand, x, z, false));
             int k = x * 16;
             int l = z * 16;
-            BiomeGenBase biomegenbase = this.endWorld.func_72807_a(k + 16, l + 16);
-            biomegenbase.func_76728_a(this.endWorld, this.endWorld.field_73012_v, k, l);
-            MinecraftForge.EVENT_BUS.post((Event)new PopulateChunkEvent.Post(p_73153_1_, this.endWorld, this.endWorld.field_73012_v, x, z, false));
+            BiomeGenBase biomegenbase = this.endWorld.getBiomeGenForCoords(k + 16, l + 16);
+            biomegenbase.decorate(this.endWorld, this.endWorld.rand, k, l);
+            MinecraftForge.EVENT_BUS.post((Event)new PopulateChunkEvent.Post(p_73153_1_, this.endWorld, this.endWorld.rand, x, z, false));
             this.generateLakes(x, z, this.endRNG, this.endWorld);
             if (x == 0 && z == 0) {
                 WorldGenBeerusBigTree beerusTree = new WorldGenBeerusBigTree(false);
-                for (int i = this.endWorld.func_72800_K(); i > 0; --i) {
-                    if (this.endWorld.func_147439_a(x, i, z) == Blocks.field_150350_a) continue;
-                    beerusTree.func_76484_a(this.endWorld, this.endRNG, x, i, z);
+                for (int i = this.endWorld.getHeight(); i > 0; --i) {
+                    if (this.endWorld.getBlock(x, i, z) == Blocks.air) continue;
+                    beerusTree.generate(this.endWorld, this.endRNG, x, i, z);
                     break;
                 }
             }
         }
         finally {
-            BlockFalling.field_149832_M = false;
+            BlockFalling.fallInstantly = false;
         }
     }
 
-    public boolean func_73151_a(boolean p_73151_1_, IProgressUpdate p_73151_2_) {
+    public boolean saveChunks(boolean p_73151_1_, IProgressUpdate p_73151_2_) {
         return true;
     }
 
-    public void func_104112_b() {
+    public void saveExtraData() {
     }
 
-    public boolean func_73156_b() {
+    public boolean unloadQueuedChunks() {
         return false;
     }
 
-    public boolean func_73157_c() {
+    public boolean canSave() {
         return true;
     }
 
-    public String func_73148_d() {
+    public String makeString() {
         return "RandomLevelSource";
     }
 
-    public List func_73155_a(EnumCreatureType p_73155_1_, int p_73155_2_, int p_73155_3_, int p_73155_4_) {
-        BiomeGenBase biomegenbase = this.endWorld.func_72807_a(p_73155_2_, p_73155_4_);
-        return biomegenbase.func_76747_a(p_73155_1_);
+    public List getPossibleCreatures(EnumCreatureType p_73155_1_, int p_73155_2_, int p_73155_3_, int p_73155_4_) {
+        BiomeGenBase biomegenbase = this.endWorld.getBiomeGenForCoords(p_73155_2_, p_73155_4_);
+        return biomegenbase.getSpawnableList(p_73155_1_);
     }
 
     public ChunkPosition func_147416_a(World p_147416_1_, String p_147416_2_, int p_147416_3_, int p_147416_4_, int p_147416_5_) {
         return null;
     }
 
-    public int func_73152_e() {
+    public int getLoadedChunkCount() {
         return 0;
     }
 
-    public void func_82695_e(int p_82695_1_, int p_82695_2_) {
+    public void recreateStructures(int p_82695_1_, int p_82695_2_) {
     }
 }

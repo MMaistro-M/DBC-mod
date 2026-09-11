@@ -50,6 +50,18 @@ compileJava {
     options.compilerArgs += ['-proc:none']
 }
 
+// ForgeGradle 1.2 does not propagate the normal compile configuration to
+// its legacy source compiler. Keep the original mod JARs visible only while
+// compiling the replacement classes.
+def localModJars = fileTree(dir: 'libs', include: ['*.jar'])
+sourceSets.main.compileClasspath += localModJars
+sourceSets.main.runtimeClasspath += localModJars
+// Decompiled classes use the 1.7.10 SRG names. Compile them against the
+// matching Forge SRG artifact, rather than ForgeGradle's deobfuscated source JAR.
+def srgCompileJar = file(System.properties['user.home'] + '/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1614-1.7.10/forge-1.7.10-10.13.4.1614-1.7.10-srg.jar')
+def forgeCompileJar = file(System.properties['user.home'] + '/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1614-1.7.10/forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar')
+compileJava.classpath = files(forgeCompileJar, localModJars, fileTree(dir: System.properties['user.home'] + '/.gradle/caches/modules-2/files-2.1', include: ['**/*.jar']))
+
 processResources
 {
     // this will ensure that this task is redone when the versions change.
@@ -74,3 +86,29 @@ processResources
 // and server JARs were downloaded from Mojang and SHA-1 verified in its cache.
 tasks.downloadClient.enabled = false
 tasks.downloadServer.enabled = false
+
+task mostrarClasspath << {
+    println compileJava.classpath.asPath
+}
+// Convert only the generated copy of the decompiled sources from SRG to MCP
+// names immediately before javac. Originals in codigo_mods are never touched.
+compileJava.doFirst {
+    def mapFile = file(System.properties['user.home'] + '/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1614-1.7.10/srgs/srg-mcp.srg')
+    def nameMap = [:]
+    mapFile.eachLine { line ->
+        if (line.startsWith('FD: ') || line.startsWith('MD: ')) {
+            def parts = line.split(' ')
+            def from = parts[1].tokenize('/').last()
+            def to = (line.startsWith('FD: ') ? parts[2] : parts[3]).tokenize('/').last()
+            if (from != to) nameMap[from] = to
+        }
+    }
+    fileTree(dir: "$buildDir/sources/java", include: ['**/*.java']).each { source ->
+        def text = source.getText('UTF-8')
+        nameMap.each { from, to -> text = text.replaceAll('\\b' + java.util.regex.Pattern.quote(from) + '\\b', to) }
+if (source.name == 'MixinJRMCoreComTickH.java') {
+            text = text.replace('getStackInSlot(', 'func_70301_a(').replace('decrStackSize(', 'func_70298_a(')
+        }
+        source.setText(text, 'UTF-8')
+    }
+}

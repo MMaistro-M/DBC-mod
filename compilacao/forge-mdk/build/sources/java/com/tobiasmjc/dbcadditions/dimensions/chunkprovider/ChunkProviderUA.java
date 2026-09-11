@@ -50,11 +50,11 @@ implements IChunkProvider {
         this.mountainNoiseGen = new NoiseGeneratorOctaves(this.random, 8);
     }
 
-    public Chunk func_73154_d(int chunkX, int chunkZ) {
+    public Chunk provideChunk(int chunkX, int chunkZ) {
         Block[] blocks = new Block[65536];
         int startX = chunkX * 16;
         int startZ = chunkZ * 16;
-        double[] baseNoise = this.baseNoiseGen.func_76305_a(null, startX, startZ, 16, 16, 0.05, 0.05, 0.5);
+        double[] baseNoise = this.baseNoiseGen.generateNoiseOctaves(null, startX, startZ, 16, 16, 0.05, 0.05, 0.5);
         for (int x = 0; x < 16; ++x) {
             for (int z = 0; z < 16; ++z) {
                 int worldX = startX + x;
@@ -74,7 +74,7 @@ implements IChunkProvider {
             }
         }
         Chunk chunk = new Chunk(this.world, blocks, new byte[65536], chunkX, chunkZ);
-        chunk.func_76603_b();
+        chunk.generateSkylightMap();
         return chunk;
     }
 
@@ -85,68 +85,68 @@ implements IChunkProvider {
         }
     }
 
-    public boolean func_73149_a(int x, int z) {
+    public boolean chunkExists(int x, int z) {
         return true;
     }
 
-    public Chunk func_73158_c(int p_73158_1_, int p_73158_2_) {
-        return this.func_73154_d(p_73158_1_, p_73158_2_);
+    public Chunk loadChunk(int p_73158_1_, int p_73158_2_) {
+        return this.provideChunk(p_73158_1_, p_73158_2_);
     }
 
-    public void func_73153_a(IChunkProvider provider, int x, int z) {
-        BlockFalling.field_149832_M = true;
+    public void populate(IChunkProvider provider, int x, int z) {
+        BlockFalling.fallInstantly = true;
         try {
             int k = x * 16;
             int l = z * 16;
-            BiomeGenBase biomegenbase = this.world.func_72807_a(k + 16, l + 16);
-            this.random.setSeed(this.world.func_72905_C());
+            BiomeGenBase biomegenbase = this.world.getBiomeGenForCoords(k + 16, l + 16);
+            this.random.setSeed(this.world.getSeed());
             long i1 = this.random.nextLong() / 2L * 2L + 1L;
             long j1 = this.random.nextLong() / 2L * 2L + 1L;
-            this.random.setSeed((long)x * i1 + (long)z * j1 ^ this.world.func_72905_C());
+            this.random.setSeed((long)x * i1 + (long)z * j1 ^ this.world.getSeed());
             boolean flag = false;
-            biomegenbase.func_76728_a(this.world, this.random, k, l);
+            biomegenbase.decorate(this.world, this.random, k, l);
             if (x == 0 && z == 0) {
                 new UniversalArena().generate(this.world, x, 66, z);
             }
             MinecraftForge.EVENT_BUS.post((Event)new PopulateChunkEvent.Post(provider, this.world, this.random, x, z, flag));
         }
         finally {
-            BlockFalling.field_149832_M = false;
+            BlockFalling.fallInstantly = false;
         }
     }
 
-    public boolean func_73151_a(boolean par1, IProgressUpdate par2IProgressUpdate) {
+    public boolean saveChunks(boolean par1, IProgressUpdate par2IProgressUpdate) {
         return true;
     }
 
-    public void func_104112_b() {
+    public void saveExtraData() {
     }
 
-    public boolean func_73156_b() {
+    public boolean unloadQueuedChunks() {
         return false;
     }
 
-    public boolean func_73157_c() {
+    public boolean canSave() {
         return true;
     }
 
-    public String func_73148_d() {
+    public String makeString() {
         return "ACLevelSource";
     }
 
-    public List func_73155_a(EnumCreatureType par1EnumCreatureType, int x, int y, int z) {
-        BiomeGenBase biome = this.world.func_72807_a(x, z);
-        return biome == null ? null : biome.func_76747_a(par1EnumCreatureType);
+    public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int x, int y, int z) {
+        BiomeGenBase biome = this.world.getBiomeGenForCoords(x, z);
+        return biome == null ? null : biome.getSpawnableList(par1EnumCreatureType);
     }
 
     public ChunkPosition func_147416_a(World p_147416_1_, String p_147416_2_, int p_147416_3_, int p_147416_4_, int p_147416_5_) {
         return null;
     }
 
-    public int func_73152_e() {
+    public int getLoadedChunkCount() {
         return 0;
     }
 
-    public void func_82695_e(int p_82695_1_, int p_82695_2_) {
+    public void recreateStructures(int p_82695_1_, int p_82695_2_) {
     }
 }

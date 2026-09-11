@@ -90,7 +90,7 @@ implements IChunkProvider {
         this.ravineGenerator = TerrainGen.getModdedMapGen((MapGenBase)this.ravineGenerator, (InitMapGenEvent.EventType)InitMapGenEvent.EventType.RAVINE);
         this.worldObj = par1World;
         this.mapFeaturesEnabled = par4;
-        this.worldType = par1World.func_72912_H().func_76067_t();
+        this.worldType = par1World.getWorldInfo().getTerrainType();
         this.rand = new Random(par2);
         this.noiseGen1 = new NoiseGeneratorOctaves(this.rand, 16);
         this.noiseGen2 = new NoiseGeneratorOctaves(this.rand, 16);
@@ -104,7 +104,7 @@ implements IChunkProvider {
         for (int j = -2; j <= 2; ++j) {
             for (int k = -2; k <= 2; ++k) {
                 float f;
-                this.parabolicField[j + 2 + (k + 2) * 5] = f = 10.0f / MathHelper.func_76129_c((float)((float)(j * j + k * k) + 0.2f));
+                this.parabolicField[j + 2 + (k + 2) * 5] = f = 10.0f / MathHelper.sqrt_float((float)((float)(j * j + k * k) + 0.2f));
             }
         }
         NoiseGenerator[] noiseGens = new NoiseGenerator[]{this.noiseGen1, this.noiseGen2, this.noiseGen3, this.noiseGen4, this.noiseGen5, this.noiseGen6, this.mobSpawnerNoise};
@@ -120,7 +120,7 @@ implements IChunkProvider {
 
     public void generateTerrain(int x, int z, Block[] par3BlockArray) {
         int b0 = 63;
-        this.biomesForGeneration = this.worldObj.func_72959_q().func_76937_a(this.biomesForGeneration, x * 4 - 2, z * 4 - 2, 10, 10);
+        this.biomesForGeneration = this.worldObj.getWorldChunkManager().getBiomesForGeneration(this.biomesForGeneration, x * 4 - 2, z * 4 - 2, 10, 10);
         this.generateNoise(x * 4, 0, z * 4);
         for (int k = 0; k < 4; ++k) {
             int l = k * 5;
@@ -156,7 +156,8 @@ implements IChunkProvider {
                             for (int k3 = 0; k3 < 4; ++k3) {
                                 double d;
                                 d15 += d16;
-                                par3BlockArray[j3 += short1] = d > 0.0 ? Blocks.field_150348_b : (k2 * 8 + l2 < b0 - 1 ? Blocks.field_150355_j : null);
+                                d = d15;
+                                par3BlockArray[j3 += short1] = d > 0.0 ? Blocks.stone : (k2 * 8 + l2 < b0 - 1 ? Blocks.water : null);
                             }
                             d10 += d12;
                             d11 += d13;
@@ -192,9 +193,9 @@ implements IChunkProvider {
     }
 
     public void genBiomeModdedTerrain(BiomeDBCUtils bgb, World world, Random random, Block[] replacableBlock, byte[] aByte, int x, int y, double z) {
-        Block block = bgb.field_76752_A;
+        Block block = bgb.topBlock;
         byte b0 = (byte)(bgb.field_150604_aj & 0xFF);
-        Block block1 = bgb.field_76753_B;
+        Block block1 = bgb.fillerBlock;
         int k = -1;
         int l = (int)(z / 3.0 + 3.0 + random.nextDouble() * 0.25);
         int i1 = x & 0xF;
@@ -203,28 +204,28 @@ implements IChunkProvider {
         for (int l1 = 255; l1 >= 0; --l1) {
             int i2 = (j1 * 16 + i1) * k1 + l1;
             if (l1 <= 0 + random.nextInt(5)) {
-                replacableBlock[i2] = Blocks.field_150357_h;
+                replacableBlock[i2] = Blocks.bedrock;
                 continue;
             }
             Block block2 = replacableBlock[i2];
-            if (block2 != null && block2.func_149688_o() != Material.field_151579_a) {
-                if (block2 != Blocks.field_150348_b) continue;
+            if (block2 != null && block2.getMaterial() != Material.air) {
+                if (block2 != Blocks.stone) continue;
                 if (k == -1) {
                     if (l <= 0) {
                         block = null;
                         b0 = 0;
-                        block1 = Blocks.field_150348_b;
+                        block1 = Blocks.stone;
                     } else if (l1 >= 59 && l1 <= 64) {
-                        block = bgb.field_76752_A;
+                        block = bgb.topBlock;
                         b0 = (byte)(bgb.field_150604_aj & 0xFF);
-                        block1 = bgb.field_76753_B;
+                        block1 = bgb.fillerBlock;
                     }
-                    if (l1 < 63 && (block == null || block.func_149688_o() == Material.field_151579_a)) {
-                        if (bgb.func_150564_a(x, l1, y) < 0.15f) {
-                            block = Blocks.field_150432_aD;
+                    if (l1 < 63 && (block == null || block.getMaterial() == Material.air)) {
+                        if (bgb.getFloatTemperature(x, l1, y) < 0.15f) {
+                            block = Blocks.ice;
                             b0 = 0;
                         } else {
-                            block = Blocks.field_150355_j;
+                            block = Blocks.water;
                             b0 = 0;
                         }
                     }
@@ -236,8 +237,8 @@ implements IChunkProvider {
                     }
                     if (l1 < 56 - l) {
                         block = null;
-                        block1 = Blocks.field_150348_b;
-                        replacableBlock[i2] = Blocks.field_150351_n;
+                        block1 = Blocks.stone;
+                        replacableBlock[i2] = Blocks.gravel;
                         continue;
                     }
                     replacableBlock[i2] = block1;
@@ -245,42 +246,42 @@ implements IChunkProvider {
                 }
                 if (k <= 0) continue;
                 replacableBlock[i2] = block1;
-                if (--k != 0 || block1 != Blocks.field_150354_m) continue;
+                if (--k != 0 || block1 != Blocks.sand) continue;
                 k = random.nextInt(4) + Math.max(0, l1 - 63);
-                block1 = Blocks.field_150322_A;
+                block1 = Blocks.sandstone;
                 continue;
             }
             k = -1;
         }
     }
 
-    public Chunk func_73158_c(int x, int z) {
-        return this.func_73154_d(x, z);
+    public Chunk loadChunk(int x, int z) {
+        return this.provideChunk(x, z);
     }
 
-    public Chunk func_73154_d(int par1, int par2) {
+    public Chunk provideChunk(int par1, int par2) {
         this.rand.setSeed((long)par1 * 341873128712L + (long)par2 * 132897987541L);
         Block[] ablock = new Block[65536];
         byte[] abyte = new byte[65536];
         this.generateTerrain(par1, par2, ablock);
-        this.biomesForGeneration = this.worldObj.func_72959_q().func_76933_b(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
+        this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
         this.replaceBlocksForBiome(par1, par2, ablock, abyte, this.biomesForGeneration);
         this.caveGenerator.func_151539_a((IChunkProvider)this, this.worldObj, par1, par2, ablock);
         this.ravineGenerator.func_151539_a((IChunkProvider)this, this.worldObj, par1, par2, ablock);
         Chunk chunk = new Chunk(this.worldObj, ablock, abyte, par1, par2);
-        byte[] abyte1 = chunk.func_76605_m();
+        byte[] abyte1 = chunk.getBiomeArray();
         for (int k = 0; k < abyte1.length; ++k) {
-            abyte1[k] = (byte)this.biomesForGeneration[k].field_76756_M;
+            abyte1[k] = (byte)this.biomesForGeneration[k].biomeID;
         }
-        chunk.func_76603_b();
+        chunk.generateSkylightMap();
         return chunk;
     }
 
     private void generateNoise(int x, int y, int z) {
-        this.doubleArray4 = this.noiseGen6.func_76305_a(this.doubleArray4, x, z, 5, 5, 200.0, 200.0, 0.5);
-        this.doubleArray1 = this.noiseGen3.func_76304_a(this.doubleArray1, x, y, z, 5, 33, 5, 8.555150000000001, 4.277575000000001, 8.555150000000001);
-        this.doubleArray2 = this.noiseGen1.func_76304_a(this.doubleArray2, x, y, z, 5, 33, 5, 684.412, 684.412, 684.412);
-        this.doubleArray3 = this.noiseGen2.func_76304_a(this.doubleArray3, x, y, z, 5, 33, 5, 684.412, 684.412, 684.412);
+        this.doubleArray4 = this.noiseGen6.generateNoiseOctaves(this.doubleArray4, x, z, 5, 5, 200.0, 200.0, 0.5);
+        this.doubleArray1 = this.noiseGen3.generateNoiseOctaves(this.doubleArray1, x, y, z, 5, 33, 5, 8.555150000000001, 4.277575000000001, 8.555150000000001);
+        this.doubleArray2 = this.noiseGen1.generateNoiseOctaves(this.doubleArray2, x, y, z, 5, 33, 5, 684.412, 684.412, 684.412);
+        this.doubleArray3 = this.noiseGen2.generateNoiseOctaves(this.doubleArray3, x, y, z, 5, 33, 5, 684.412, 684.412, 684.412);
         int l = 0;
         int i1 = 0;
         for (int j1 = 0; j1 < 5; ++j1) {
@@ -293,14 +294,14 @@ implements IChunkProvider {
                 for (int l1 = -b0; l1 <= b0; ++l1) {
                     for (int i2 = -b0; i2 <= b0; ++i2) {
                         BiomeGenBase biomegenbase1 = this.biomesForGeneration[j1 + l1 + 2 + (k1 + i2 + 2) * 10];
-                        float f3 = biomegenbase1.field_76748_D;
-                        float f4 = biomegenbase1.field_76749_E;
-                        if (this.worldType == WorldType.field_151360_e && f3 > 0.0f) {
+                        float f3 = biomegenbase1.rootHeight;
+                        float f4 = biomegenbase1.heightVariation;
+                        if (this.worldType == WorldType.AMPLIFIED && f3 > 0.0f) {
                             f3 = 1.0f + f3 * 2.0f;
                             f4 = 1.0f + f4 * 4.0f;
                         }
                         float f5 = this.parabolicField[l1 + 2 + (i2 + 2) * 5] / (f3 + 2.0f);
-                        if (biomegenbase1.field_76748_D > biomegenbase.field_76748_D) {
+                        if (biomegenbase1.rootHeight > biomegenbase.rootHeight) {
                             f5 /= 2.0f;
                         }
                         f += f4 * f5;
@@ -342,7 +343,7 @@ implements IChunkProvider {
                     double d7 = this.doubleArray2[l] / 512.0;
                     double d8 = this.doubleArray3[l] / 512.0;
                     double d9 = (this.doubleArray1[l] / 10.0 + 1.0) / 2.0;
-                    double d10 = MathHelper.func_151238_b((double)d7, (double)d8, (double)d9) - d6;
+                    double d10 = MathHelper.denormalizeClamp((double)d7, (double)d8, (double)d9) - d6;
                     if (j2 > 29) {
                         double d11 = (float)(j2 - 29) / 3.0f;
                         d10 = d10 * (1.0 - d11) + -10.0 * d11;
@@ -354,61 +355,61 @@ implements IChunkProvider {
         }
     }
 
-    public boolean func_73149_a(int x, int z) {
+    public boolean chunkExists(int x, int z) {
         return true;
     }
 
-    public void func_73153_a(IChunkProvider par1IChunkProvider, int x, int z) {
-        BlockFalling.field_149832_M = true;
+    public void populate(IChunkProvider par1IChunkProvider, int x, int z) {
+        BlockFalling.fallInstantly = true;
         try {
             int k = x * 16;
             int l = z * 16;
-            BiomeGenBase biomegenbase = this.worldObj.func_72807_a(k + 16, l + 16);
-            this.rand.setSeed(this.worldObj.func_72905_C());
+            BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(k + 16, l + 16);
+            this.rand.setSeed(this.worldObj.getSeed());
             long i1 = this.rand.nextLong() / 2L * 2L + 1L;
             long j1 = this.rand.nextLong() / 2L * 2L + 1L;
-            this.rand.setSeed((long)x * i1 + (long)z * j1 ^ this.worldObj.func_72905_C());
+            this.rand.setSeed((long)x * i1 + (long)z * j1 ^ this.worldObj.getSeed());
             boolean flag = false;
-            biomegenbase.func_76728_a(this.worldObj, this.rand, k, l);
+            biomegenbase.decorate(this.worldObj, this.rand, k, l);
             MinecraftForge.EVENT_BUS.post((Event)new PopulateChunkEvent.Post(par1IChunkProvider, this.worldObj, this.rand, x, z, flag));
         }
         finally {
-            BlockFalling.field_149832_M = false;
+            BlockFalling.fallInstantly = false;
         }
     }
 
-    public boolean func_73151_a(boolean par1, IProgressUpdate par2IProgressUpdate) {
+    public boolean saveChunks(boolean par1, IProgressUpdate par2IProgressUpdate) {
         return true;
     }
 
-    public void func_104112_b() {
+    public void saveExtraData() {
     }
 
-    public boolean func_73156_b() {
+    public boolean unloadQueuedChunks() {
         return false;
     }
 
-    public boolean func_73157_c() {
+    public boolean canSave() {
         return true;
     }
 
-    public String func_73148_d() {
+    public String makeString() {
         return "ACLevelSource";
     }
 
-    public List func_73155_a(EnumCreatureType par1EnumCreatureType, int x, int y, int z) {
-        BiomeGenBase biome = this.worldObj.func_72807_a(x, z);
-        return biome == null ? null : biome.func_76747_a(par1EnumCreatureType);
+    public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int x, int y, int z) {
+        BiomeGenBase biome = this.worldObj.getBiomeGenForCoords(x, z);
+        return biome == null ? null : biome.getSpawnableList(par1EnumCreatureType);
     }
 
     public ChunkPosition func_147416_a(World p_147416_1_, String p_147416_2_, int p_147416_3_, int p_147416_4_, int p_147416_5_) {
         return null;
     }
 
-    public int func_73152_e() {
+    public int getLoadedChunkCount() {
         return 0;
     }
 
-    public void func_82695_e(int p_82695_1_, int p_82695_2_) {
+    public void recreateStructures(int p_82695_1_, int p_82695_2_) {
     }
 }

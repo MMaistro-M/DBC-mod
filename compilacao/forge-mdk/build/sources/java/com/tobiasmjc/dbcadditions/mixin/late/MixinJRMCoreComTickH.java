@@ -53,16 +53,16 @@ public class MixinJRMCoreComTickH {
     private void addDBCAData(MinecraftServer server, int playerID, EntityPlayerMP player, JGPlayerMP jgPlayer, NBTTagCompound nbt, CallbackInfo ci) {
         String au = "";
         DBCAPlayer dbplayer = DBCAPlayer.get((EntityPlayer)player);
-        MixinJRMCoreComTickH.dat10[playerID] = "" + nbt.func_74771_c("jrmcRelease") + ";" + nbt.func_74762_e("jrmcStamina") + ";" + dbplayer.DBAForm + ";" + dbplayer.formMasteries + ";" + dbplayer.DBARace + ";" + (dbplayer.PotaraFusion ? "1" : "0") + ";" + dbplayer.PotaraCooldown;
-        String statusEffects = nbt.func_74779_i("jrmcStatusEff");
+        MixinJRMCoreComTickH.dat10[playerID] = "" + nbt.getByte("jrmcRelease") + ";" + nbt.getInteger("jrmcStamina") + ";" + dbplayer.DBAForm + ";" + dbplayer.formMasteries + ";" + dbplayer.DBARace + ";" + (dbplayer.PotaraFusion ? "1" : "0") + ";" + dbplayer.PotaraCooldown;
+        String statusEffects = nbt.getString("jrmcStatusEff");
         DBCAPlayerEProperties prop = DBCAPlayerEProperties.get((EntityPlayer)player);
         ItemStack rightS = prop.inventory.func_70301_a(0);
         ItemStack leftS = prop.inventory.func_70301_a(1);
-        int right = rightS == null ? -1 : Item.func_150891_b((Item)rightS.func_77973_b());
-        int left = leftS == null ? -1 : Item.func_150891_b((Item)leftS.func_77973_b());
-        MixinJRMCoreComTickH.dat19[playerID] = "" + nbt.func_74771_c("jrmcTlmd") + ";" + statusEffects + ";" + dbplayer.Skills + ";" + right + ";" + left;
+        int right = rightS == null ? -1 : Item.getIdFromItem((Item)rightS.getItem());
+        int left = leftS == null ? -1 : Item.getIdFromItem((Item)leftS.getItem());
+        MixinJRMCoreComTickH.dat19[playerID] = "" + nbt.getByte("jrmcTlmd") + ";" + statusEffects + ";" + dbplayer.Skills + ";" + right + ";" + left;
         if (dbplayer.DBARace != -1) {
-            MixinJRMCoreComTickH.dat16[playerID] = "" + (dbplayer.DBARace != -1 ? ((au = nbt.func_74779_i("jrmcDNSAU")).length() > 6 ? au : " ") : " ");
+            MixinJRMCoreComTickH.dat16[playerID] = "" + (dbplayer.DBARace != -1 ? ((au = nbt.getString("jrmcDNSAU")).length() > 6 ? au : " ") : " ");
         }
     }
 
@@ -85,13 +85,13 @@ public class MixinJRMCoreComTickH {
     @Redirect(method={"serverTick"}, at=@At(value="INVOKE", target="LJinRyuu/JRMCore/server/JGRaceHelper;getRacialSkillLevel(Lnet/minecraft/nbt/NBTTagCompound;)B"))
     private static byte fixMajinCrash(NBTTagCompound nbt) {
         String key;
-        boolean dbc = nbt.func_74771_c("jrmcPwrtyp") == 1;
-        boolean nc = nbt.func_74771_c("jrmcPwrtyp") == 2;
-        byte race = nbt.func_74771_c("jrmcRace");
+        boolean dbc = nbt.getByte("jrmcPwrtyp") == 1;
+        boolean nc = nbt.getByte("jrmcPwrtyp") == 2;
+        byte race = nbt.getByte("jrmcRace");
         boolean currentLevel = false;
         String string = key = dbc ? "jrmcSSltX" : "jrmcSSltY";
-        if (nbt.func_74764_b(key) && !nbt.func_74779_i(key).contains("pty") && nbt.func_74779_i(key).length() > 1 && (!nc || !nbt.func_74779_i("jrmcSSltY").contains("Sai") && race != 1 && race != 2)) {
-            byte r = Byte.parseByte(nbt.func_74779_i(key).substring(2));
+        if (nbt.hasKey(key) && !nbt.getString(key).contains("pty") && nbt.getString(key).length() > 1 && (!nc || !nbt.getString("jrmcSSltY").contains("Sai") && race != 1 && race != 2)) {
+            byte r = Byte.parseByte(nbt.getString(key).substring(2));
             if (race == 5 && r > 4) {
                 return 4;
             }
@@ -113,7 +113,7 @@ public class MixinJRMCoreComTickH {
         if (dbcaPlayer.PotaraFusion) {
             String[] fusionParticipants;
             boolean keep = false;
-            String fusionMembers = nbt.func_74779_i("jrmcFuzion");
+            String fusionMembers = nbt.getString("jrmcFuzion");
             if (fusionMembers.length() > 0 && !fusionMembers.equals(" ") && (fusionParticipants = fusionMembers.split(",")).length == 3) {
                 keep = true;
             }
@@ -139,7 +139,7 @@ public class MixinJRMCoreComTickH {
         }
         byte release = jgPlayer.get().getRelease();
         int[] playerAttributes = jgPlayer.get().getAttributes();
-        String s1 = nbt.func_74779_i("jrmcSSltX");
+        String s1 = nbt.getString("jrmcSSltX");
         int st = 6;
         float cost = (float)(JRMCoreH.getPlayerAttribute(playerAttributes, 0, st, 0, 1, s1, jgPlayer.get().getRelease(), jgPlayer.get().getReserve(), false, false, false, false, false, 1, null, false) - playerAttributes[0]) * 0.4f + (float)(JRMCoreH.getPlayerAttribute(playerAttributes, 1, st, 0, 1, s1, jgPlayer.get().getRelease(), jgPlayer.get().getReserve(), false, false, false, false, false, 1, null, false) - playerAttributes[1]) * 0.25f + (float)(JRMCoreH.getPlayerAttribute(playerAttributes, 3, st, 0, 1, s1, jgPlayer.get().getRelease(), jgPlayer.get().getReserve(), false, false, false, false, false, 1, null, false) - playerAttributes[3]) * 0.35f;
         cost *= form.getKiDrain();
@@ -151,12 +151,12 @@ public class MixinJRMCoreComTickH {
         int maxEnergy = jgPlayer.get().getEnergyMax(jgPlayer.get().getRace(), jgPlayer.get().getClassID(), (byte)1, playerAttributes, JRMCoreH.SklLvl_KiBs(jgPlayer.get().getSkills(), 1));
         int energy = jgPlayer.get().getEnergy() + (int)cost;
         if (energy < 0) {
-            nbt.func_74768_a("jrmcRelease", 0);
+            nbt.setInteger("jrmcRelease", 0);
             energy = 0;
             dbcaPlayer.descend();
         }
-        if ((ko = nbt.func_74762_e("jrmcHar4va")) > 0) {
-            nbt.func_74768_a("jrmcRelease", 0);
+        if ((ko = nbt.getInteger("jrmcHar4va")) > 0) {
+            nbt.setInteger("jrmcRelease", 0);
             energy = 0;
             dbcaPlayer.descend();
         }
@@ -177,7 +177,7 @@ public class MixinJRMCoreComTickH {
         if (dbcaPlayer.PotaraFusion) {
             String[] fusionParticipants;
             boolean keep = false;
-            String fusionMembers = nbt.func_74779_i("jrmcFuzion");
+            String fusionMembers = nbt.getString("jrmcFuzion");
             if (fusionMembers.length() > 0 && !fusionMembers.equals(" ") && (fusionParticipants = fusionMembers.split(",")).length == 3) {
                 keep = true;
             }
@@ -203,7 +203,7 @@ public class MixinJRMCoreComTickH {
         }
         byte release = jgPlayer.get().getRelease();
         int[] playerAttributes = jgPlayer.get().getAttributes();
-        String s1 = nbt.func_74779_i("jrmcSSltX");
+        String s1 = nbt.getString("jrmcSSltX");
         int st = 6;
         float cost = (float)(JRMCoreH.getPlayerAttribute(playerAttributes, 0, st, 0, 1, s1, jgPlayer.get().getRelease(), jgPlayer.get().getReserve(), false, false, false, false, false, 1, null, false) - playerAttributes[0]) * 0.4f + (float)(JRMCoreH.getPlayerAttribute(playerAttributes, 1, st, 0, 1, s1, jgPlayer.get().getRelease(), jgPlayer.get().getReserve(), false, false, false, false, false, 1, null, false) - playerAttributes[1]) * 0.25f + (float)(JRMCoreH.getPlayerAttribute(playerAttributes, 3, st, 0, 1, s1, jgPlayer.get().getRelease(), jgPlayer.get().getReserve(), false, false, false, false, false, 1, null, false) - playerAttributes[3]) * 0.35f;
         cost *= form.getKiDrain();
@@ -215,12 +215,12 @@ public class MixinJRMCoreComTickH {
         int maxEnergy = jgPlayer.get().getEnergyMax(jgPlayer.get().getRace(), jgPlayer.get().getClassID(), (byte)1, playerAttributes, JRMCoreH.SklLvl_KiBs(jgPlayer.get().getSkills(), 1));
         int energy = jgPlayer.get().getEnergy() + (int)cost;
         if (energy < 0) {
-            nbt.func_74768_a("jrmcRelease", 0);
+            nbt.setInteger("jrmcRelease", 0);
             energy = 0;
             dbcaPlayer.descend();
         }
-        if ((ko = nbt.func_74762_e("jrmcHar4va")) > 0) {
-            nbt.func_74768_a("jrmcRelease", 0);
+        if ((ko = nbt.getInteger("jrmcHar4va")) > 0) {
+            nbt.setInteger("jrmcRelease", 0);
             energy = 0;
             dbcaPlayer.descend();
         }

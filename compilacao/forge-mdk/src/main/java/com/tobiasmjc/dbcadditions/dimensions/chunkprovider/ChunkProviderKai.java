@@ -156,6 +156,7 @@ implements IChunkProvider {
                             for (int k3 = 0; k3 < 4; ++k3) {
                                 double d;
                                 d15 += d16;
+                                d = d15;
                                 par3BlockArray[j3 += short1] = d > 0.0 ? Blocks.field_150348_b : (k2 * 8 + l2 < b0 - 1 ? Blocks.field_150355_j : null);
                             }
                             d10 += d12;

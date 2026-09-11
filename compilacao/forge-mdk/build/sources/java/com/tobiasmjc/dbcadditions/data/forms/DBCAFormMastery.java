@@ -54,8 +54,8 @@ public class DBCAFormMastery {
     public void saveNBTData() {
         DBCAPlayer dbcaPlayer = DBCAPlayer.get(this.player);
         NBTTagCompound playerNbt = dbcaPlayer.getDBCAData();
-        if (playerNbt.func_74764_b("FormMastery")) {
-            String existingFormMastery = playerNbt.func_74779_i("FormMastery");
+        if (playerNbt.hasKey("FormMastery")) {
+            String existingFormMastery = playerNbt.getString("FormMastery");
             String[] entries = existingFormMastery.split("-");
             StringBuilder newFormMasteryBuilder = new StringBuilder();
             boolean found = false;
@@ -82,8 +82,8 @@ public class DBCAFormMastery {
     }
 
     private void loadNBTData(EntityPlayer player) {
-        NBTTagCompound formMasteryCompound = DataUtils.nbt(player, "pres").func_74775_l("DBCAData");
-        this.encodedFormMastery = formMasteryCompound.func_74779_i("FormMastery");
+        NBTTagCompound formMasteryCompound = DataUtils.nbt(player, "pres").getCompoundTag("DBCAData");
+        this.encodedFormMastery = formMasteryCompound.getString("FormMastery");
     }
 
     private void loadMasteryData() {

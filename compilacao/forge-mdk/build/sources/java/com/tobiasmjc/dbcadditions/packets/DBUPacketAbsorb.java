@@ -56,8 +56,8 @@ implements IMessage {
     extends DBUMessageHandler<DBUPacketAbsorb> {
         @Override
         public void onServerSide(EntityPlayerMP p, DBUPacketAbsorb message) {
-            message.grabberName = p.func_70005_c_();
-            p.field_70170_p.func_72956_a((Entity)p, "dbcadditions:bioandroid.absorb_start", 3.0f, p.field_70170_p.field_73012_v.nextFloat() * 0.1f + 0.9f);
+            message.grabberName = p.getCommandSenderName();
+            p.worldObj.playSoundAtEntity((Entity)p, "dbcadditions:bioandroid.absorb_start", 3.0f, p.worldObj.rand.nextFloat() * 0.1f + 0.9f);
             if (message.grabbedID == -1) {
                 return;
             }
@@ -65,23 +65,23 @@ implements IMessage {
             EntityPlayer grabber = p;
             if (!absorb) {
                 DBCAAbilities.stopAbsorbing(grabber);
-                DBUPackets.sendToAll(message, p.field_70170_p);
+                DBUPackets.sendToAll(message, p.worldObj);
                 return;
             }
-            Entity target = p.field_70170_p.func_73045_a(message.grabbedID);
-            if (!(target instanceof EntityCreature) || p.func_70068_e(target) > 36.0) {
+            Entity target = p.worldObj.getEntityByID(message.grabbedID);
+            if (!(target instanceof EntityCreature) || p.getDistanceSqToEntity(target) > 36.0) {
                 return;
             }
             DBCAAbilities.startAbsorbing(grabber, message.grabbedID);
-            DBUPackets.sendToAll(message, p.field_70170_p);
+            DBUPackets.sendToAll(message, p.worldObj);
         }
 
         @Override
         public void onClientSide(DBUPacketAbsorb message) {
             boolean absorb = message.absorbing;
-            EntityPlayer grabber = Minecraft.func_71410_x().field_71441_e.func_72924_a(message.grabberName);
+            EntityPlayer grabber = Minecraft.getMinecraft().theWorld.getPlayerEntityByName(message.grabberName);
             if (!absorb) {
-                if (grabber == Minecraft.func_71410_x().field_71439_g) {
+                if (grabber == Minecraft.getMinecraft().thePlayer) {
                     DBCAClientData.absorbCooldown = 1000;
                 }
                 if (grabber != null) {

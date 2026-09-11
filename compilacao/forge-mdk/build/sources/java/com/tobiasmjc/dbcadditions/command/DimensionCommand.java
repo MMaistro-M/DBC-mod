@@ -26,35 +26,35 @@ import net.minecraft.util.IChatComponent;
 
 public class DimensionCommand
 extends CommandBase {
-    public String func_71517_b() {
+    public String getCommandName() {
         return "dbcdimension";
     }
 
-    public String func_71518_a(ICommandSender p_71518_1_) {
+    public String getCommandUsage(ICommandSender p_71518_1_) {
         return "/dbcdimension <player> <dimension>";
     }
 
-    public List<String> func_71516_a(ICommandSender sender, String[] args) {
+    public List<String> addTabCompletionOptions(ICommandSender sender, String[] args) {
         if (args.length == 1) {
-            return CommandBase.func_71530_a((String[])args, (String[])MinecraftServer.func_71276_C().func_71213_z());
+            return CommandBase.getListOfStringsMatchingLastWord((String[])args, (String[])MinecraftServer.getServer().getAllUsernames());
         }
         return new ArrayList<String>();
     }
 
-    public int func_82362_a() {
+    public int getRequiredPermissionLevel() {
         return 4;
     }
 
-    public void func_71515_b(ICommandSender sender, String[] args) {
+    public void processCommand(ICommandSender sender, String[] args) {
         if (args.length != 2) {
-            sender.func_145747_a((IChatComponent)new ChatComponentText(this.func_71518_a(sender)));
+            sender.addChatMessage((IChatComponent)new ChatComponentText(this.getCommandUsage(sender)));
             return;
         }
-        EntityPlayerMP player = DimensionCommand.func_82359_c((ICommandSender)sender, (String)args[0]);
-        int id = DimensionCommand.func_71526_a((ICommandSender)sender, (String)args[1]);
+        EntityPlayerMP player = DimensionCommand.getPlayer((ICommandSender)sender, (String)args[0]);
+        int id = DimensionCommand.parseInt((ICommandSender)sender, (String)args[1]);
         MinecraftServer server = FMLCommonHandler.instance().getMinecraftServerInstance();
         if (!TeleporterDBUtils.transferPlayer(server, player, id)) {
-            sender.func_145747_a((IChatComponent)new ChatComponentText("Dimension " + id + " is not available."));
+            sender.addChatMessage((IChatComponent)new ChatComponentText("Dimension " + id + " is not available."));
         }
     }
 }

@@ -44,7 +44,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value={DBCPacketHandlerServer.class}, remap=false)
 public class MixinDBCPacketHandler {
-    private static final ChatStyle styleRed = new ChatStyle().func_150238_a(EnumChatFormatting.RED);
+    private static final ChatStyle styleRed = new ChatStyle().setColor(EnumChatFormatting.RED);
 
     @Redirect(method={"handleDBCascend"}, at=@At(value="INVOKE", target="LJinRyuu/JRMCore/JRMCoreH;race_match(II)Z"))
     private boolean handleFusionCustomRaces(int race1, int race2, @Local(name={"pl2"}) LocalRef<EntityPlayer> pl2, @Local(name={"jgPlayer"}) LocalRef<JGPlayerMP> jgPlayer) {
@@ -82,7 +82,7 @@ public class MixinDBCPacketHandler {
                 int remainingEnergy = curEnergy - (int)energyCost;
                 quickTransformKiLoss.set(remainingEnergy);
             } else {
-                p.func_145747_a(new ChatComponentText("Not Enough Ki to Transform Instantly! Cost: " + energyCost).func_150255_a(styleRed));
+                p.addChatMessage(new ChatComponentText("Not Enough Ki to Transform Instantly! Cost: " + energyCost).setChatStyle(styleRed));
                 return;
             }
         }
@@ -226,7 +226,7 @@ public class MixinDBCPacketHandler {
                 message = "Failed to Instant Transform! Required " + formName + " Mastery Level: " + hasUnlocked + " to be unlocked!";
             }
             if (hasUnlocked != 0.0) {
-                p.func_145747_a(new ChatComponentText(message).func_150255_a(styleRed));
+                p.addChatMessage(new ChatComponentText(message).setChatStyle(styleRed));
                 return false;
             }
         }
@@ -248,7 +248,7 @@ public class MixinDBCPacketHandler {
                 message = "Failed to Instant Transform! Required " + formName + " Mastery Level: " + hasUnlocked + " to be unlocked!";
             }
             if (hasUnlocked != 0.0) {
-                p.func_145747_a(new ChatComponentText(message).func_150255_a(styleRed));
+                p.addChatMessage(new ChatComponentText(message).setChatStyle(styleRed));
                 return false;
             }
         }
